@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: HYWenHei-85W;
+    src : url("../assets/font/zh-cn.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/background/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 20% center;
+}
+
+nav{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A29499;
+    opacity: 0.8;
+}
+
+
+.logo{
+    margin-left: 2rem;
+    width: 20%;
+    height: 100%;
+}
+
+.logo a img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-bar{  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75%;
+}
+
+
+.menu-content{
+    height: 100%;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.menu-content a{
+    color : white;
+    text-decoration: none;
+}
+
+.login-content{
+    display: none;
+}
+
+.login{
+    width: 12%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+    color : white;
+}
+
+.login-text{
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.login-logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.login-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+article{
+    padding : 7vh 0 10vh 0;
+    color : white;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 85vh;
+    font-size: 2rem;
+}
+
+article h2{
+    font-family: "HYWenHei-85W";
+}
+
+article img{
+    width: 45%;
+}
+
+.burger{
+    display: none;
+    /* padding-right: 5rem; */
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 5px;
+    margin : 3.2px;
+    background-color: white;
+    transition: all 0.3 ease;
+}
+
+@media screen and (max-width : 900px){
+    article{
+        font-size: 1.6rem;
+    }
+    article img{
+        width: 60%;
+    }
+    .menu-bar{
+        width: 100%;
+    }
+    .menu-content{
+        font-size: 1rem;
+    }
+    .login{
+        width: 18%;
+    }
+    .login-logo{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width : 750px){
+    .logo{
+        width: 30%;
+    }
+    article{
+        font-size: 1.2rem;
+    }
+    body{
+        overflow-x : hidden;
+    }
+    .login{
+        display: none;
+    }
+    .login-content{
+        display: block;
+    }
+    .menu{
+        position : absolute;
+        right : 0px;
+        top : 15vh;
+        width : 50%;
+        height : 85vh;
+        background-color: #A29499;
+        transform: translateX(100%);
+        transition : transform 0.5s ease-in;
+    }
+    .menu-bar{
+        height: 100%;
+        position : absolute;
+        display : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items : center;
+    }
+    .menu-bar .menu-content{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .menu-content{
+        display: flex;
+        justify-content: center;
+        align-items : center;
+    }
+    .burger{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 27px;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    .logo{
+    }
+}
+
+@media screen and (max-width : 450px){
+    .logo{
+        width: 45%;
+    }
+    article{
+        padding: 10vh 0 12vh 0;
+        font-size: 0.8rem;
+    }
+    article img{
+        width: 90%;
+    }
+}
+
+.menu-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-6px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-6px,-6px);
+}
