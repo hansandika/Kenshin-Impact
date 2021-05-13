@@ -607,6 +607,7 @@ article img{
     }
 }
 
+/* hp */
 @media screen and (max-width : 1060px){
     .logo{
         height: fit-content;
@@ -680,7 +681,7 @@ article img{
         justify-content: space-between;
         background-color: rgba(0,0,0,0);
     }
-    .logo img{
+    #logo-navbar{
         visibility: hidden;
     }
     .toggle .line1{
@@ -735,7 +736,7 @@ article img{
     article img{
         width: 90%;
     }
-        .toggle .line1{
+    .toggle .line1{
         transform: rotate(-45deg) translate(-5px,4px);
     }
     .toggle .line2{

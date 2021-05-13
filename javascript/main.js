@@ -1,10 +1,10 @@
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector(".sidebar");
+    const sidebar = document.querySelector(".sidebar");
     const navLink = document.querySelectorAll('.sidebar-content');
 
     burger.addEventListener('click', () => {
-        nav.classList.toggle('menu-active');   
+        sidebar.classList.toggle('menu-active');   
         navLink.forEach((e,index) => {
             if(e.style.animation){
                 e.style.animation = "";
@@ -15,5 +15,23 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
     })
 }
+
+const navbarLogo = document.querySelector("#logo-navbar");
+const mainLogo = document.querySelector('#logo-main');
+const navbar = document.querySelector('nav');
+document.addEventListener('scroll',() => {
+    if(window.scrollY > 0){
+        navbarLogo.style.visibility = 'visible';
+        mainLogo.style.visibility = "hidden";
+        navbar.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
+        console.log(window.scrollY)
+    }
+    else if(window.scrollY <= 5){
+        navbarLogo.style.visibility = 'hidden';
+        mainLogo.style.visibility = 'visible';
+        navbar.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    }
+})
+
 
 navSlide();
