@@ -36,6 +36,7 @@ nav{
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 5;
+    transition: all 0.5s ease;
 }
 
 
@@ -47,6 +48,7 @@ nav{
 .logo a img{
     padding-top: 0.5rem;
     width: 100%;
+    transition : all 0.2s ease-in-out;
 }
 
 .menu{
@@ -642,7 +644,7 @@ article img{
     }
     .logo a img{
         padding-top: 0;
-        width: 100%;
+        width: 90%;
     }
     article{
         font-size: 1.2rem;
@@ -677,6 +679,7 @@ article img{
         margin-bottom: 7px;
     }
     nav{
+        position : fixed;
         height: 10vh;
         justify-content: space-between;
         background-color: rgba(0,0,0,0);
@@ -714,7 +717,7 @@ article img{
         height: fit-content;
     }
     .logo a img{
-        width: 100%;
+        width: 68%;
     }
     header img{
         width: 70%;

@@ -26,7 +26,7 @@ document.addEventListener('scroll',() => {
         navbar.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
         console.log(window.scrollY)
     }
-    else if(window.scrollY <= 5){
+    else if(window.scrollY == 0){
         navbarLogo.style.visibility = 'hidden';
         mainLogo.style.visibility = 'visible';
         navbar.style.backgroundColor = "rgb(0, 0, 0, 0)";
