@@ -35,7 +35,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-    z-index: 5;
+    z-index: 4;
     transition: all 0.5s ease;
 }
 
@@ -143,10 +143,6 @@ nav .start-download, .menu-content:nth-child(4):hover ~.animation{
 .menu-content a:hover{
     text-shadow: 1px 1px 8px #7EE0FF;
 }
-/* .border-active{
-    border-top: 5px solid #7EE0FF;
-    text-shadow : blur(10px);
-} */
 
 .login-content{
     display: none;
@@ -200,6 +196,15 @@ nav .start-download, .menu-content:nth-child(4):hover ~.animation{
     background-color: #393B40;
 }
 
+.sidebar-div{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 4;
+}
+
 aside{
     position : fixed;
     right: 0;
@@ -208,7 +213,7 @@ aside{
     background-color: white;
     display: none;
     transition : all 0.5s ease;
-    z-index: 2;
+    z-index: 4;
 }
 
 .list-sidebar{
@@ -227,7 +232,7 @@ aside{
     font-size: 1.2rem;
     color : black;
     padding-left: 2.2rem;
-    border-bottom : 1px solid rgba(0,0,0,0.05);
+    border-bottom : 1px solid rgba(0,0,0,0.5);
     transition : all 0.4s ease;
 }
 
@@ -272,14 +277,15 @@ article img{
     height: 30px;
     padding: 8px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 7;
 }
 
 .burger div{
     width: 20px;
     height: 2.5px;
     background-color: white;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
+    z-index: 7;
 }
 
 .burger div:first-child{
@@ -299,6 +305,19 @@ article img{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-4px);
 }
+/* 
+.close-div div{
+    width: 20px;
+    height: 2.5px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+.close-div .line1{
+    transform: rotate(-45deg) translate(-5px,4px);
+}
+.close-div .line2{
+    transform: rotate(45deg) translate(-5px,-4px);
+} */
 
 @media screen and (max-width : 1477px){
     .menu-bar .animation{
@@ -313,28 +332,6 @@ article img{
         left : var(--leftPos2);
     }
 
-
-    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
-        left : var(--leftPos3);
-    }
-
-    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
-        left : var(--leftPos4);
-    }
-}
-
-@media screen and (max-width : 1262px){
-    .menu-bar .animation{
-        left : 40px;  
-        --leftPos1 : 40px;
-    }
-    nav .start-home, .menu-content:first-child:hover ~.animation{
-        left : var(--leftPos1);
-    }
-
-    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
-        left : var(--leftPos2);
-    }
 
     nav .start-about, .menu-content:nth-child(3):hover ~.animation{
         left : var(--leftPos3);
@@ -389,10 +386,98 @@ article img{
     }
 }
 
-@media screen and (max-width : 1100px){
+@media screen and (min-width : 1200px){
     .menu-bar .animation{
-        left : 10px;  
-        --leftPos1 : 10px;
+        left : 35px;  
+        --leftPos1 : 35px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1250px){
+    .menu-bar .animation{
+        left : 50px;  
+        --leftPos1 : 50px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1300px){
+    .menu-bar .animation{
+        left : 60px;  
+        --leftPos1 : 60px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1350px){
+    .menu-bar .animation{
+        left : 75px;  
+        --leftPos1 : 75px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1400px){
+    .menu-bar .animation{
+        left : 90px;  
+        --leftPos1 : 85px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
         left : var(--leftPos1);
@@ -435,8 +520,30 @@ article img{
 
 @media screen and (min-width : 1500px){
     .menu-bar .animation{
-        left : 120px;  
-        --leftPos1 : 120px;
+        left : 110px;  
+        --leftPos1 : 110px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1550px){
+    .menu-bar .animation{
+        left : 125px;  
+        --leftPos1 : 125px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
         left : var(--leftPos1);
@@ -457,8 +564,30 @@ article img{
 
 @media screen and (min-width : 1600px){
     .menu-bar .animation{
-        left : 150px;  
-        --leftPos1 : 150px;
+        left : 140px;  
+        --leftPos1 : 140px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1650px){
+    .menu-bar .animation{
+        left : 155px;  
+        --leftPos1 : 155px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
         left : var(--leftPos1);
@@ -479,8 +608,30 @@ article img{
 
 @media screen and (min-width : 1700px){
     .menu-bar .animation{
-        left : 170px;  
-        --leftPos1 : 170px;
+        left : 165px;  
+        --leftPos1 : 165px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1750px){
+    .menu-bar .animation{
+        left : 175px;  
+        --leftPos1 : 175px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
         left : var(--leftPos1);
@@ -521,10 +672,10 @@ article img{
     }
 }
 
-@media screen and (min-width : 1800px){
+@media screen and (min-width : 1850px){
     .menu-bar .animation{
-        left : 210px;  
-        --leftPos1 : 210px;
+        left : 205px;  
+        --leftPos1 : 205px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
         left : var(--leftPos1);
@@ -544,6 +695,28 @@ article img{
 }
 
 @media screen and (min-width : 1900px){
+    .menu-bar .animation{
+        left : 220px;  
+        --leftPos1 : 220px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1950px){
     .menu-bar .animation{
         left : 230px;  
         --leftPos1 : 230px;
@@ -567,8 +740,30 @@ article img{
 
 @media screen and (min-width : 2000px){
     .menu-bar .animation{
-        left : 250px;  
-        --leftPos1 : 250px;
+        left : 245px;  
+        --leftPos1 : 245px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 2050px){
+    .menu-bar .animation{
+        left : 255px;  
+        --leftPos1 : 255px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
         left : var(--leftPos1);
@@ -591,6 +786,50 @@ article img{
     .menu-bar .animation{
         left : 270px;  
         --leftPos1 : 270px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 2150px){
+    .menu-bar .animation{
+        left : 285px;  
+        --leftPos1 : 285px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 2150px){
+    .menu-bar .animation{
+        left : 295px;  
+        --leftPos1 : 295px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
         left : var(--leftPos1);
@@ -871,7 +1110,7 @@ article img{
 
 @media screen and (min-width : 1400px){
     .gameplay-title h2{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .gameplay-photo{
         width: 50%;
@@ -880,5 +1119,82 @@ article img{
         padding : 1.1rem 0.5rem;
         font-size: 1.8rem;
         line-height: 1.4;
+    }
+}
+
+.update-div{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(../assets/background/update.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.update-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    color: white;
+}
+
+.update-title h2{
+    text-align: center;
+    font-family: "HYWenHei-85W";
+    font-size: 3rem;
+}
+
+.update-detail{
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-photo{
+    width: 50%;
+    height: 50%;
+}
+
+.update-photo img{
+    width: 100%;
+    height: 100%;
+}
+
+.update-version{
+    background-color: rgba(0,0,0,0.3);
+    height: 50%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    padding: 1rem 1rem;
+}
+
+.update-version h2{
+    font-size: 2rem;
+}
+
+.update-version p{
+    font-size: 1.2rem;
+    border-bottom: 1px solid white;
+}
+
+.update-version span{
+    color : rgba(255,255,255,0.5);
+}
+
+@media screen and (max-width : 1200px){
+    .update-version h2{
+        font-size: 1.5rem;
+    }
+
+    .update-version p{
+        font-size: 1.1rem;
+        border-bottom: 1px solid white;
     }
 }
