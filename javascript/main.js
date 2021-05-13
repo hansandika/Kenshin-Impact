@@ -20,16 +20,18 @@ const navbarLogo = document.querySelector("#logo-navbar");
 const mainLogo = document.querySelector('#logo-main');
 const navbar = document.querySelector('nav');
 document.addEventListener('scroll',() => {
-    if(window.scrollY > 0){
-        navbarLogo.style.visibility = 'visible';
-        mainLogo.style.visibility = "hidden";
-        navbar.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
-        console.log(window.scrollY)
-    }
-    else if(window.scrollY == 0){
-        navbarLogo.style.visibility = 'hidden';
-        mainLogo.style.visibility = 'visible';
-        navbar.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    if(screen.width < 770){
+        if(window.scrollY > 0){
+            navbarLogo.style.visibility = 'visible';
+            mainLogo.style.visibility = "hidden";
+            navbar.style.backgroundColor = "rgb(0, 0, 0, 0.8)";
+            // console.log(window.scrollY)
+        }
+        else if(window.scrollY == 0){
+            navbarLogo.style.visibility = 'hidden';
+            mainLogo.style.visibility = 'visible';
+            navbar.style.backgroundColor = "rgb(0, 0, 0, 0)";
+        }
     }
 })
 
