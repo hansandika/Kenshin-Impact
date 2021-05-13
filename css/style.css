@@ -4,6 +4,12 @@
     src : url("../assets/font/zh-cn.ttf");
 }
 
+:root{
+    --leftPos1 : 0px;
+    --leftPos2 : 0px;
+    --leftPos3 : 0px;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -28,7 +34,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(187, 184, 184, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 5;
 }
 
@@ -43,7 +49,6 @@ nav{
     width: 100%;
 }
 
-
 .menu{
     width: 70%;
     height: 100%;
@@ -53,20 +58,25 @@ nav{
 }
 
 .menu-bar{  
+    position : relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 75%;
+    height: 100%;
 }
 
-
 .menu-content{
-    height: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: bolder;
     transition: all 0.5s ease-in;
+    cursor: pointer;
 }
 
 .menu-content a{
@@ -74,9 +84,72 @@ nav{
     text-decoration: none;
 }
 
+.menu-bar .animation{
+    position : absolute;
+    height: 5px;
+    width: 85px;
+    top : 0;
+    left: 105px;
+    z-index: -5;
+    background-color: #7EE0FF;
+    transition: all .5s ease 0s;
+    --leftPos1 : 105px;
+    --leftPos2 : calc(85px + var(--leftPos1) + 10px);
+    --leftPos3 : calc(155px + var(--leftPos2));
+    --leftPos4 : calc(150px + var(--leftPos3));
+}
+
+nav .start-home, .menu-content:first-child:hover ~.animation{
+    left : 105px;
+}
+
+.menu-content:first-child{
+    width: 105px;
+}
+
+nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+    left : var(--leftPos2);
+    width: 150px;
+}
+
+.menu-content:nth-child(2){
+    width: 150px;
+}
+
+nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+    left : var(--leftPos3);
+    width: 150px;
+}
+
+ .menu-content:nth-child(3){
+    width: 150px;
+ }
+
+nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+    left : var(--leftPos4);
+    width: 180px;
+}
+
+.menu-content:nth-child(4){
+    width: 180px;
+}
+
+.active{
+    text-shadow: 1px 1px 8px #7EE0FF;
+}
+
+.menu-content a:hover{
+    text-shadow: 1px 1px 8px #7EE0FF;
+}
+/* .border-active{
+    border-top: 5px solid #7EE0FF;
+    text-shadow : blur(10px);
+} */
+
 .login-content{
     display: none;
 }
+
 
 .login{
     padding : 0.3em 0.8em;
@@ -120,27 +193,20 @@ nav{
     padding-left: 40px;
 }
 
+.grey-div{
+    height: 10vh;
+    background-color: #393B40;
+}
+
 aside{
     position : fixed;
     right: 0;
-    width: 50%;
+    width: 80%;
     height: 100vh;
     background-color: white;
-    background-color: rgba(255,255,255,.3);
-    backdrop-filter: blur(10px);
     display: none;
     transition : all 0.5s ease;
     z-index: 2;
-}
-
-header{
-    height: 15vh;
-}
-
-header img{
-    padding: 1em;
-    width: 70%;
-    height: 100%;
 }
 
 .list-sidebar{
@@ -159,8 +225,7 @@ header img{
     font-size: 1.2rem;
     color : black;
     padding-left: 2.2rem;
-    border-top : 1px solid rgba(255,255,255,.1);
-    border-bottom : 1px solid black;
+    border-bottom : 1px solid rgba(0,0,0,0.05);
     transition : all 0.4s ease;
 }
 
@@ -201,7 +266,6 @@ article img{
 }
 
 .burger{
-    background-color: rgb(117, 110, 114);
     display: none;
     height: 30px;
     padding: 8px;
@@ -210,21 +274,340 @@ article img{
 }
 
 .burger div{
-    width: 25px;
-    height: 3px;
+    width: 20px;
+    height: 2.5px;
     background-color: white;
     transition: all 0.3 ease;
 }
 
 .burger div:first-child{
-    margin-bottom: 3.2px;
+    margin-bottom: 4px;
 }
 
 .burger div:nth-child(2){
-     margin-bottom: 3.2px;
+     margin-bottom: 4px;
 }
 
-@media screen and (max-width : 950px){
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,4px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-4px);
+}
+
+@media screen and (max-width : 1477px){
+    .menu-bar .animation{
+        left : 70px;  
+        --leftPos1 : 70px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (max-width : 1262px){
+    .menu-bar .animation{
+        left : 40px;  
+        --leftPos1 : 40px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (max-width : 1262px){
+    .menu-bar .animation{
+        left : 20px;  
+        --leftPos1 : 20px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (max-width : 1100px){
+    .menu-bar .animation{
+        left : 10px;  
+        --leftPos1 : 10px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (max-width : 1100px){
+    .menu-bar .animation{
+        left : 10px;  
+        --leftPos1 : 10px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1450px){
+    .menu-bar .animation{
+        left : 100px;  
+        --leftPos1 : 100px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1500px){
+    .menu-bar .animation{
+        left : 120px;  
+        --leftPos1 : 120px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1600px){
+    .menu-bar .animation{
+        left : 150px;  
+        --leftPos1 : 150px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1700px){
+    .menu-bar .animation{
+        left : 170px;  
+        --leftPos1 : 170px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1800px){
+    .menu-bar .animation{
+        left : 190px;  
+        --leftPos1 : 190px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1800px){
+    .menu-bar .animation{
+        left : 210px;  
+        --leftPos1 : 210px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 1900px){
+    .menu-bar .animation{
+        left : 230px;  
+        --leftPos1 : 230px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 2000px){
+    .menu-bar .animation{
+        left : 250px;  
+        --leftPos1 : 250px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (min-width : 2100px){
+    .menu-bar .animation{
+        left : 270px;  
+        --leftPos1 : 270px;
+    }
+    nav .start-home, .menu-content:first-child:hover ~.animation{
+        left : var(--leftPos1);
+    }
+
+    nav .start-character, .menu-content:nth-child(2):hover ~.animation{
+        left : var(--leftPos2);
+    }
+
+    nav .start-about, .menu-content:nth-child(3):hover ~.animation{
+        left : var(--leftPos3);
+    }
+
+    nav .start-download, .menu-content:nth-child(4):hover ~.animation{
+        left : var(--leftPos4);
+    }
+}
+
+@media screen and (max-width : 1060px){
     .logo{
         height: fit-content;
     }
@@ -251,6 +634,7 @@ article img{
     }
 }
 
+
 @media screen and (max-width : 770px){
     .logo{
         height: fit-content;
@@ -268,19 +652,63 @@ article img{
     .menu{
         display: none;
     }
+    .list-sidebar a{
+        font-size: 2rem;
+        line-height: 7rem;
+    }
     aside{
+        width: 60vw;
         display: block;
         transform : translateX(100%);
     }
     .burger{
         display: block;
+        padding-right: 30px;
+    }
+    .burger div{
+        width: 30px;
+        height: 4px;
+    }
+    .burger div:first-child{
+        margin-bottom: 7px;
+    }
+    .burger div:nth-child(2){
+        margin-bottom: 7px;
     }
     nav{
+        height: 10vh;
         justify-content: space-between;
+        background-color: rgba(0,0,0,0);
+    }
+    .logo img{
+        visibility: hidden;
+    }
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-8px,8px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-8px,-8px);
     }
 }
 
 @media screen and (max-width : 500px){
+    .burger{
+        padding: 8px;
+    }
+    .burger div{
+        width: 20px;
+        height: 2.5px;
+    }
+    .burger div:first-child{
+        margin-bottom: 4px;
+    }
+
+    .burger div:nth-child(2){
+        margin-bottom: 4px;
+    }
     .logo{
         height: fit-content;
     }
@@ -293,12 +721,28 @@ article img{
     .logo a img{
         padding: 0.5rem;
     }
+    aside{
+        width: 80vw;
+    }
+    .list-sidebar a{
+        line-height: 5rem;
+        font-size: 1.2rem;
+    }
     article{
         padding: 10vh 0 12vh 0;
         font-size: 0.9rem;
     }
     article img{
         width: 90%;
+    }
+        .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,4px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-4px);
     }
 }
 
@@ -316,17 +760,6 @@ article img{
         transform: translateX(0px);
     }
 }
-
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,3.5px);
-}
-.toggle .line2{
-    opacity: 0;
-}
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-3.5px);
-}
-
 
 .gameplay-div{
     width: 100%;
