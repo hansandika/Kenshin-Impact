@@ -1272,3 +1272,130 @@ article img{
         min-width: 280px;
     }   
 }
+
+@media screen and (max-width : 330px) {
+     .update-version h2{
+        font-size: 1.5rem;
+    }
+    .update-version p{
+        font-size: 1.2rem;
+        border-bottom: 1px solid white;
+    }
+}
+
+footer{
+    height: 40vh;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+.logo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mihoyo-div{
+    padding: 0 1rem;
+    width: 20vw;
+    height: auto;
+    border-right: 2px solid rgba(255,255,255,0.5);;
+}
+
+.mihoyo-div img{
+    width: 100%;
+}
+
+.kenshin-impact-logo{
+    padding: 0 1rem 1.5vh;
+    width: 20vw;
+    height: auto;
+}
+
+.kenshin-impact-logo img{
+    width: 100%;
+}
+
+.terms{
+    color : rgba(255,255,255,0.5);
+    display: flex;
+}
+
+.terms p{
+    border-left: 1.5px solid rgba(255,255,255,0.5);
+    padding: 0.5rem 1rem;
+}
+
+.copyright{
+    color : rgba(255,255,255,0.5);
+}
+
+@media screen and (max-width : 1300px){
+    .mihoyo-div{
+        width: 30vw;
+    }
+    .kenshin-impact-logo{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width : 900px){
+    .terms p{
+        padding: 0.5rem 0.6rem;
+    }
+    .terms p, .copyright p{
+        font-size: 0.7rem;
+    }
+    .mihoyo-div{
+        width: 35vw;
+    }
+    .kenshin-impact-logo{
+        width: 35vw;
+    }
+}
+
+@media screen and (max-width : 600px){
+    .terms p{
+        padding: 0.3rem 0.4rem;
+    }
+    .terms p, .copyright p{
+        font-size: 0.7rem;
+    }
+    .mihoyo-div{
+        width: 45vw;
+    }
+    .kenshin-impact-logo{
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width : 450px){
+    .terms p, .copyright p{
+        font-size: 0.6rem;
+    }
+    .mihoyo-div{
+        width: 45vw;
+    }
+    .kenshin-impact-logo{
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width : 330px){  
+    .terms p{
+        padding: 0.2rem 0.3rem;
+    }
+    .terms p, .copyright p{
+        font-size: 0.55rem;
+    }
+    .mihoyo-div{
+        width: 45vw;
+    }
+    .kenshin-impact-logo{
+        width: 45vw;
+    }
+}
