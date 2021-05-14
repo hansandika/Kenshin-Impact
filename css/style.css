@@ -202,7 +202,7 @@ nav .start-download, .menu-content:nth-child(4):hover ~.animation{
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
     display: none;
-    z-index: 4;
+    z-index: 5;
 }
 
 aside{
@@ -213,7 +213,7 @@ aside{
     background-color: white;
     display: none;
     transition : all 0.5s ease;
-    z-index: 4;
+    z-index: 10;
 }
 
 .list-sidebar{
@@ -228,12 +228,17 @@ aside{
     display: block;
     height: 100%;
     width: 100%;
+    border-left: 5px solid white;
     line-height: 5rem;
     font-size: 1.2rem;
     color : black;
     padding-left: 2.2rem;
-    border-bottom : 1px solid rgba(0,0,0,0.5);
+    border-bottom : 0.5px solid rgba(0,0,0,0.1);
     transition : all 0.4s ease;
+}
+
+.sidebar-active{
+    border-left: 5px solid #7EE0FF;
 }
 
 .list-sidebar li:hover a{
@@ -273,11 +278,14 @@ article img{
 }
 
 .burger{
+    position : fixed;
+    right: 5vw;
+    top : 2vh;
     display: none;
     height: 30px;
     padding: 8px;
     cursor: pointer;
-    z-index: 7;
+    z-index: 10;
 }
 
 .burger div{
@@ -285,7 +293,6 @@ article img{
     height: 2.5px;
     background-color: white;
     transition: all 0.3s ease;
-    z-index: 7;
 }
 
 .burger div:first-child{
@@ -305,19 +312,6 @@ article img{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-4px);
 }
-/* 
-.close-div div{
-    width: 20px;
-    height: 2.5px;
-    background-color: white;
-    transition: all 0.3s ease;
-}
-.close-div .line1{
-    transform: rotate(-45deg) translate(-5px,4px);
-}
-.close-div .line2{
-    transform: rotate(45deg) translate(-5px,-4px);
-} */
 
 @media screen and (max-width : 1477px){
     .menu-bar .animation{
@@ -1004,13 +998,21 @@ article img{
     }
 }
 
-.gameplay-div{
-    width: 100%;
-    min-height: 100vh;
+.gameplay-background{
+    position : absolute;
+    width: 100vw;
+    height: 100vh;
     background-image: url(../assets/background/gameplay.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: -2;
+    filter : blur(2px);
+}
+
+.gameplay-div{
+    width: 100%;
+    min-height: 100vh;
     color: white;
 }
 
@@ -1196,5 +1198,27 @@ article img{
     .update-version p{
         font-size: 1.1rem;
         border-bottom: 1px solid white;
+    }
+}
+
+@media screen and (max-width : 1100px){
+    .update-version h2{
+        font-size: 1.3rem;
+    }
+
+    .update-version p{
+        font-size: 1rem;
+        border-bottom: 1px solid white;
+    }
+}
+
+
+@media screen and (max-width : 900px){
+    .update-photo{
+        width: 60%;
+        height: 50%;
+    }
+    .update-version{
+        width: 30%;
     }
 }
