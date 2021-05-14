@@ -16,10 +16,13 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+/* 
+body{
+    overflow-x : hidden;
+} */
 
 .landing-page{
     height: 100vh;
-    width: 100vw;
     background-image: url(../assets/background/landingpage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -198,7 +201,7 @@ nav .start-download, .menu-content:nth-child(4):hover ~.animation{
 
 .sidebar-div{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
     display: none;
@@ -882,9 +885,6 @@ article img{
     article{
         font-size: 1.2rem;
     }
-    body{
-        overflow-x : hidden;
-    }
     .menu{
         display: none;
     }
@@ -1000,8 +1000,8 @@ article img{
 
 .gameplay-background{
     position : absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: url(../assets/background/gameplay.jpg);
     background-size: cover;
     background-position: center;
@@ -1011,7 +1011,7 @@ article img{
 }
 
 .gameplay-div{
-    width: 100%;
+    /* border : 1px solid red; */
     min-height: 100vh;
     color: white;
 }
@@ -1030,7 +1030,6 @@ article img{
 }
 
 .gameplay-card{     
-    width: 100vw;
     height: 85vh;
     display: flex;
     align-items: center;
@@ -1090,17 +1089,16 @@ article img{
         width: 50%;
         height: 80%;
         padding: 1rem 1.5rem;
-        font-size: 1.2rem;
-        line-height: 1.4rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
 }
 
-
 @media screen and (min-width : 1000px){
     .gameplay-text{
-        padding : 1.1rem 0.5rem;
-        font-size: 1.5rem;
-        line-height: 1.3;
+        padding : 1.1rem 1.5rem;
+        font-size: 1.3rem;
+        line-height: 1.35;
     }
     .gameplay-detail{
         width: 90vw;
@@ -1118,19 +1116,27 @@ article img{
         width: 50%;
     }
     .gameplay-text{
-        padding : 1.1rem 0.5rem;
-        font-size: 1.8rem;
-        line-height: 1.4;
+        padding : 1rem 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
     }
 }
 
 .update-div{
-    width: 100vw;
+    position: relative;
     min-height: 100vh;
+}
+
+.update-background{
+    position : absolute;
+    width: 100%;
+    min-height: 100%;
     background-image: url(../assets/background/update.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index : -2;
+    filter : blur(2px);
 }
 
 .update-title{
@@ -1138,6 +1144,7 @@ article img{
     justify-content: center;
     align-items: center;
     height: 15vh;
+    padding-top: 10vh;
     color: white;
 }
 
@@ -1149,15 +1156,16 @@ article img{
 
 .update-detail{
     display: flex;
-    width: 100vw;
     height: 85vh;
     justify-content: center;
     align-items: center;
 }
 
 .update-photo{
-    width: 50%;
+    width: 40%;
     height: 50%;
+    min-width: 320px;
+    max-height: 400px;
 }
 
 .update-photo img{
@@ -1175,6 +1183,8 @@ article img{
     justify-content: space-evenly;
     color: white;
     padding: 1rem 1rem;
+    max-height: 400px;
+    min-width: 320px;
 }
 
 .update-version h2{
@@ -1182,8 +1192,13 @@ article img{
 }
 
 .update-version p{
+    cursor : pointer;
     font-size: 1.2rem;
     border-bottom: 1px solid white;
+}
+
+.update-version p:hover{
+    background-color : rgba(255,255,255,0.1);
 }
 
 .update-version span{
@@ -1201,7 +1216,7 @@ article img{
     }
 }
 
-@media screen and (max-width : 1100px){
+@media screen and (max-width : 1105px){
     .update-version h2{
         font-size: 1.3rem;
     }
@@ -1213,12 +1228,47 @@ article img{
 }
 
 
-@media screen and (max-width : 900px){
+@media screen and (max-width : 1050px){
     .update-photo{
-        width: 60%;
-        height: 50%;
+        width: 50%;
+        height: 55%;
     }
     .update-version{
         width: 30%;
+        height: 55%;
+    }   
+     .update-version h2{
+        font-size: 1.7rem;
     }
+    .update-version p{
+        font-size: 1.3rem;
+        border-bottom: 1px solid white;
+    }
+}
+
+@media screen and (max-width : 760px){
+    .update-title h2{
+        font-size: 2rem;
+    }
+    .update-detail{
+        flex-direction: column;
+    }
+    .update-photo{
+        width: 50%;
+        height: 40%;
+    }
+    .update-version{
+        width: 50%;
+        height: 40%;
+    }   
+}
+
+
+@media screen and (max-width : 405px) {
+     .update-photo{
+        min-width: 280px;
+    }
+    .update-version{
+        min-width: 280px;
+    }   
 }
