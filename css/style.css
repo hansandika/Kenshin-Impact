@@ -16,10 +16,10 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-/* 
+
 body{
     overflow-x : hidden;
-} */
+}
 
 .landing-page{
     height: 100vh;
@@ -1134,7 +1134,7 @@ article img{
     background-image: url(../assets/background/update.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left 20% center;
     z-index : -2;
     filter : blur(2px);
 }
@@ -1283,6 +1283,200 @@ article img{
     }
 }
 
+.download{
+    min-height: 70vh;
+    height: 70vh;
+    position: relative;
+}
+
+.download-background{
+    height: 70vh;
+    position: absolute;
+    width: 100%;
+    background-image: url(../assets/background/Download.jpg);
+    background-size: cover;
+    background-position: right 20% center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter : brightness(80%);
+}
+
+
+.download-content{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download-text{
+    padding-left: 3rem;
+    width: 100%;
+}
+
+.download-text h2{
+    text-align: left;
+    font-family: 'HYWenHei-85W';
+    color : rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+    font-size: 2.5rem;
+}
+
+.download-button button{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: white;
+    font-size: 3rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    transition: ease-out 0.3s;
+    cursor : pointer;
+    padding: 1rem 3rem;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.download-button button:hover{
+    color : rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 8px #7EE0FF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.download-button button::before{
+    transition : 0.5s all ease;
+    content : "";
+    border-radius: 1rem;
+    position: absolute;
+    top : 0;
+    left : 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(255,255,255,1);
+}
+
+.download-button button:hover:before{
+    transition : all 0.5s all ease;
+    left : 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+@media screen and (max-width : 950px) {
+    .download-content{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 750px) {
+    .download-text{
+        padding-left : 2rem;
+    }
+    .download-text h2{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .download-button button{
+        font-size: 2.5rem;
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .download-text{
+        padding-left : 1rem;
+    }
+    .download-text h2{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .download-button button{
+        font-size: 2.2rem;
+        padding: 0.5rem 2rem;
+    }
+}
+
+.contact-us{
+    position : relative;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.contact-us-background{
+    position : absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/background/ContactUs.jpg);
+    background-position: left 20% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.contact-us-content{
+    padding : 2vh 5vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.contact-us-content h2{
+    color : white;
+    font-family: 'HYWenHei-85W';
+    text-transform: uppercase;
+}
+
+.fab {
+    padding: 0.7rem;
+    font-size: 3rem;    
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    cursor : pointer;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-discord{
+    background : #6776BA;
+    color : white;
+}
+
+
+
+
 footer{
     height: 40vh;
     background-color: rgb(43, 43, 43);
@@ -1399,3 +1593,13 @@ footer{
         width: 45vw;
     }
 }
+
+
+
+
+
+
+
+
+
+
