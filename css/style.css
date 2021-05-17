@@ -846,7 +846,7 @@ article img{
 }
 
 /* hp */
-@media screen and (max-width : 1060px){
+/* @media screen and (max-width : 1060px){
     .logo{
         height: fit-content;
     }
@@ -871,10 +871,10 @@ article img{
     .login-logo{
         font-size: 1.2rem;
     }
-}
+} */
 
 
-@media screen and (max-width : 770px){
+@media screen and (max-width : 1030px){
     .logo{
         height: fit-content;
     }
@@ -1406,7 +1406,6 @@ article img{
 .contact-us{
     position : relative;
     height: 100vh;
-    /* height: auto; */
     min-height: 100vh;
 }
 
@@ -1464,8 +1463,12 @@ article img{
 }
 
 .contact-us-logo i{
-    margin: 0rem 1.5rem 1.5rem;   
+    margin: 0 1.5rem 1.5rem 0;  
     font-size: 3rem;
+}
+
+.contact-us-logo:first-child{
+    margin-left: 2rem;
 }
 
 .contact-us-box{
@@ -1543,7 +1546,11 @@ article img{
     .contact-us-row p{
         font-size: 1.2rem;
         line-height: 2.5rem;
+        padding-left: 0.2rem;
     }  
+    .contact-us-logo:first-child{
+        margin-left: 5rem;
+    }
 }
 
 @media screen and (max-width : 1100px){
@@ -1556,16 +1563,12 @@ article img{
 }
 
 @media screen and (max-width : 950px) {
-    .fab{
-        padding: 0.5rem;
-        font-size: 1.5rem;
-    }      
     .contact-us-row h2{
-        font-size: 1.2em;
+        font-size: 2rem;
     }
     .contact-us-row p{
-        font-size: 0.9rem;
-        line-height: 1.1rem;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
         padding: 0.5rem;
     }
 }
@@ -1756,13 +1759,3 @@ footer{
         width: 45vw;
     }
 }
-
-
-
-
-
-
-
-
-
-
