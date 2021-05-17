@@ -37,11 +37,43 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 4;
     transition: all 0.5s ease;
 }
 
+.dropdown{
+    position : relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content{
+    position : absolute;
+    top : 15vh;
+    left: 0;
+    display: none;
+    list-style: none;
+    background-color: #2F2D2B;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 4;
+    transition : all 5s ease-in-out;
+}
+
+.dropdown-content li a{
+    color : white;
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem;
+}
+
+.dropdown-content li a:hover{
+    background-color: #3E3F3F;
+}
 
 .logo{
     width: 15rem;
@@ -51,7 +83,7 @@ nav{
 .logo a img{
     padding-top: 0.5rem;
     width: 100%;
-    transition : all 0.2s ease-in-out;
+    /* transition : all 0.2s ease-in-out; */
 }
 
 .menu{
@@ -72,7 +104,7 @@ nav{
 }
 
 .menu-content{
-    height: 12vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1230,11 +1262,11 @@ article img{
 @media screen and (max-width : 1050px){
     .update-photo{
         width: 50%;
-        height: 55%;
+        height: 35%;
     }
     .update-version{
         width: 30%;
-        height: 55%;
+        height: 35%;
     }   
      .update-version h2{
         font-size: 1.7rem;
@@ -1615,15 +1647,18 @@ article img{
 
 @media screen and (max-width : 420px){
     .contact-us-title h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .contact-us-logo i{
         font-size: 1.5rem;
         margin: 0 0.7vw; 
     }
+    .contact-us-row h2{
+        font-size: 1.2rem;
+    }
     .contact-us-row p{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: 0.7rem;
     } 
 }
@@ -1635,7 +1670,7 @@ article img{
         margin: 0 0.7vw; 
     }
     .contact-us-row h2{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .contact-us-row p{
         font-size: 0.8rem;
