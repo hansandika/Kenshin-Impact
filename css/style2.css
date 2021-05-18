@@ -43,7 +43,8 @@ body{
 
 .character-landing-page{
     min-height: 100vh;
-    position: relative;
+    height: 110vh;
+    position: absolute;
     overflow : hidden;
 }
 
@@ -58,11 +59,13 @@ body{
     background-position: left 20% center;
     filter : blur(3px);
     z-index: -2;
+    transition: 0.3s;
 }
+
 
 .paraleogram{
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 55vw;
     left : 12vw;
     transform: skew(45deg);
@@ -1023,12 +1026,14 @@ aside{
 
 .content{
     width: 100%;
-    height: auto;
+    height: 110vh;
     position: absolute;
     min-height : 100vh;
     top : 0;
     display: flex;  
     align-items: center;
+    position : relative;
+    overflow-y: hidden;
 }
 
 .map-content{
@@ -1077,7 +1082,7 @@ aside{
     top : 0;
     position: absolute;
     width: auto;
-    height: 100%;
+    height: 110vh;       
     overflow: hidden;
 }
 
@@ -1087,7 +1092,45 @@ aside{
     min-height: 100vh;
 }
 
+.slider-div{
+    position: absolute;
+    bottom: 0; 
+    left : 0;
+    height: 20vh;
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+}
 
+.image-list{
+    display: flex;
+    width: 65vw;
+    padding: 1rem 0;
+    height: 100%;
+}
+
+.image-content{
+    margin-right: 2rem;
+    border-radius: 8%;
+    background-color: rgba(0,0,0,0.3);
+    width: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img{
+    width: 100%;
+    height : 100%;
+}
+
+.image-content h3{
+    color : white;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+}
 
 
 
