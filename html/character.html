@@ -6,12 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character</title>
     <link rel="shortcut icon" href="../assets/photo/paemon.jpg" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
 </head>
 <body>
-    
+    <div class="character-landing-page">
+        <div class="sidebar-div"></div>
+        <aside class="sidebar">
+            <div class="grey-div">
+            </div>
+            <ul class="list-sidebar">
+                <li class="sidebar-content sidebar-active"><a href="#"><i class="fas fa-qrcode"></i>Home</a></li>
+                <li class="sidebar-content"><a href="#"><i class="fas fa-user-ninja"></i>Character</a></li>
+                <li class="sidebar-content"><a href="#"><i class="fas fa-question-circle"></i>About Us</a></li>
+                <li class="sidebar-content"><a href="#"><i class="fas fa-images"></i>Gallery</a></li>
+                <!-- <li class="sidebar-content"><a href="#"><i class="fas fa-download"></i>Download</a></li> -->
+                <li class="sidebar-content"><a href="#"><i class="fas fa-key"></i>Login</a></li>
+            </ul>
+        </aside>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav>
+            <div class="logo">
+                <a href="" id="logo-navbar"><img src="../assets/Logo/logo putih.png"></a>
+            </div>
+            <div class="menu">
+                <ul class="menu-bar">
+                    <li class="menu-content active">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="menu-content dropdown">
+                        <a href="./character.html">Character</a>
+                        <ul class="dropdown-content">
+                            <li><a href='#'>Liyue Harbor</a></li>
+                            <li><a href='#'>Mondstadt</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-content">
+                        <a href="./index.html">Gallery</a>
+                    </li>
+                    <li class="menu-content">
+                        <a href="./index.html">About Game</a>
+                    </li>
+                    <li class="menu-content login-content">
+                        <a href="./index.html">Login</a>
+                    </li>
+                    <div class="animation start-home"></div>
+                </ul>
+                <div class="login">
+                    <a href="./index.html">Login</a>
+                    <div class="login-logo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script src="../javascript/navbar.js"></script>
 </body>
 </html>
