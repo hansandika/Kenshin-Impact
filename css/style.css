@@ -1014,6 +1014,14 @@ article img{
     filter : blur(2px);
 }
 
+.gameplay-background::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+}
+
 .gameplay-div{
     min-height: 100vh;
     color: white;
@@ -1140,6 +1148,14 @@ article img{
     background-position: left 20% center;
     z-index : -2;
     filter : blur(2px);
+}
+
+.update-background::after{
+    content: '';
+    position : absolute;
+    width: 100%;
+    height : 100%;
+    background-color: rgba(0,0,0,0.15);
 }
 
 .update-title{
