@@ -22,11 +22,33 @@ body{
 }
 
 .character-landing-page{
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    overflow : hidden;
+}
+
+.character-background{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    position : absolute;
     background-image: url(../assets/background/Mondstadt.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left 20% center;
+    filter : blur(3px);
+    z-index: -2;
+}
+
+.paraleogram{
+    position: absolute;
+    height: 100vh;
+    width: 70rem;
+    left : 12vw;
+    transform: skew(45deg);
+    z-index: -1;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(1px);
 }
 
 nav{
@@ -37,7 +59,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 4;
     transition: all 0.5s ease;
 }
@@ -123,20 +145,21 @@ nav{
 .menu-bar .animation{
     position : absolute;
     height: 5px;
-    width: 85px;
+    width: 150px;
     top : 0;
     left: 105px;
     z-index: -5;
     background-color: #7EE0FF;
     transition: all .5s ease 0s;
     --leftPos1 : 105px;
-    --leftPos2 : calc(85px + var(--leftPos1) + 10px);
+    --leftPos2 : calc(85px + var(--leftPos1) + 10px); 
     --leftPos3 : calc(155px + var(--leftPos2));
     --leftPos4 : calc(150px + var(--leftPos3));
 }
 
 nav .start-home, .menu-content:first-child:hover ~.animation{
     left : 105px;
+    width: 105px;
 }
 
 .menu-content:first-child{
@@ -174,7 +197,7 @@ nav .start-download, .menu-content:nth-child(4):hover ~.animation{
     text-shadow: 1px 1px 8px #7EE0FF;
 }
 
-.menu-content a:hover{
+.menu-content:hover{
     text-shadow: 1px 1px 8px #7EE0FF;
 }
 
@@ -348,7 +371,7 @@ aside{
 
 @media screen and (max-width : 1262px){
     .menu-bar .animation{
-        left : 20px;  
+        left : 115px;  
         --leftPos1 : 20px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -370,7 +393,7 @@ aside{
 
 @media screen and (max-width : 1100px){
     .menu-bar .animation{
-        left : 10px;  
+        left : 105px;  
         --leftPos1 : 10px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -392,7 +415,7 @@ aside{
 
 @media screen and (min-width : 1200px){
     .menu-bar .animation{
-        left : 35px;  
+        left : 130px;  
         --leftPos1 : 35px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -414,7 +437,7 @@ aside{
 
 @media screen and (min-width : 1250px){
     .menu-bar .animation{
-        left : 50px;  
+        left : 145px;  
         --leftPos1 : 50px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -436,7 +459,7 @@ aside{
 
 @media screen and (min-width : 1300px){
     .menu-bar .animation{
-        left : 60px;  
+        left : 155px;  
         --leftPos1 : 60px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -458,7 +481,7 @@ aside{
 
 @media screen and (min-width : 1350px){
     .menu-bar .animation{
-        left : 75px;  
+        left : 170px;  
         --leftPos1 : 75px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -480,7 +503,7 @@ aside{
 
 @media screen and (min-width : 1400px){
     .menu-bar .animation{
-        left : 90px;  
+        left : 185px;  
         --leftPos1 : 85px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -502,7 +525,7 @@ aside{
 
 @media screen and (min-width : 1450px){
     .menu-bar .animation{
-        left : 100px;  
+        left : 195px;  
         --leftPos1 : 100px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -524,7 +547,7 @@ aside{
 
 @media screen and (min-width : 1500px){
     .menu-bar .animation{
-        left : 110px;  
+        left : 205px;  
         --leftPos1 : 110px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -546,7 +569,7 @@ aside{
 
 @media screen and (min-width : 1550px){
     .menu-bar .animation{
-        left : 125px;  
+        left : 220px;  
         --leftPos1 : 125px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -568,7 +591,7 @@ aside{
 
 @media screen and (min-width : 1600px){
     .menu-bar .animation{
-        left : 140px;  
+        left : 235px;  
         --leftPos1 : 140px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -590,7 +613,7 @@ aside{
 
 @media screen and (min-width : 1650px){
     .menu-bar .animation{
-        left : 155px;  
+        left : 250px;  
         --leftPos1 : 155px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -612,7 +635,7 @@ aside{
 
 @media screen and (min-width : 1700px){
     .menu-bar .animation{
-        left : 165px;  
+        left : 260px;  
         --leftPos1 : 165px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -634,7 +657,7 @@ aside{
 
 @media screen and (min-width : 1750px){
     .menu-bar .animation{
-        left : 175px;  
+        left : 270px;  
         --leftPos1 : 175px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -656,7 +679,7 @@ aside{
 
 @media screen and (min-width : 1800px){
     .menu-bar .animation{
-        left : 190px;  
+        left : 285px;  
         --leftPos1 : 190px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -678,7 +701,7 @@ aside{
 
 @media screen and (min-width : 1850px){
     .menu-bar .animation{
-        left : 205px;  
+        left : 300px;  
         --leftPos1 : 205px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -700,7 +723,7 @@ aside{
 
 @media screen and (min-width : 1900px){
     .menu-bar .animation{
-        left : 220px;  
+        left : 315px;  
         --leftPos1 : 220px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -722,7 +745,7 @@ aside{
 
 @media screen and (min-width : 1950px){
     .menu-bar .animation{
-        left : 230px;  
+        left : 325px;  
         --leftPos1 : 230px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -744,7 +767,7 @@ aside{
 
 @media screen and (min-width : 2000px){
     .menu-bar .animation{
-        left : 245px;  
+        left : 340px;  
         --leftPos1 : 245px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -766,7 +789,7 @@ aside{
 
 @media screen and (min-width : 2050px){
     .menu-bar .animation{
-        left : 255px;  
+        left : 350px;  
         --leftPos1 : 255px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -788,7 +811,7 @@ aside{
 
 @media screen and (min-width : 2100px){
     .menu-bar .animation{
-        left : 270px;  
+        left : 365px;  
         --leftPos1 : 270px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -810,7 +833,7 @@ aside{
 
 @media screen and (min-width : 2150px){
     .menu-bar .animation{
-        left : 285px;  
+        left : 380px;  
         --leftPos1 : 285px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -830,9 +853,9 @@ aside{
     }
 }
 
-@media screen and (min-width : 2150px){
+@media screen and (min-width : 2200px){
     .menu-bar .animation{
-        left : 295px;  
+        left : 390px;  
         --leftPos1 : 295px;
     }
     nav .start-home, .menu-content:first-child:hover ~.animation{
@@ -975,5 +998,122 @@ aside{
     to{
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+footer{
+    height: 40vh;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+.logo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mihoyo-div{
+    padding: 0 1rem;
+    width: 20vw;
+    height: auto;
+    border-right: 2px solid rgba(255,255,255,0.5);;
+}
+
+.mihoyo-div img{
+    width: 100%;
+}
+
+.kenshin-impact-logo{
+    padding: 0 1rem 1.5vh;
+    width: 20vw;
+    height: auto;
+}
+
+.kenshin-impact-logo img{
+    width: 100%;
+}
+
+.terms{
+    color : rgba(255,255,255,0.5);
+    display: flex;
+}
+
+.terms p{
+    border-left: 1.5px solid rgba(255,255,255,0.5);
+    padding: 0.5rem 1rem;
+}
+
+.copyright{
+    color : rgba(255,255,255,0.5);
+}
+
+@media screen and (max-width : 1300px){
+    .mihoyo-div{
+        width: 30vw;
+    }
+    .kenshin-impact-logo{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width : 900px){
+    .terms p{
+        padding: 0.5rem 0.6rem;
+    }
+    .terms p, .copyright p{
+        font-size: 0.7rem;
+    }
+    .mihoyo-div{
+        width: 35vw;
+    }
+    .kenshin-impact-logo{
+        width: 35vw;
+    }
+}
+
+@media screen and (max-width : 600px){
+    .terms p{
+        padding: 0.3rem 0.4rem;
+    }
+    .terms p, .copyright p{
+        font-size: 0.7rem;
+    }
+    .mihoyo-div{
+        width: 45vw;
+    }
+    .kenshin-impact-logo{
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width : 450px){
+    .terms p, .copyright p{
+        font-size: 0.6rem;
+    }
+    .mihoyo-div{
+        width: 45vw;
+    }
+    .kenshin-impact-logo{
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width : 330px){  
+    .terms p{
+        padding: 0.2rem 0.3rem;
+    }
+    .terms p, .copyright p{
+        font-size: 0.55rem;
+    }
+    .mihoyo-div{
+        width: 45vw;
+    }
+    .kenshin-impact-logo{
+        width: 45vw;
     }
 }

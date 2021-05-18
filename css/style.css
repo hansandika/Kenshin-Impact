@@ -174,7 +174,7 @@ nav .start-download, .menu-content:nth-child(4):hover ~.animation{
     text-shadow: 1px 1px 8px #7EE0FF;
 }
 
-.menu-content a:hover{
+.menu-content:hover{
     text-shadow: 1px 1px 8px #7EE0FF;
 }
 
@@ -854,7 +854,7 @@ article img{
     }
 }
 
-@media screen and (min-width : 2150px){
+@media screen and (min-width : 2200px){
     .menu-bar .animation{
         left : 295px;  
         --leftPos1 : 295px;
