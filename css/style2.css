@@ -1092,8 +1092,29 @@ aside{
     min-height: 100vh;
 }
 
+.left-slider{
+    width: 5rem;
+    height: auto;
+}
+
+.left-slider img{
+    width: 100%;
+}
+
+.right-slider{
+    width: 5rem;
+    height: auto;
+}
+
+.right-slider img{
+    width: 100%;
+}
+
 .slider-div{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 0; 
     left : 0;
     height: 20vh;
@@ -1103,6 +1124,8 @@ aside{
 
 .image-list{
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 65vw;
     padding: 1rem 0;
     height: 100%;
