@@ -1047,13 +1047,21 @@ aside{
     padding: 0.5rem 0 1rem 1rem;
     color : White;
     font-size: 1.5rem;
-    width: 15rem;
+    width: 18rem;
 }
 
 .map-content img{
     width: 2rem;
     height: auto;
     margin-right: 1rem;
+}
+
+.map-active{
+    background: linear-gradient(to right, rgba(0,0,0,0.6),rgba(0,0,0,0));
+}
+
+.map-active img{
+    content : url(../assets/ICON/bulletin1.png);
 }
 
 .character-content{
