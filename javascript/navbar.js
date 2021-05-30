@@ -50,7 +50,7 @@ const scroll = () => {
 
 window.addEventListener('click', (e) =>{
     if(e.target == sidebarDiv && sidebarDiv.style.display == "block"){
-        sidebarDiv.style.display = "none";
+        sidebarDiv.style.display = "non e";
         sidebar.classList.remove('menu-active');
         burger.classList.remove('toggle');
         navLink.forEach((e,index) => {

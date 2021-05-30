@@ -53,7 +53,7 @@ body{
     min-height: 100vh;
     height: 100%;
     position : absolute;
-    background-image: url(../assets/background/Mondstadt.jpg);
+    background-image: url(../assets/background/Mondstat.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left 20% center;
@@ -1048,12 +1048,18 @@ aside{
     color : White;
     font-size: 1.5rem;
     width: 18rem;
+    cursor : pointer;
 }
 
 .map-content img{
     width: 2rem;
     height: auto;
     margin-right: 1rem;
+    pointer-events: none;
+}
+
+.map-content p{
+    pointer-events: none;
 }
 
 .map-active{
@@ -1069,7 +1075,7 @@ aside{
     width: 70vw;
 }
 
-.character-content h2{
+.character-name{
     border-top: 5px solid rgb(223, 188, 139);
     padding: 1rem;
     color : white;
@@ -1077,6 +1083,16 @@ aside{
     font-family: "HYWenHei-85W";
     font-size: 5rem;
     text-transform: uppercase;
+    opacity: 0;
+    display: none;
+    transform: translateX(100%);
+    transition : all 0.1s ease;
+}
+
+.active-character-name{
+    display: block;
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 .character-text{
@@ -1091,6 +1107,16 @@ aside{
     position: relative;
     z-index: 2;
     word-spacing: 5px;
+    transform: translateX(100%);
+    display: none;
+    opacity: 0;
+    transition : all 0.1s ease;
+}
+
+.active-character-text{
+    display: block;
+    transform: translateX(0%);
+    opacity: 1;
 }
 
 .character-image{
@@ -1100,10 +1126,19 @@ aside{
     width: auto;
     height: 110vh;       
     overflow: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.active-character-image{
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 .character-image img{
-    width: 52rem;
+    width: auto;
     height: 100%;
     min-height: 100vh;
 }
@@ -1137,7 +1172,8 @@ aside{
     left : 0;
     height: 25vh;
     width: 100%;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(1px);
 }
 
 .image-list{
@@ -1155,18 +1191,20 @@ aside{
     border-top-right-radius: 8%;
     background-color: rgba(0,0,0,0.3);
     width: 15%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     cursor : pointer;
+    transition: all 0.2s;
 }
 
 
 .image-content img{
     height : 80%;
+    pointer-events: none;
 }
 
 .image-content h3{
@@ -1181,13 +1219,14 @@ aside{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border-bottom-right-radius: 12%;
-    border-bottom-left-radius: 12%; */
+    pointer-events: none;
 }
 
 .active-character{
     border : 2px solid rgba(255,255,255,1);
     background-image: linear-gradient(to bottom right, rgba(0,0,0,1),rgba(88, 88, 88,1));
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
 }
 
 .active-character h3{
@@ -1203,6 +1242,26 @@ aside{
 .image-content:hover h3{
     color : black;
     background-color: rgba(255,255,255,1);
+}
+
+.character-name-div{
+    display: none;
+}
+
+.character-text-div{
+    display: none;
+}
+
+.character-image-div{
+    display: none;
+}
+
+.image-list{
+    display: none;
+}
+
+.active-div{
+    display: flex;
 }
 
 footer{
