@@ -216,7 +216,7 @@ nav .start-download, .menu-content:nth-child(4):hover ~.animation{
     width: 180px;
 }
 
-.active{
+.active > a{
     text-shadow: 1px 1px 8px #7EE0FF;
 }
 
