@@ -1,14 +1,13 @@
 const background = document.querySelector('.character-background');
-var flag = true;
+background.style.backgroundImage = 'url("../assets/background/Mondstat.png")';
 
-setInterval(()=>{
-    if(flag){
+const changeBackground = setInterval(()=>{
+    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.png")'){
         background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
-    }else{  
+    }else{
         background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
     }
-    flag = !flag;
-},15000)
+},20000)
 
 let currSlideIndex = 0;
 const slider = () =>{
@@ -111,6 +110,12 @@ const map = () =>{
                 mapContent[currIndex].className = mapContent[currIndex].className.replace(' map-active',' ');
                 mapContent[slideIndex].classList.add('map-active');
                 if(currIndex === 0){
+                    if(flag){
+                        background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
+                    }else{
+                        background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
+                    }
+                    flag = !flag;
                     characterNameDiv[0].classList.remove('active-div');
                     characterTextDiv[0].classList.remove("active-div");
                     imageDiv[0].classList.remove("active-div");
@@ -121,6 +126,12 @@ const map = () =>{
                     imageDiv[1].classList.add('active-div');
                     imageList[1].classList.add('active-div');
                 }else{
+                    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.png")'){
+                        background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
+                    }else{
+                        background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
+                    }
+                    flag = !flag;
                     characterNameDiv[0].classList.add('active-div');
                     characterTextDiv[0].classList.add('active-div');
                     imageDiv[0].classList.add('active-div');
@@ -145,5 +156,3 @@ const appCharacter = ()=>{
 
 appCharacter();
 
-// const activeDiv = document.querySelectorAll('.active-div');
-// console.log('tetst' , activeDiv[3].children.length);

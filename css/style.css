@@ -1266,6 +1266,11 @@ article img{
 }
 
 @media screen and (max-width : 760px){
+    .update-version{
+        width: 50%;
+        height: 40%;
+        min-width: 370px;
+    }   
     .update-title h2{
         font-size: 2rem;
     }
@@ -1275,21 +1280,29 @@ article img{
     .update-photo{
         width: 50%;
         height: 40%;
+        min-width: 370px;
     }
-    .update-version{
-        width: 50%;
-        height: 40%;
-    }   
 }
 
 
 @media screen and (max-width : 405px) {
      .update-photo{
         min-width: 280px;
+        height: auto;
     }
     .update-version{
         min-width: 280px;
+        height: auto;
     }   
+    .update-header h2{
+        font-size: 1.2rem;
+    }
+    .update-text p{
+        font-size: 1rem;
+    }
+    .update-version{
+        padding: 1rem 0;
+    }
 }
 
 @media screen and (max-width : 330px) {
@@ -1345,49 +1358,53 @@ article img{
     font-size: 2.5rem;
 }
 
+.download-button{
+    padding: 0.3rem;
+    border : 1px solid rgba(255,255,255,1);
+}
+
 .download-button button{
     position: relative;
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    color: white;
-    font-size: 3rem;
-    border-radius: 1rem;
+    color: rgb(17, 26, 36);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    width: 25rem;
+    height: auto;
     outline: none;
     border: none;
     transition: ease-out 0.3s;
     cursor : pointer;
-    padding: 1rem 3rem;
-    background-color: rgba(0,0,0,0.5);
+    padding: 0.8rem 3rem;
+    background-color: rgba(255, 255, 255,0.8);
     z-index: 1;
+    text-transform: uppercase;
 }
 
 .download-button button:hover{
-    color : rgba(0,0,0,0.5);
-    text-shadow: 1px 1px 8px #7EE0FF;
+    color : rgb(234, 231, 224);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-
 .download-button button::before{
-    transition : 0.5s all ease;
+    transition : 0.3s all ease;
     content : "";
-    border-radius: 1rem;
     position: absolute;
     top : 0;
     left : 50%;
     right: 50%;
     bottom: 0;
     opacity: 0;
-    background-color: rgba(255,255,255,1);
+    background-color: rgb(17, 26, 36);
 }
 
 .download-button button:hover:before{
-    transition : all 0.5s all ease;
     left : 0;
     right: 0;
     opacity: 1;
     z-index: -1;
 }
+
 
 @media screen and (max-width : 950px) {
     .download-content{
@@ -1395,21 +1412,24 @@ article img{
     }
 }
 
-@media screen and (max-width : 750px) {
+@media screen and (max-width : 770px) {
     .download-text{
         padding-left : 2rem;
     }
     .download-text h2{
-        font-size: 2rem;
-        line-height: 3rem;
+        font-size: 2.5rem;
+        line-height: 4rem;
     }
     .download-button button{
         font-size: 2.5rem;
-        padding: 0.5rem 2rem;
+        padding: 1rem 2rem;
     }
 }
 
-@media screen and (max-width : 550px) {
+@media screen and (max-width : 560px) {
+    .download-content{
+        width: 100%;
+    }
     .download-text{
         padding-left : 1rem;
     }
@@ -1418,8 +1438,14 @@ article img{
         line-height: 2.5rem;
     }
     .download-button button{
-        font-size: 2.2rem;
+        width: 15rem;
+        font-size: 1.3rem;
         padding: 0.5rem 2rem;
+    }
+    .download-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -1666,6 +1692,91 @@ article img{
     } 
 }
 
+.mondstadt-section{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: url(../assets/background/Mondstat.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(65%);
+}
+
+.liyueharbor-section{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: url(../assets/background/Liyue.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(55%);
+}
+
+.character-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position : relative;
+    height: 40vh;
+    overflow: hidden;
+    max-height: 300px;
+    transition: all 0.2s;
+}
+
+.character-section h2{
+    color : rgba(255,255,255,1);
+    font-size: 2.5rem;
+}
+
+.character-section img{
+    position: absolute;
+    right: 0;
+    width: 40%;
+    top : -10vh;
+    height: auto;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.character-section:hover{
+    border : 5px solid rgba(255,255,255,1);
+}
+
+.character-section:hover .mondstadt-section{
+    filter: brightness(90%);
+}
+
+.character-section:hover .liyueharbor-section{
+    filter: brightness(90%);
+}
+
+.character-section:hover img{
+    opacity: 1;
+}
+
+@media screen and (max-width : 770px) {
+    .character-section{
+        max-height: 250px;
+    }
+    /* .character-section h2{
+        font-size: 1.5rem;
+    } */
+}
+
+@media screen and (max-width : 550px){
+    .character-section{
+        max-height: 150px;
+    }
+    .character-section h2{
+        font-size: 1.5rem;
+    }
+}
 footer{
     height: 40vh;
     background-color: rgb(43, 43, 43);
@@ -1704,8 +1815,13 @@ footer{
 }
 
 .terms{
-    color : rgba(255,255,255,0.5);
     display: flex;
+}
+
+.terms a{
+    text-decoration: none;
+    color : rgba(255,255,255,0.5);
+    transition : all 0.3s;
 }
 
 .terms p{
@@ -1713,8 +1829,14 @@ footer{
     padding: 0.5rem 1rem;
 }
 
+.terms a:hover{
+    color : rgba(255,255,255,1);
+    text-decoration: underline;
+}
+
 .copyright{
-    color : rgba(255,255,255,0.5);
+    color : rgba(255,255,255,1);
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width : 1300px){

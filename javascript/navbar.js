@@ -27,26 +27,41 @@ const navSlide = () => {
     })
 }
 
+window.addEventListener("resize", () => {
+    const navbarLogo = document.querySelector("#logo-navbar");
+    const navbar = document.querySelector('nav');
+    if(screen.width >= 770){
+        navbar.style.backgroundColor= "rgba(0, 0, 0, 0.6)";
+        navbarLogo.style.visibility = 'visible';
+    }else{
+        if(window.scrollY > 0){
+            navbarLogo.style.visibility = 'visible';
+            navbar.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+        }
+        else if(window.scrollY == 0){
+            navbarLogo.style.visibility = 'hidden';
+            navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        }
+    }
+})
+
 const scroll = () => {
     const navbarLogo = document.querySelector("#logo-navbar");
-    const mainLogo = document.querySelector('#logo-main');
     const navbar = document.querySelector('nav');
     document.addEventListener('scroll',() => {
         if(screen.width < 770){
             if(window.scrollY > 0){
-                navbarLogo.style.visibility = 'visible';
-                mainLogo.style.visibility = "hidden";
+                    
                 navbar.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-                // console.log(window.scrollY)
             }
             else if(window.scrollY == 0){
                 navbarLogo.style.visibility = 'hidden';
-                mainLogo.style.visibility = 'visible';
                 navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
             }
         }
     })
 }
+
 
 window.addEventListener('click', (e) =>{
     if(e.target == sidebarDiv && sidebarDiv.style.display == "block"){
