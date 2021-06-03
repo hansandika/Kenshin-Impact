@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: HYWenHei-85W;
+  src: url("../assets/font/zh-cn.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  position: fixed;
+  padding: 0 1rem;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  transition: all 0.5s ease;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  display: none;
+  list-style: none;
+  background-color: #2f2d2b;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+  transition: all 5s ease-in-out;
+}
+
+.dropdown-content li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 1.5rem;
+}
+
+.dropdown-content li a:hover {
+  background-color: #3e3f3f;
+}
+
+.logo {
+  width: 15rem;
+  height: fit-content;
+}
+
+.logo a img {
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+.menu {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+}
+
+.menu-content {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.menu-content a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.menu-bar .animation {
+  position: absolute;
+  height: 5px;
+  width: 85px;
+  top: 0;
+  left: 105px;
+  z-index: -5;
+  background-color: #7ee0ff;
+  transition: all 0.5s ease 0s;
+  --leftPos1: 105px;
+  --leftPos2: calc(85px + var(--leftPos1) + 10px);
+  --leftPos3: calc(155px + var(--leftPos2));
+  --leftPos4: calc(150px + var(--leftPos3));
+}
+
+nav .start-home,
+.menu-content:first-child:hover ~ .animation {
+  left: 105px;
+}
+
+.menu-content:first-child {
+  width: 105px;
+}
+
+nav .start-character,
+.menu-content:nth-child(2):hover ~ .animation {
+  left: var(--leftPos2);
+  width: 150px;
+}
+
+.menu-content:nth-child(2) {
+  width: 150px;
+}
+
+nav .start-about,
+.menu-content:nth-child(3):hover ~ .animation {
+  left: var(--leftPos3);
+  width: 150px;
+}
+
+.menu-content:nth-child(3) {
+  width: 150px;
+}
+
+nav .start-download,
+.menu-content:nth-child(4):hover ~ .animation {
+  left: var(--leftPos4);
+  width: 180px;
+}
+
+.menu-content:nth-child(4) {
+  width: 180px;
+}
+
+.active {
+  text-shadow: 1px 1px 8px #7ee0ff;
+}
+
+.menu-content:hover {
+  text-shadow: 1px 1px 8px #7ee0ff;
+}
+
+.login-content {
+  display: none;
+}
+
+.login {
+  padding: 0.3em 0.8em;
+  border: none;
+  outline: none;
+  border-radius: 5em;
+  background-color: rgba(0, 136, 169, 1);
+  width: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.login a {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.login:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.login-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.login-logo img {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  color: white;
+  padding-left: 40px;
+}
+
+.header-text {
+  position: relative;
+  top: 60vh;
+}
+
+.first-page {
+  height: 100vh;
+  background-image: url(../assets/background/first-page.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+article {
+  /* color: white; */
+  display: flex;
+  /* padding: 7vh 0 10vh 0; */
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* height: 80vh; */
+}
+
+article h1 {
+  font-family: "HYWenHei-85W";
+  font-size: 4.8rem;
+  /* outline: 2px solid black; */
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: #b5bab0;
+  -webkit-text-stroke-width: 1px;
+}
+
+@media screen and (max-width: 800px) {
+  article h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-text {
+    top: 70vh;
+  }
+  article h1 {
+    font-size: 3rem;
+  }
+}
+
+.second-page {
+  /* display: flex; */
+  margin: 0;
+  height: 100vh;
+  background-image: url(../assets/background/second-page.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game-features {
+  /* padding: 0; */
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  background-color: #fff0db;
+  border-radius: 10px;
+  justify-content: center;
+  margin: 0 40px;
+  width: 85%;
+}
+
+.title h1 {
+  /* padding-right: 10px;
+  padding-left: 10px; */
+  font-family: "HYWenHei-85W";
+  font-size: 4rem;
+  color: #583e20;
+}
+
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: #fff0db;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+.first-feature {
+  display: flex;
+  margin: 0px 40px;
+  margin-top: 100px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  /* height: 400px; */
+}
+
+.caption {
+  background-color: #fff0db;
+  border-radius: 10px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 300px;
+  width: 400px;
+  /* padding: 10px 20px; */
+}
+.sub-title {
+  text-align: center;
+  font-family: "HYWenHei-85W";
+  color: #583e20;
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+  font-weight: bold;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.text {
+  text-align: left;
+  font-size: 15pt;
+  font-family: "HYWenHei-85W";
+  color: #583e20;
+  text-align: justify;
+}
+.inner-caption {
+  /* width: 60%;
+  height: 60%; */
+  padding: 15px;
+}
+
+.image img {
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* title */
+@media screen and (max-width: 1550px) {
+  .title h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* content */
+@media screen and (max-width: 1280px) {
+  .caption {
+    height: 300px;
+    width: 380px;
+  }
+
+  .sub-title {
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 12pt;
+  }
+  .image img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .caption {
+    height: 260px;
+    width: 350px;
+  }
+
+  .sub-title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 12pt;
+  }
+  .image img {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+  .caption {
+    height: 260px;
+    width: 300px;
+  }
+
+  .sub-title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 12pt;
+  }
+  .image img {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .caption {
+    height: 220px;
+    width: 300px;
+  }
+
+  .sub-title {
+    padding-top: 30px;
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 10pt;
+  }
+  .image img {
+    height: 220px;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title h1 {
+    font-size: 1.6rem;
+  }
+
+  .first-feature {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .caption {
+    /* flex-direction: row; */
+    height: 120px;
+    width: 500px;
+    border-radius: 0;
+  }
+  .inner-caption {
+    padding: 10px;
+  }
+  .sub-title {
+    padding-top: 10px;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
+
+  .text {
+    font-size: 11pt;
+  }
+  .image img {
+    height: 240px;
+    width: 500px;
+  }
+}
+
+.third-page {
+  margin: 0;
+  height: 100vh;
+  background-image: url(../assets/background/third-page.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
