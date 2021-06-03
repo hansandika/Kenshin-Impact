@@ -30,7 +30,7 @@ const navSlide = () => {
 window.addEventListener("resize", () => {
     const navbarLogo = document.querySelector("#logo-navbar");
     const navbar = document.querySelector('nav');
-    if(screen.width >= 770){
+    if(screen.width >= 1025){
         navbar.style.backgroundColor= "rgba(0, 0, 0, 0.6)";
         navbarLogo.style.visibility = 'visible';
     }else{
@@ -43,24 +43,17 @@ window.addEventListener("resize", () => {
             navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
         }
     }
+    slide();
 })
 
-const scroll = () => {
+const windowSize = () => {
     const navbarLogo = document.querySelector("#logo-navbar");
     const navbar = document.querySelector('nav');
-    document.addEventListener('scroll',() => {
-        if(screen.width < 770){
-            if(window.scrollY > 0){
-                    
-                navbar.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-            }
-            else if(window.scrollY == 0){
-                navbarLogo.style.visibility = 'hidden';
-                navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
-            }
-        }
-    })
-}
+    if(screen.width < 1025){
+        navbarLogo.style.visibility = 'visible';
+        navbar.style.backgroundColor = "rgba(0, 0, 0, 0.4)";  
+    }
+};
 
 
 window.addEventListener('click', (e) =>{
@@ -78,9 +71,43 @@ window.addEventListener('click', (e) =>{
     }
 })
 
+const slide = () => {
+    const slider = document.querySelector('.slide');
+    var item = document.querySelectorAll('.menu-bar li');
+    const dropdown = document.querySelector('.dropdown-content');
+    const activeNavbar = document.querySelector('.active-navbar');
+    indicator(activeNavbar.childNodes[1]);
+    function indicator(e){
+        slider.style.left = e.offsetLeft + 'px';
+        slider.style.width = e.offsetWidth + 'px';
+    }
+
+    item.forEach(e => {
+        e.addEventListener('mouseover',(e) => {
+            if(e.target.childNodes[1] === undefined){
+                indicator(e.target.parentElement.parentElement.childNodes[1]);
+            }
+            else{
+                indicator(e.target.childNodes[1]);
+            }
+        })
+        e.addEventListener('mouseout',(e) => {
+            indicator(activeNavbar.childNodes[1]);
+        })
+    });
+
+    item[1].addEventListener('mouseover',(e) => {
+        dropdown.style.left = item[1].offsetLeft + 'px';
+    })
+}
+
 const app = () => {
     navSlide();
     scroll();
+    slide();
+    windowSize();
 }
 
 app();
+
+

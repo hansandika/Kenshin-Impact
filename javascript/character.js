@@ -110,12 +110,11 @@ const map = () =>{
                 mapContent[currIndex].className = mapContent[currIndex].className.replace(' map-active',' ');
                 mapContent[slideIndex].classList.add('map-active');
                 if(currIndex === 0){
-                    if(flag){
-                        background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
-                    }else{
+                    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.png")'){
                         background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
+                    }else{
+                        background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
                     }
-                    flag = !flag;
                     characterNameDiv[0].classList.remove('active-div');
                     characterTextDiv[0].classList.remove("active-div");
                     imageDiv[0].classList.remove("active-div");
@@ -131,7 +130,6 @@ const map = () =>{
                     }else{
                         background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
                     }
-                    flag = !flag;
                     characterNameDiv[0].classList.add('active-div');
                     characterTextDiv[0].classList.add('active-div');
                     imageDiv[0].classList.add('active-div');
@@ -148,10 +146,98 @@ const map = () =>{
     })
 }
 
+window.addEventListener("resize", () => {
+    const navbarLogo = document.querySelector("#logo-navbar");
+    const navbar = document.querySelector('nav');
+    if(screen.width >= 1025){
+        navbar.style.backgroundColor= "rgba(0, 0, 0, 0.6)";
+        navbarLogo.style.visibility = 'visible';
+    }else{
+        navbarLogo.style.visibility = 'visible';
+        navbar.style.backgroundColor = "rgba(0, 0, 0, 0.4)";  
+    }
+})
+
+const mapDropdown = () => {
+    const dropdown = document.querySelector(".map-responsive");
+    const arrow = document.querySelector('.arrow');
+    const dropdownResponsive = document.querySelector('.dropdown-responsive');
+    dropdown.addEventListener('click', () => {
+        if(dropdownResponsive.style.visibility === 'visible'){
+            dropdownResponsive.style.visibility = 'hidden';
+            arrow.classList.remove('down');
+            arrow.classList.add('up');
+        }
+        else{
+            dropdownResponsive.style.visibility = 'visible';
+            arrow.classList.remove('up');
+            arrow.classList.add('down');
+        }
+    })
+}
+
+const mapSelect = () => {
+    const dropdownMap = document.querySelectorAll('.dropdown-map');
+    const arrow = document.querySelector('.arrow');
+    const dropdownResponsive = document.querySelector('.dropdown-responsive');
+    dropdownMap.forEach(e => {
+        e.addEventListener('click', () => {
+            const chooseMap = e;
+            let indexChooseMap;
+            for(let i = 0;i < dropdownMap.length;i++){
+                if(dropdownMap[i] == chooseMap){
+                    indexChooseMap = i;
+                }
+            }
+            const characterNameDiv = document.querySelectorAll('.character-name-div');
+            const characterTextDiv = document.querySelectorAll(".character-text-div");
+            const imageDiv = document.querySelectorAll('.character-image-div');
+            const imageList = document.querySelectorAll('.image-list');
+
+            if(!chooseMap.classList.contains('active-dropdown')){
+                chooseMap.classList.add('active-dropdown');
+                if(indexChooseMap == 0){
+                    dropdownMap[1].classList.remove('active-dropdown');
+
+                    background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
+                    characterNameDiv[0].classList.add('active-div');
+                    characterTextDiv[0].classList.add('active-div');
+                    imageDiv[0].classList.add('active-div');
+                    imageList[0].classList.add('active-div');
+
+                    characterNameDiv[1].classList.remove('active-div');
+                    characterTextDiv[1].classList.remove("active-div");
+                    imageDiv[1].classList.remove("active-div");
+                    imageList[1].classList.remove('active-div');
+
+                }else{
+                    dropdownMap[0].classList.remove('active-dropdown');
+                    
+                    background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
+                    characterNameDiv[0].classList.remove('active-div');
+                    characterTextDiv[0].classList.remove("active-div");
+                    imageDiv[0].classList.remove("active-div");
+                    imageList[0].classList.remove('active-div');
+
+                    characterNameDiv[1].classList.add('active-div');
+                    characterTextDiv[1].classList.add('active-div');
+                    imageDiv[1].classList.add('active-div');
+                    imageList[1].classList.add('active-div');
+                }
+            }
+            dropdownResponsive.style.visibility = 'hidden';
+            arrow.classList.remove('down');
+            arrow.classList.add('up');
+        })
+    });
+}
+
 const appCharacter = ()=>{
     slider();
     imageShow();
     map();
+    mapDropdown();
+    mapSelect();
 }
 
 appCharacter();

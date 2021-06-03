@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character</title>
-    <link rel="shortcut icon" href="../assets/Logo/mihoyoman logo website.png" />
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="shortcut icon" href="../assets/Logo/mihoyoman logo website.png"/>
+    <link rel="stylesheet" href="../css/character.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
@@ -15,14 +17,13 @@
     <section class="character-landing-page">
         <div class="sidebar-div"></div>
         <aside class="sidebar">
-            <div class="grey-div">
-            </div>
+            <div class="grey-div"></div>
             <ul class="list-sidebar">
                 <li class="sidebar-content sidebar-active"><a href="#"><i class="fas fa-qrcode"></i>Home</a></li>
-                <li class="sidebar-content"><a href="#"><i class="fas fa-user-ninja"></i>Character</a></li>
+                <li class="sidebar-content"><a href="../html/character.html"><i class="fas fa-user-ninja"></i>Character</a></li>
                 <li class="sidebar-content"><a href="#"><i class="fas fa-question-circle"></i>About Us</a></li>
                 <li class="sidebar-content"><a href="#"><i class="fas fa-images"></i>Gallery</a></li>
-                 <!-- <li class="sidebar-content"><a href="#"><i class="fas fa-download"></i>Download</a></li> -->
+                <li class="sidebar-content"><a href="#"><i class="fas fa-download"></i>Download</a></li>
                 <li class="sidebar-content"><a href="#"><i class="fas fa-key"></i>Login</a></li>
             </ul>
         </aside>
@@ -37,26 +38,40 @@
             </div>
             <div class="menu">
                 <ul class="menu-bar">
-                    <li class="menu-content">
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li class="menu-content dropdown active">
-                        <a href="./character.html">Character</a>
-                        <ul class="dropdown-content">
-                            <li><a href='#'>Liyue Harbor</a></li>
-                            <li><a href='#'>Mondstadt</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-content">
-                        <a href="./index.html">Gallery</a>
-                    </li>
-                    <li class="menu-content">
-                        <a href="./index.html">About Game</a>
-                    </li>
-                    <li class="menu-content login-content">
-                        <a href="./index.html">Login</a>
-                    </li>
-                    <div class="animation start-home"></div>
+                    <div class="slide"></div>
+                    <a href="../html/index.html">
+                        <li class="menu-content">
+                            <p>Home</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="menu-content dropdown active-navbar">
+                            <p>Character</p>
+                            <ul class="dropdown-content">
+                                <li>
+                                    <p>LiyueHarbor</p>
+                                </li>
+                                <li>
+                                    <p>Mondstadt</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </a>
+                    <a href='#'>
+                        <li class="menu-content">
+                            <p>Gallery</p>
+                        </li>
+                    </a>
+                    <a href='../html/aboutGame.html'>
+                        <li class="menu-content">
+                            <p>About Game</p>
+                        </li>
+                    </a>
+                    <a href='#'>
+                        <li class="menu-content">
+                            <p>Download</p>
+                        </li>
+                    </a>
                 </ul>
                 <div class="login">
                     <a href="./index.html">Login</a>
@@ -143,36 +158,36 @@
                 </div>
             </div>
             <div class="character-image-div active-div">
-                <div class="character-image active-character-image">
+                <div class="character-image active-character-image jaen">
                     <img draggable="false" src = "../assets/Character/Mondstadt/jaen.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image ambar">
                     <img draggable="false" src="../assets/Character/Mondstadt/Ambar.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image lasi">
                     <img draggable="false" src="../assets/Character/Mondstadt/Lasi.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image barbar">
                     <img draggable="false" src="../assets/Character/Mondstadt/Barbar.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image vanti">
                     <img draggable="false" src="../assets/Character/Mondstadt/Vanti.png">
                 </div>
             </div>
             <div class="character-image-div">
-                <div class="character-image active-character-image">
+                <div class="character-image active-character-image chongyon">
                     <img draggable="false" src="../assets/Character/Liyue Harbor/Chongyon.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image hu-ta">
                     <img draggable="false" src="../assets/Character/Liyue Harbor/Hu Ta.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image keking">
                     <img draggable="false" src="../assets/Character/Liyue Harbor/Keking.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image mingguang">
                     <img draggable="false" src="../assets/Character/Liyue Harbor/Mingguang.png">
                 </div>
-                <div class="character-image">
+                <div class="character-image siao">
                     <img draggable="false" src="../assets/Character/Liyue Harbor/Siao.png">
                 </div>
             </div>
@@ -228,6 +243,20 @@
                     <img src="../assets/ICON/Arrow Right.png">
                 </div>
             </section>
+            <section class = "map-responsive">
+                <div class="map-responsive-choose active-map-responsive">
+                    <h2>Mondstadt</h2>
+                    <i class = "arrow up"></i>
+                </div>
+                <div class="map-responsive-choose">
+                    <h2>LiyueHarbor</h2>
+                    <i class="arrow up"></i>
+                </div>
+            </section>
+            <section class="dropdown-responsive">
+                <p class = "dropdown-map active-dropdown">Mondstadt</p>
+                <p class = "dropdown-map">Liyue</p>
+            </section>
         </div>
    </section> 
     <footer>
@@ -240,16 +269,24 @@
             </div>
         </div>
         <div class="terms">
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
-            <p>About Us</p>
-            <p>Contact Us</p>
+            <a href="../html/PrivacyPolicy.html" target="_blank">
+                <p>Privacy Policy</p>
+            </a>
+            <a href="../html/termsOfService.html" target="_blank">
+                <p>Terms of Service</p>
+            </a>
+            <a href="" target="_blank">
+                <p>About Us</p>
+            </a>
+            <a href="mailto:kenshin_cs@mihoyo.com">
+                <p>Contact Us</p>
+            </a>
         </div>
         <div class="copyright">
             <p>Copyright &copy; 2021 Mihayo All Rights Reserved</p>
         </div>
     </footer>
-    <script src="../javascript/navbar.js"></script>
+    <script src="../javascript/navbar.js"></script> 
     <script src="../javascript/character.js"></script>
 </body>
 </html>

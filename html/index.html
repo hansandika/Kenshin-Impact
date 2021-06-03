@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="shortcut icon" href="../assets/Logo/mihoyoman logo website.png" />
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
@@ -19,10 +22,10 @@
             <div class="grey-div"></div>
             <ul class="list-sidebar">
                 <li class="sidebar-content sidebar-active"><a href="#"><i class="fas fa-qrcode"></i>Home</a></li>
-                <li class="sidebar-content"><a href="#"><i class="fas fa-user-ninja"></i>Character</a></li>
+                <li class="sidebar-content"><a href="../html/character.html"><i class="fas fa-user-ninja"></i>Character</a></li>
                 <li class="sidebar-content"><a href="#"><i class="fas fa-question-circle"></i>About Us</a></li>
                 <li class="sidebar-content"><a href="#"><i class="fas fa-images"></i>Gallery</a></li>
-                <!-- <li class="sidebar-content"><a href="#"><i class="fas fa-download"></i>Download</a></li> -->
+                <li class="sidebar-content"><a href="#"><i class="fas fa-download"></i>Download</a></li>
                 <li class="sidebar-content"><a href="#"><i class="fas fa-key"></i>Login</a></li>
             </ul>
         </aside>
@@ -37,26 +40,36 @@
             </div>
             <div class="menu">
                 <ul class="menu-bar">
-                    <li class="menu-content active">
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li class="menu-content dropdown">
-                        <a href="./character.html">Character</a>
-                        <ul class = "dropdown-content">
-                            <li><a href='#'>Liyue Harbor</a></li>
-                            <li><a href='#'>Mondstadt</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-content">
-                        <a href="./index.html">Gallery</a>
-                    </li>
-                    <li class="menu-content">
-                        <a href="./index.html">About Game</a>
-                    </li>
-                    <li class="menu-content login-content">
-                        <a href="./index.html">Login</a>
-                    </li>
-                    <div class="animation start-home"></div>
+                    <div class="slide"></div>
+                    <a href = "#">
+                        <li class="menu-content active-navbar">
+                            <p>Home</p>
+                        </li>
+                    </a>
+                    <a href = "../html/character.html">
+                        <li class="menu-content dropdown">
+                            <p>Character</p>
+                            <ul class="dropdown-content">
+                                <li><p>LiyueHarbor</p></li>
+                                <li><p>Mondstadt</p></li>
+                            </ul>
+                        </li>
+                    </a>
+                    <a href = '#'>
+                        <li class="menu-content">
+                            <p>Gallery</p>
+                        </li>
+                    </a>
+                    <a href = '../html/aboutGame.html'>
+                        <li class="menu-content">
+                            <p>About Game</p>
+                        </li>
+                    </a>
+                    <a href ='#'>
+                        <li class="menu-content">
+                            <p>Download</p>
+                        </li>
+                    </a>
                 </ul>
                 <div class="login">
                     <a href="./index.html">Login</a>
@@ -129,70 +142,70 @@
             </div>
         </div>
     </section>
-<!--     
-    <section class="contact-us">
-        <div class="contact-us-background"></div>
-        <div class="contact-us-content">
-            <div class="contact-us-title">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-us-detail">
-                <div class="contact-us-logo">
-                    <i class="fab fa-discord"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-youtube"></i>
+<!--             
+        <section class="contact-us">
+            <div class="contact-us-background"></div>
+            <div class="contact-us-content">
+                <div class="contact-us-title">
+                    <h2>Contact Us</h2>
                 </div>
-                <div class="contact-us-box">
-                    <div class="contact-us-row">
-                        <h2>Email</h2>
-                        <p>Kenshin_Impact_Global@gmail.com</p>
-                        <p>Kenshin_Impact_Indo@gmail.com</p>
-                        <p>Kenshin_Impact_Japan@gmail.com</p>
-                        <p>Kenshin_Impact_French@gmail.com</p>
+                <div class="contact-us-detail">
+                    <div class="contact-us-logo">
+                        <i class="fab fa-discord"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-youtube"></i>
                     </div>
-                    <div class="contact-us-row">
-                        <h2>In-Game Customer Support</h2>
-                        <p>Please tap [CS] Icon inside the lower-right phone</p>
-                        <p>to access this service</p>
-                        <p>Support Hours</p>
-                        <p>10:00 - 19:00 (GMT+8) Daily</p>
-                    </div>
-                    <div class="contact-us-row">
-                        <h2>Other Contacts</h2>
-                        <p>Press & Partnership Inquiries</p>
-                        <p>pr_global@mihayo.com</p>
-                        <p>Content Submission:</p>
-                        <p>contentcreator@mihayo.com</p>
+                    <div class="contact-us-box">
+                        <div class="contact-us-row">
+                            <h2>Email</h2>
+                            <p>Kenshin_Impact_Global@gmail.com</p>
+                            <p>Kenshin_Impact_Indo@gmail.com</p>
+                            <p>Kenshin_Impact_Japan@gmail.com</p>
+                            <p>Kenshin_Impact_French@gmail.com</p>
+                        </div>
+                        <div class="contact-us-row">
+                            <h2>In-Game Customer Support</h2>
+                            <p>Please tap [CS] Icon inside the lower-right phone</p>
+                            <p>to access this service</p>
+                            <p>Support Hours</p>
+                            <p>10:00 - 19:00 (GMT+8) Daily</p>
+                        </div>
+                        <div class="contact-us-row">
+                            <h2>Other Contacts</h2>
+                            <p>Press & Partnership Inquiries</p>
+                            <p>pr_global@mihayo.com</p>
+                            <p>Content Submission:</p>
+                            <p>contentcreator@mihayo.com</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    -->
+        </section>
+        -->
     <section class="character">
         <section class="character-section">
             <div class="mondstadt-section"></div>
             <div class="character-text">
                 <h2>Mondstadt</h2>
-                <img src = "../assets/ICON/Line.png" class = "line">
+                <img src="../assets/ICON/Line.png" class="line">
             </div>
             <div class="diamond-line">
-                <img src = "../assets/ICON/diamond.png" class = "diamond">
+                <img src="../assets/ICON/diamond.png" class="diamond">
             </div>
-            <img src="../assets/Character/Mondstadt/Ambar.png" class = "character-image">
+            <img src="../assets/Character/Mondstadt/Ambar.png" class="character-image">
         </section>
         <section class="character-section">
             <div class="liyueharbor-section"></div>
             <div class="character-text">
                 <h2>Liyue Harbor</h2>
-                <img src="../assets/ICON/Line.png" class ="line">
+                <img src="../assets/ICON/Line.png" class="line">
             </div>
             <div class="diamond-line">
-                <img src="../assets/ICON/diamond.png" class = "diamond">
+                <img src="../assets/ICON/diamond.png" class="diamond">
             </div>
-            <img src="../assets/Character/Liyue Harbor/Hu Ta.png" class = "character-image">
+            <img src="../assets/Character/Liyue Harbor/Hu Ta.png" class="character-image">
         </section>
     </section>
     <section class="social-media">
@@ -215,17 +228,26 @@
             </div>
         </div>
         <div class="terms">
-            <a href=""><p>Privacy Policy</p></a>
-            <a href=""><p>Terms of Service</p></a>
-            <a href=""><p>About Us</p></a> 
-            <a href=""><p>Contact Us</p></a>
+            <a href="../html/PrivacyPolicy.html" target="_blank">
+                <p>Privacy Policy</p>
+            </a>
+            <a href="../html/termsOfService.html" target="_blank">
+                <p>Terms of Service</p>
+            </a>
+            <a href="" target="_blank">
+                <p>About Us</p>
+            </a>
+            <a href="mailto:kenshin_cs@mihoyo.com">
+                <p>Contact Us</p>
+            </a>
         </div>
         <div class="copyright">
             <p>Copyright &copy; 2021 Mihayo All Rights Reserved</p>
         </div>
-    </footer>
-    <script src="../javascript/navbar.js"></script>
+    </footer> 
     <script src="../javascript/mainLogo.js"></script>
+    <script src="../javascript/navbar.js"></script>
+    <script src='../javascript/home.js'></script>
 </body>
 
 </html>
