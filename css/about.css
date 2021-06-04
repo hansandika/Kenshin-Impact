@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-text {
+  position: relative;
+  top: 60vh;
+}
+
+.about-landing-page {
+  height: auto;
+  min-height: 100vh;
+  background-image: url(../assets/background/first-page.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-text{
+    position: relative;
+    top : 15vh;
+}
+
+article{
+    padding : 7vh 0 10vh 0;
+    color : white;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 85vh;
+    font-size: 2rem;
+}
+
+article img{
+    position : relative;
+    top : 10vh;
+    width: 45rem;
+    visibility: hidden;
+}
+
+article h2 {
+  font-family: "HYWenHei-85W";
+  font-size: 4.8rem;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: #b5bab0;
+  -webkit-text-stroke-width: 1px;
+}
+
+/* hp */
+
+@media screen and (max-width : 1095px){
+    article img{
+      visibility: visible;
+    }
+    article h2{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width : 780px){
+    article h2{
+        text-align: center;
+    }
+    article img{
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width : 650px){
+    article h2{
+        font-size: 2.5rem;
+    }
+    article img{
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width : 500px){
+    article img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    article h2{
+        padding: 2vh 1vw;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('../assets/background/third-page.jpg');
+}
+
+.arrow{
+    width: 30vw;
+}
+
+.game-features-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,255,255,1);
+    padding: 5rem 0 8rem;
+}
+
+.game-features-title h2{    
+    font-size: 3rem;
+    margin : 0 2vw;
+}
+
+.game-features-content{
+    margin-bottom : 10rem; 
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-features-content:nth-child(5){
+    margin-bottom: 5rem;
+}
+
+.caption{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top : -6vh;
+    background-color: rgb(253, 239, 217);
+    min-width: 20rem;
+    width: 30%;
+    height: 85%;
+    padding : 2vh 2vw;
+    text-align: center;
+    z-index: 2;
+}
+
+.left-caption{
+    left : 5vw;
+}
+
+.right-caption{
+    right: 5vw;
+    order : 2;
+}
+
+.caption::after{
+    content: '';
+    position : absolute;
+    width: 95%;
+    height: 95%;
+    border : 3.5px solid rgb(221, 211, 189);
+    border-radius: 2.5px;
+}
+
+.caption h2{
+    font-size: 2.3vw;
+    padding-bottom: 5%;
+    color: rgb(99, 79, 66);
+}
+
+.caption p{
+    font-size: 1.25vw;
+    text-align: left;
+    color: #583e20;
+}
+
+.features-image{
+    position : relative;
+    min-width: 45rem;
+    width: 60%;
+    height: auto;
+}
+
+.features-image img{
+    height: auto;
+    width: 100%;
+}
+
+.left-caption ~ .features-image{
+    right: 5vw;  
+}
+
+.right-caption ~ .features-image{
+    left : 5vw;
+}
+
+@media screen and (max-width : 1100px) {
+    .features-image{
+        min-width: 30rem;
+    }
+    .left-caption ~ .features-image{
+        right: 0;
+    }
+    .right-caption ~ .features-image{
+        left : 0;
+    }
+    .game-features-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+        height: auto;
+    }
+    .caption{
+        left: 0;
+        top : 0;
+        width: 65%;
+        height: auto;
+        padding: 3rem;
+        min-width: 30rem;
+        order : 2;
+    }
+    .caption h2{
+        font-size: 2.2rem;
+    }
+    .caption p{
+        font-size: 1.5rem;
+    }
+    .features-image{
+        width: 65%;
+        height: 20rem;
+        order : 1;
+    }
+
+    .features-image img{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 900px){
+    .game-features-title img{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width : 580px) {
+    .game-features-title h2{
+        font-size: 2rem;
+    }
+    .game-features-title img{
+        width: 10%;
+    }
+    .features-image{
+        min-width: 20rem;
+        height: 12rem;
+    }
+
+    .caption{
+        padding : 3rem 1.5rem; 
+        min-width: 20rem;
+    }
+    .caption h2{
+        font-size: 1.5rem;
+    }
+    .caption p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width : 340px){
+    .game-features-title h2{
+        font-size: 1.7rem;
+    }
+    .caption{
+        padding: 1.5rem;
+        min-width: 18rem;
+    }
+    .caption h2{
+        font-size: 1.2rem;
+    }
+    .caption p{
+        font-size: 0.8rem;
+    }
+    .features-image{
+        min-width: 18rem;
+    }
+}
+
+.character-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    margin-bottom: 10rem;
+}
+
+.character-button a{
+    text-decoration: none;
+}
+
+.character-button button{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #583e20;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    width: 25rem;
+    height: auto;
+    outline: none;
+    border: none;
+    transition: ease-out 0.3s;
+    cursor : pointer;
+    padding: 0.8rem 3rem;
+    background-color: rgb(253, 239, 217);
+    z-index: 1;
+    overflow: hidden;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-button button::after{
+    position: absolute;
+    content : '';
+    width: 95%;
+    height: 85%;
+    border : 2.5px solid rgb(221, 211, 189);
+}
+
+.character-button button:hover{
+    color : rgb(234, 231, 224);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.character-button button:hover:after{
+    border-color: white;
+}
+
+.character-button button::before{
+    transition : 0.5s all ease;
+    content : "";
+    position: absolute;
+    top : 0;
+    left : 0;
+    width: 150%;
+    height: 100%;
+    transform: translateX(-120%) skew(120deg);
+    bottom: 0;
+    opacity: 1;
+    background-color: rgb(17, 26, 36);
+}
+
+.character-button button:hover:before{
+    transform: translateX(-10%) skew(120deg);
+    opacity: 1;
+    z-index: -1;
+}

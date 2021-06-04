@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-text {
+  position: relative;
+  top: 60vh;
+}
+
+.download-landing-page {
+  height: auto;
+  min-height: 100vh;
+  background-image: url(../assets/background/Download-landing-page.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

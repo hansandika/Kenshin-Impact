@@ -16,9 +16,11 @@ body {
 }
 
 .page {
-  height: 100vh;
+  height: auto;
+  min-height: 75vh;
+  margin-bottom: 10vh;
 }
-
+  
 .page p {
   line-height: 1.8;
 }
@@ -51,10 +53,12 @@ header div p {
 .content {
   margin: 0 120px;
 }
+
 .box {
   /* margin: 30px; */
   background-color: #f0f0f0;
   padding: 50px;
+  min-height: 50vh;
   /* border: 1px solid black; */
 }
 
@@ -93,6 +97,9 @@ header div p {
   }
   .box {
     padding: 30px;
+  }
+  .about{
+    padding-bottom: 2px;
   }
 }
 

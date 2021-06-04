@@ -1,3 +1,68 @@
+.social-media{
+    background-color: rgb(17, 26, 36);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-media h2{
+    color : rgba(255,255,255,1);
+    padding-right: 5vw;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.social-media .fab{
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    background: none;
+    color : rgba(255,255,255,0.7);
+}
+
+.social-media-logo{
+    padding-left: 3rem;
+}
+
+.social-media .fab:hover{
+    color : rgba(255,255,255,1);
+}
+
+@media screen and (max-width : 750px){
+    .social-media .fab{
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+    }
+    .social-media h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width : 470px){
+    .social-media-logo{
+        padding-left: 1rem;
+    }
+    .social-media .fab{
+        padding: 1rem 0.2rem;
+        font-size: 1rem;
+    }
+    .social-media h2{
+        padding-left: 1rem; 
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width : 400px){
+    .social-media .fab{
+        padding: 1rem 0.1rem;
+        font-size: 1rem;
+    }
+    .social-media h2{
+        padding-left: 0.5rem; 
+        padding-right: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
 footer{
     height: 40vh;
     max-height: 15rem;
