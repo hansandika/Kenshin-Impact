@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url(../assets/background/ppBackground.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.page {
+  height: 100vh;
+}
+
+.page p {
+  line-height: 1.8;
+}
+
+.page a {
+  line-height: 1.8;
+}
+
+header {
+  margin: 0 100px;
+  padding-top: 120px;
+  display: flex;
+  padding-bottom: 10px;
+}
+.home a {
+  color: lightgray;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.home a:hover {
+  color: white;
+}
+
+header div p {
+  color: white;
+  padding: 0 5px;
+}
+
+.content {
+  margin: 0 120px;
+}
+.box {
+  /* margin: 30px; */
+  background-color: #f0f0f0;
+  padding: 50px;
+  /* border: 1px solid black; */
+}
+
+.about {
+  color: #7d7d7d;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.text {
+  color: #7d7d7d;
+  font-size: 11pt;
+  /* letter-spacing: 1 / px; */
+  word-spacing: 2px;
+}
+
+.new-point {
+  padding-top: 20px;
+}
+
+.bottom {
+  text-align: right;
+}
+.bottom p {
+  font-size: 11pt;
+  color: #7d7d7d;
+}
+
+@media screen and (max-width: 700px) {
+  .content {
+    margin: 0 60px;
+  }
+  header {
+    margin: 0 70px;
+    padding-top: 100px;
+  }
+  .box {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .date {
+    font-size: 10pt;
+  }
+  .content {
+    margin: 0 40px;
+  }
+  header {
+    margin: 0 50px;
+    padding-top: 80px;
+  }
+  .box {
+    padding: 20px;
+  }
+  .text {
+    font-size: 9pt;
+  }
+  .home {
+    font-size: 10pt;
+  }
+  header div p {
+    font-size: 10pt;
+  }
+  .bottom p {
+    font-size: 9pt;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .date {
+    font-size: 9pt;
+  }
+  .home {
+    font-size: 9pt;
+  }
+  .content {
+    margin: 0 20px;
+  }
+  header {
+    margin: 0 30px;
+    padding-top: 60px;
+  }
+  .box {
+    padding: 20px;
+  }
+  .text {
+    font-size: 8pt;
+  }
+  header div p {
+    font-size: 9pt;
+  }
+  .bottom p {
+    font-size: 8pt;
+  }
+}
