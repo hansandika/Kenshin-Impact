@@ -4,6 +4,9 @@
     src : url("../assets/font/zh-cn.ttf");
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     padding: 0;
@@ -12,24 +15,51 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    overflow : hidden;
-}
-
 .gallery-landing-page{
-    z-index: 5;
+    position: relative;
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
     height: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .landing-page-video{
-    position: absolute;
-    top : -10rem;
-    z-index: -5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    z-index: -5;
     overflow: hidden;
-    width: 100%;
+    width : 100%;
+    height: 100vh;
+}
+
+.landing-page-video iframe{
+    width: 500vw;
+    height: 150vh;
+}
+
+@media screen and (min-width : 1920px) {
+    .landing-page-video{
+        background-color: black;
+    }
+}
+
+.header-text{
+    position : absolute;
+    bottom: 30vh;
+    width: 45%;
+    z-index: 2;
+    left: 5vw;
+    color : rgba(255,255,255,1);
+}
+
+.header-text h2{
+    font-family: 'HYWenHei-85W';
+    font-size: 3.5rem;
+}
+
+.header-text p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
 }

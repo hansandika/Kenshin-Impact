@@ -91,10 +91,10 @@
   cursor: pointer;
   padding: 1rem 2rem;
   color : rgb(135, 152, 197);
-  border-bottom: 2px solid rgb(135, 152, 197);
+  border-bottom: 3px solid rgb(135, 152, 197);
 }
 
-.active-media{
+.system-requirement-media .active-media{
   color : rgb(17, 26, 36);
   border-color: rgb(17, 26, 36);
 }
