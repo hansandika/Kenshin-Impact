@@ -20,3 +20,140 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.download-box{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width : 100%;
+  height: auto;
+  bottom : 15vh;
+  padding: 2rem;
+  gap: 15px;
+  background-color: rgba(255,255,255,0.3);
+}
+
+.download-logo{
+  height: 35%;
+}
+
+.download-logo img{
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+}
+
+@media screen and (max-width : 500px) {
+  .download-box{
+    padding: 1rem;
+  }
+  .download-logo{
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width : 330px){
+  .download-box{
+    padding: 0.8rem;
+  }
+  .download-logo{
+    height: 2rem;
+  }
+}
+
+.system-requirement-title{
+  color : rgb(125, 119, 185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.system-requirement-title h2{
+    font-size: 3.5rem;
+    margin : 0 2vw;
+}
+
+.system-requirement{
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+.system-requirement-media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.system-requirement-media h2{
+  cursor: pointer;
+  padding: 1rem 2rem;
+  color : rgb(135, 152, 197);
+  border-bottom: 2px solid rgb(135, 152, 197);
+}
+
+.active-media{
+  color : rgb(17, 26, 36);
+  border-color: rgb(17, 26, 36);
+}
+
+.specification{
+  margin: 3rem 9vw;
+  display: none;
+  line-height: 1.8rem;
+}
+
+.specification h2{
+  font-size: 1.5rem;
+}
+
+.specification p{
+  font-size: 1.3rem;
+}
+
+.recommended-configuration{
+   margin-bottom: 2rem;
+}
+
+.active-specification{
+  display: block;
+}
+
+@media screen and (max-width : 700px) {
+  .system-requirement-title h2{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width : 500px) {
+  .system-requirement-title h2{
+    font-size: 2rem;
+  }
+  .specification h2{
+    font-size: 1.2rem;
+  }
+  .specification p{
+    font-size: 1rem;
+  }
+  .system-requirement-media h2{
+    padding: 1.3rem;
+  }
+}
+
+@media screen and (max-width : 360px) {
+  .system-requirement-title h2{
+    font-size: 1.5rem;
+  }
+  .system-requirement-media h2{
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .specification h2{
+    font-size: 1rem;
+  }
+  .specification p{
+    font-size: 0.8rem;
+  }
+}
