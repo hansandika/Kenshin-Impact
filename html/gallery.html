@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <section class="gallery-landing-page">
@@ -92,18 +93,81 @@
             <p>Below are some of our favorite Kenshin Impact wallpapers, videos, and screenshots.</p>
         </div>
     </section>
-    <section class="media-section">
-        <div class="section-title">
-            <h2>Jump To A Section</h2>
-        </div>
-        <div class="media">
-
-        </div>
-        <div class="media">
-
-        </div>
-    </section>
+    <main>        
+        <section class="media-section">
+            <div class="media-title">
+                <h2>Jump To A Section</h2>
+            </div>
+            <div class="media-div">
+                <a href="#video"><h2>Video</h2></a>
+                <a href="#screenshots"><h2>Screenshots</h2></a>
+                <a href=""><h2>Wallpaper</h2></a>
+            </div>
+        </section>
+        <section class="video-section">
+            <div class="section-title">
+                <h2 id = "video">Videos</h2>
+            </div>
+            <div class="video-div">
+                <div class="video">
+                    <a href="https://youtu.be/9cti_Dwd3Hc" target="_blank"><img draggable="false" src="../assets/video/Diona.png"></a>   
+                    <p>New Character Demo</p>
+                    <p>"Diona: Wine Industry Slayer"</p>
+                </div>
+                <div class="video">
+                    <a href="https://youtu.be/y43rmAQ-l_M" target ="_blank"><img draggable="false" src="../assets/video/Yanfei.png"></a>
+                    <p>New Character Demo</p>
+                    <p>"Yanfei: Legal Expertise"</p>
+                </div>  
+                <div class="video">
+                    <a href="https://youtu.be/KJwOW1zS8UM" target="_blank"><img draggable="false" src="../assets/video/Rosaria.png"></a>
+                    <p>New Character Demo</p>
+                    <p>"Rosaria: No Overtime, Ever"</p>
+                </div>
+                <div class="video">
+                    <a href="https://youtu.be/TvqGRUWm8qE" target="_blank"><img draggable="false" src="../assets/video/Xiangling.png"></a>
+                    <p>New Character Demo</p>
+                    <p>"Xiangling: Chef de Cuisine"</p>
+                </div>
+                <div class="video">
+                    <a href="https://youtu.be/rPLh5QAedUE" target="_blank"><img draggable="false" src="../assets/video/Keqing.png"></a>
+                    <p>New Character Demo</p>
+                    <p>"Keqing: Yuheng of the Qixing"</p>
+                </div>
+                <div class="video">
+                    <a href="https://youtu.be/QUioSVENXcI" target="_blank"><img draggable="false" src="../assets/video/Mona.png"></a>
+                    <p>New Character Demo</p>
+                    <p>Mona: Fate and Destiny"</p>
+                </div>
+            </div>
+        </section>
+        <section class="screenshot-section">
+            <div class="section-title">
+                <h2 id="screenshots">Screenshots</h2>
+            </div>
+            <div class="slider-container">
+                <div class="left-slider">
+                    <img src = "../assets/ICON/Arrow Left.png">
+                </div>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="img-slider"><img src="../assets/screenshot/photo1.jpg"></div>
+                        <div class="img-slider"><img src="../assets/screenshot/photo2.jpg"></div>
+                        <div class="img-slider"><img src="../assets/screenshot/photo3.jpg"></div>
+                        <div class="img-slider"><img src="../assets/screenshot/photo4.jpg"></div>
+                        <div class="img-slider"><img src="../assets/screenshot/photo5.jpg"></div>
+                        <div class="img-slider"><img src="../assets/screenshot/photo6.jpg"></div>
+                        <div class="img-slider"><img src="../assets/screenshot/photo7.jpg"></div>
+                    </div>
+                </div>
+                <div class="right-slider">
+                    <img src="../assets/ICON/Arrow Right.png">
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="../javascript/navbar.js"></script>
     <script src="../javascript/resize.js"></script>
+    <script src="../javascript/gallery.js"></script>
 </body>
 </html>
