@@ -79,6 +79,10 @@
 .system-requirement{
   height: auto;
   margin-bottom: 10rem;
+  background-image: url('../assets/background/download-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .system-requirement-media{
