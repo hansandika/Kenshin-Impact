@@ -141,14 +141,14 @@ article img{
 }
 
 .button-slide i{
-    color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.5);
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .button-slide i:hover{
-    color : rgba(0,0,0.8);
+    color : rgba(255,255,255,1);
 }
 
 .news-latest{
@@ -170,7 +170,7 @@ article img{
     text-overflow: ellipsis; 
 }
 
-.news-text-title h2{
+.news-text-title{
     position: relative;
     padding: 0.5rem 0;
     color: rgb(250, 212, 158);
@@ -178,7 +178,7 @@ article img{
     cursor: pointer;
 }
 
-.news-text::after{
+.news-text-title::after{
     content: '';
     position: absolute;
     bottom: -2px;
