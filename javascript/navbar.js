@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var item = document.querySelectorAll('.menu-bar li');
       const dropdown = document.querySelector('.dropdown-content');
       const activeNavbar = document.querySelector('.active-navbar');
-      indicator(activeNavbar.childNodes[1]);
+      indicator(activeNavbar.children[0]);
       function indicator(e){
           slider.style.left = e.offsetLeft + 'px';
           slider.style.width = e.offsetWidth + 'px';
@@ -85,15 +85,15 @@ document.addEventListener("DOMContentLoaded", function() {
   
       item.forEach(e => {
           e.addEventListener('mouseover',(e) => {
-              if(e.target.childNodes[1] === undefined){
-                  indicator(e.target.parentElement.parentElement.childNodes[1]);
+              if(e.target.parentElement.classList.contains('dropdown-content')){
+                  indicator(e.target.parentElement.parentElement.children[0]);
               }
               else{
-                  indicator(e.target.childNodes[1]);
+                  indicator(e.target.children[0]);
               }
           })
           e.addEventListener('mouseout',(e) => {
-              indicator(activeNavbar.childNodes[1]);
+              indicator(activeNavbar.children[0]);
           })
       });
   

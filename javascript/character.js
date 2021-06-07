@@ -1,11 +1,11 @@
 const background = document.querySelector('.character-background');
-background.style.backgroundImage = 'url("../assets/background/Mondstat.png")';
+background.style.backgroundImage = 'url("../assets/background/Mondstat.jpg")';
 
 const changeBackground = setInterval(()=>{
-    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.png")'){
+    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.jpg")'){
         background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
     }else{
-        background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
+        background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
     }
 },20000)
 
@@ -86,9 +86,9 @@ const imageShow = () => {
 
 const map = () =>{
     
-    window.addEventListener('click',(e)=>{
-        if(e.target.classList.contains('map-content')){
-            const mapContent = document.querySelectorAll('.map-content');
+    const mapContent = document.querySelectorAll('.map-content');
+    mapContent.forEach(element => {
+        element.addEventListener('click',(e)=>{
             let currIndex;
             let slideIndex;
             for (let i = 0; i < mapContent.length; i++) {
@@ -110,10 +110,10 @@ const map = () =>{
                 mapContent[currIndex].className = mapContent[currIndex].className.replace(' map-active',' ');
                 mapContent[slideIndex].classList.add('map-active');
                 if(currIndex === 0){
-                    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.png")'){
+                    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.jpg")'){
                         background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
                     }else{
-                        background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
+                        background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
                     }
                     characterNameDiv[0].classList.remove('active-div');
                     characterTextDiv[0].classList.remove("active-div");
@@ -125,10 +125,10 @@ const map = () =>{
                     imageDiv[1].classList.add('active-div');
                     imageList[1].classList.add('active-div');
                 }else{
-                    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.png")'){
+                    if(background.style.backgroundImage === 'url("../assets/background/Mondstat.jpg")'){
                         background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
                     }else{
-                        background.style.backgroundImage = "url('../assets/background/Mondstat.png')";
+                        background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
                     }
                     characterNameDiv[0].classList.add('active-div');
                     characterTextDiv[0].classList.add('active-div');
@@ -142,10 +142,9 @@ const map = () =>{
 
                 }
             }
-        }
+        });
     })
 }
-
 const mapDropdown = () => {
     const dropdown = document.querySelector(".map-responsive");
     const arrow = document.querySelector('.arrow');
@@ -168,8 +167,8 @@ const mapSelect = () => {
     const dropdownMap = document.querySelectorAll('.dropdown-map');
     const arrow = document.querySelector('.arrow');
     const dropdownResponsive = document.querySelector('.dropdown-responsive');
-    dropdownMap.forEach(e => {
-        e.addEventListener('click', () => {
+    dropdownMap.forEach(element => {
+        element.addEventListener('click', e => {
             const chooseMap = e;
             let indexChooseMap;
             for(let i = 0;i < dropdownMap.length;i++){
@@ -217,7 +216,7 @@ const mapSelect = () => {
             arrow.classList.remove('down');
             arrow.classList.add('up');
         })
-    });
+    })
 }
 
 const appCharacter = ()=>{
@@ -229,4 +228,3 @@ const appCharacter = ()=>{
 }
 
 appCharacter();
-
