@@ -1,4 +1,4 @@
-$(()=> {
+ $(()=>{    
   const showSlide = () =>{
       const imageSize = document.querySelector('.news-image');
       const newSlide = document.querySelector('.news-latest');
@@ -6,30 +6,26 @@ $(()=> {
   }
   
   const slideImg = () =>{
-        const slideCount = $('.news-image').length;
         const slideWidth = $('.news-image').width();
-        const totalwidth = slideCount * slideWidth;
-        console.log(slideWidth);
         $('.news-slide').css({
             width: slideWidth,  
-            marginLeft : -slideWidth
+            left : -slideWidth
         });
-        $('.news-image:last-child').prependTo(".news-slide");
+        $('.news-slide').prepend($('.news-image:last-child'));
 
         $('.left-slider').click(() => { 
-            $('.news-slide').animate({left: +slideWidth},500, ()=>{
-                $('.news-image:last-child').prependTo(".news-slide");
-                $('.news-slide').css({left:0});
+            $('.news-slide').animate({left: 0},500, ()=>{
+                $('.news-slide').prepend($('.news-image:last-child'));
+                $('.news-slide').css({left:-slideWidth});
             })
         });
 
         $('.right-slider').click(() => { 
-            $('.news-slide').animate({left: -slideWidth },500, ()=>{
-                $('.news-image:first-child').appendTo(".news-slide");
-                $('.news-slide').css({left:0});
+            $('.news-slide').animate({left: -slideWidth * 2 },500, ()=>{
+                $('.news-slide').append($('.news-image:first-child'));
+                $('.news-slide').css({left:-slideWidth});
             })
         });
-
     }
 
 
@@ -41,3 +37,4 @@ $(()=> {
   
   appsHome();
 });
+

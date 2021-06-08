@@ -99,7 +99,7 @@ html{
     position: absolute;
     display: flex;
     align-items: center;
-    bottom: 15vh;
+    bottom: 50px;
     left: 5vw;
     color: var(--secondary-color);
     cursor : pointer;
@@ -123,7 +123,7 @@ html{
 
 @-webkit-keyframes MoveUpDown {
     0%,100% {
-        transform: translateY(25%);
+        transform: translateY(75%);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
     50% {
@@ -134,7 +134,7 @@ html{
 
 @keyframes MoveUpDown{
     0%,100% {
-        transform: translateY(-25%);
+        transform: translateY(-75%);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
     50% {
@@ -283,7 +283,22 @@ main{
         margin: 0 0.5rem 5rem;
         font-size: 1rem;
     }
+}
 
+@media screen and (max-width : 320px){
+    .media-div h2{
+        padding: 0.2rem;
+        font-size: 0.8rem;
+        margin: 0 0.5rem 5rem;
+    }
+}
+
+@media screen and (max-width : 250px) {
+    .media-div h2{
+        padding: 0.2rem;
+        font-size: 0.8rem;
+        margin: 0 0.2rem 5rem;
+    }
 }
 
 .video-section{
@@ -383,6 +398,15 @@ main{
     }
 }
 
+@media screen and (max-width : 310px) {
+    .video{
+        width: 15rem;
+    }
+}
+.screenshot-section{
+    margin-bottom: 8rem;
+}
+
 .left-slider{
     cursor : pointer;
     width: 3.5rem;
@@ -401,6 +425,24 @@ main{
 
 .right-slider img{
     width: 100%;
+}
+
+@media screen and (max-width : 650px){
+    .left-slider{
+        width: 2.5rem;
+    }
+    .right-slider{
+        width: 2.5rem;
+    }
+}
+
+@media screen and (max-width : 350px){
+    .left-slider{
+        width: 2rem;
+    }
+    .right-slider{
+        width: 2rem;
+    }
 }
 
 .slider-container{
@@ -478,7 +520,7 @@ main{
     transform: translateY(-10%);
 }
 
-.fa-download{
+.wallpaper .fa-download{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -495,14 +537,26 @@ main{
     visibility: visible;
 }
 
-/* @include keyframe(bounce) {
-  0%,
-  100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
+@media screen and (max-width : 500px) {
+    .wallpaper{
+        width: 20rem;
+    }
+}
 
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-  } */
+@media screen and (max-width : 400px){
+    .section-title h2{
+        font-size: 2rem;
+    }
+    .wallpaper{
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width : 300px){
+    .section-title h2{
+        font-size: 1.5rem;
+    }
+    .wallpaper{
+        width: 10rem;
+    }
+}

@@ -10,10 +10,28 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,1) rgba(0,0,0,0.7);
 }
 
 body{
     overflow-x : hidden;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.2); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,1); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.7); 
 }
 
 .landing-page{
@@ -88,7 +106,7 @@ article img{
 .news-section{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 50vh;
     height: auto;
     background-image: url('../assets/background/update-background.jpg');
     background-position: center;
@@ -101,10 +119,11 @@ article img{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .news-title{
-    padding: 8rem;
+    padding: 8rem 0;
     text-align: center;
     text-transform: uppercase;
 }
@@ -143,6 +162,7 @@ article img{
 .button-slide i{
     color: rgba(255,255,255,0.5);
     font-size: 2.5rem;
+    padding: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -158,21 +178,13 @@ article img{
     justify-content: flex-start;
     padding: 1.5rem;
     background-color: rgba(0,0,0,0.4);  
-    overflow: hidden;
-}
-
-.news-text{
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem 0.8rem;
-    overflow: hidden;   
-    white-space: nowrap; 
-    text-overflow: ellipsis; 
+    overflow-y: scroll;
+    min-height: 300px;
 }
 
 .news-text-title{
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.2rem 0.3rem;
     color: rgb(250, 212, 158);
     border-bottom: 2.5px solid rgba(255,255,255,0.2);
     cursor: pointer;
@@ -189,16 +201,117 @@ article img{
     background-color: rgb(250, 212, 158);
 }
 
-.news-text p{
+.news-text{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.8rem;
     cursor: pointer;
+    overflow: hidden;   
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.news-text p{
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-size: 1.2rem;
     color: rgba(255,255,255,1);
-    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.news-text span{
+    width: 20%;
+    text-align: right;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
 }
 
 .news-text:hover{
     background-color: rgba(255,255,255,0.2);
 }
+
+@media screen and (max-width : 750px) {
+    .new-slide-container{
+        width: 35rem;
+    }
+    .news-slide{
+        width: 35rem;
+    }
+    .news-latest{
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width : 620px) {
+    .new-slide-container{
+        width: 28rem;
+        min-height: 220px;
+    }
+    .news-slide{
+        width: 28rem;
+        min-height: 220px;
+    }
+    .news-latest{
+        width: 28rem;
+    }
+    .news-text p{
+        font-size: 0.8rem;
+    }
+    .news-text span{
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .news-title h2{
+        font-size: 2.5rem;
+    }
+    .new-slide-container{
+        width: 22rem;
+    }
+    .news-slide{
+        width: 22rem;
+    }
+    .news-latest{
+        width: 22rem;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .news-title{
+        padding: 4rem 0;
+    }
+    .new-slide-container{
+        width: 90vw;
+    }
+    .news-slide{
+        width: 90vw;
+    }
+    .news-latest{
+        width: 90vw;    
+    }
+    .news-text p{
+        width: 75%;
+        font-size: 0.7rem;
+    }
+    .news-text span{
+        width: 25%;
+        font-size: 0.5rem;
+    }
+
+}
+
+/* @media screen and (max-width : 300px){
+    .new-slide-container{
+        width: 15rem;
+    }
+    .news-slide{
+        width: 15rem;
+    }
+    .news-latest{
+        width: 15rem;
+    }
+} */
 
 .download{
     min-height: 70vh;

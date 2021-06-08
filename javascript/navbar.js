@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", () => {
   const burger = document.querySelector('.burger');
   const sidebar = document.querySelector(".sidebar");
   const navLink = document.querySelectorAll('.sidebar-content');
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   window.addEventListener('click', (e) =>{
       if(e.target == sidebarDiv && sidebarDiv.style.display == "block"){
-          sidebarDiv.style.display = "non e";
+          sidebarDiv.style.display = "none";
           sidebar.classList.remove('menu-active');
           burger.classList.remove('toggle');
           navLink.forEach((e,index) => {
