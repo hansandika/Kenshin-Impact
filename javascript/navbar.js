@@ -102,11 +102,26 @@ window.addEventListener("load", () => {
       })
   }
   
+  const dropLink = () =>{
+    const dropdownLink = document.querySelectorAll(".dropdown-content li");
+    dropdownLink.forEach(e => {
+        e.addEventListener('click',(event)=>{
+            event.preventDefault();
+            if(event.target.children[0].innerHTML === 'Mondstadt'){
+                window.location.assign('../html/character.html?map=mondstadt');
+            }else{
+                window.location.assign('../html/character.html?map=liyueharbor');
+            }
+        })
+    });
+  }
+
   const app = () => {
       navSlide();
       scroll();
       slide();
       windowSize();
+      dropLink();
   }
   
   app();

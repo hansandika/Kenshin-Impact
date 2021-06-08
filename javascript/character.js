@@ -219,13 +219,63 @@ window.addEventListener('load',() => {
             })
         })
     }
-    
+
+    const parameter = () =>{
+        const param = new URL(window.location.href).searchParams.get("map");
+        const mapContent = document.querySelectorAll('.map-content');
+        if(param ==="liyueharbor"){
+                currIndex = 0;
+                slideIndex = 1;
+                mapContent[currIndex].className = mapContent[currIndex].className.replace(' map-active',' ');
+                mapContent[slideIndex].classList.add('map-active');
+                const characterNameDiv = document.querySelectorAll('.character-name-div');
+                const characterTextDiv = document.querySelectorAll(".character-text-div");
+                const imageDiv = document.querySelectorAll('.character-image-div');
+                const imageList = document.querySelectorAll('.image-list');
+                if(background.style.backgroundImage === 'url("../assets/background/Mondstat.jpg")'){
+                    background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
+                }else{
+                    background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
+                }
+                characterNameDiv[0].classList.remove('active-div');
+                characterTextDiv[0].classList.remove("active-div");
+                imageDiv[0].classList.remove("active-div");
+                imageList[0].classList.remove('active-div');
+
+                characterNameDiv[1].classList.add('active-div');
+                characterTextDiv[1].classList.add('active-div');
+                imageDiv[1].classList.add('active-div');
+                imageList[1].classList.add('active-div');
+        }else{
+                currIndex = 1;
+                slideIndex = 0;
+                mapContent[currIndex].className = mapContent[currIndex].className.replace(' map-active',' ');
+                mapContent[slideIndex].classList.add('map-active');
+                const characterNameDiv = document.querySelectorAll('.character-name-div');
+                const characterTextDiv = document.querySelectorAll(".character-text-div");
+                const imageDiv = document.querySelectorAll('.character-image-div');
+                const imageList = document.querySelectorAll('.image-list');
+                background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
+                
+                characterNameDiv[0].classList.add('active-div');
+                characterTextDiv[0].classList.add('active-div');
+                imageDiv[0].classList.add('active-div');
+                imageList[0].classList.add('active-div');
+
+                characterNameDiv[1].classList.remove('active-div');
+                characterTextDiv[1].classList.remove("active-div");
+                imageDiv[1].classList.remove("active-div");
+                imageList[1].classList.remove('active-div');
+        }
+    }
+
     const appCharacter = ()=>{
         slider();
         imageShow();
         map();
         mapDropdown();
         mapSelect();
+        parameter();
     }
     
     appCharacter();

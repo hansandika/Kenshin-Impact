@@ -1,8 +1,8 @@
  $(()=>{    
   const showSlide = () =>{
-      const imageSize = document.querySelector('.news-image');
+      const imageSize = document.querySelector('.news-image img');
       const newSlide = document.querySelector('.news-latest');
-      newSlide.style.height = imageSize.height+"px";
+    newSlide.style.height = imageSize.height+"px";
   }
   
   const slideImg = () =>{
@@ -28,8 +28,6 @@
         });
     }
 
-
-  
   const appsHome = () =>{
       showSlide();
       slideImg();
