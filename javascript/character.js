@@ -111,11 +111,7 @@ window.addEventListener('load',() => {
                     mapContent[currIndex].className = mapContent[currIndex].className.replace(' map-active',' ');
                     mapContent[slideIndex].classList.add('map-active');
                     if(currIndex === 0){
-                        if(background.style.backgroundImage === 'url("../assets/background/Mondstat.jpg")'){
-                            background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
-                        }else{
-                            background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
-                        }
+                        background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
                         characterNameDiv[0].classList.remove('active-div');
                         characterTextDiv[0].classList.remove("active-div");
                         imageDiv[0].classList.remove("active-div");
@@ -126,11 +122,7 @@ window.addEventListener('load',() => {
                         imageDiv[1].classList.add('active-div');
                         imageList[1].classList.add('active-div');
                     }else{
-                        if(background.style.backgroundImage === 'url("../assets/background/Mondstat.jpg")'){
-                            background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
-                        }else{
-                            background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
-                        }
+                        background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
                         characterNameDiv[0].classList.add('active-div');
                         characterTextDiv[0].classList.add('active-div');
                         imageDiv[0].classList.add('active-div');

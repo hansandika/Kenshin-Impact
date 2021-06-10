@@ -391,6 +391,7 @@ article img{
     height: auto;
     outline: none;
     border: none;
+    overflow: hidden;
     transition: ease-out 0.3s;
     cursor : pointer;
     padding: 0.8rem 3rem;
@@ -405,20 +406,21 @@ article img{
 }
 
 .download-button button::before{
-    transition : 0.3s all ease;
+    transition : 0.5s all ease;
     content : "";
     position: absolute;
     top : 0;
-    left : 50%;
-    right: 50%;
+    left : 0;
+    width: 150%;
+    height: 100%;
+    transform: translateX(-120%) skew(120deg);
     bottom: 0;
-    opacity: 0;
+    opacity: 1;
     background-color: rgb(17, 26, 36);
 }
 
 .download-button button:hover:before{
-    left : 0;
-    right: 0;
+    transform: translateX(-10%) skew(120deg);
     opacity: 1;
     z-index: -1;
 }
@@ -577,8 +579,9 @@ article img{
 
 @media screen and (max-width : 800px) {
     .character-image{
+        top : -10px;
         width: auto;
-        height: 150%;
+        height: 180%;
     }
 }
 

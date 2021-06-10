@@ -249,10 +249,10 @@ main{
 
 .media-div a{
     text-decoration : none;
+    margin: 0 2rem 7rem;    
 }
     
 .media-div h2{
-    margin: 0 2rem 7rem;
     color : var(--secondary-color);
     padding: 0.5rem;
     border-bottom: 3px solid var(--secondary-color);

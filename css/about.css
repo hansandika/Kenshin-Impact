@@ -373,7 +373,7 @@ article h2 {
     height: 100%;
     transform: translateX(-120%) skew(120deg);
     bottom: 0;
-    opacity: 1;
+    opacity: 0;
     background-color: rgb(17, 26, 36);
 }
 
