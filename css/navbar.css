@@ -161,17 +161,19 @@ nav{
     padding-left: 40px;
 }
 
-.grey-div{
+.list-sidebar::before{
+    content: '';
+    display: block;
     height: 10vh;
-    background-color: #393B40;
+    background-color: #393840;
 }
 
-.sidebar-div{
+.overlay{
     position: fixed;
     width: 100%;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
-    display: none;
+    visibility: hidden;
     z-index: 5;
 }
 

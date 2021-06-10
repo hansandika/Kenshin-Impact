@@ -15,7 +15,7 @@
 }
 
 body{
-    overflow-x : hidden;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -467,6 +467,10 @@ article img{
     }
 }
 
+.character a{
+    text-decoration: none;
+}
+
 .mondstadt-section{
     content: '';
     position: absolute;
@@ -502,7 +506,7 @@ article img{
     align-items: center;
     height: 40vh;
     overflow: hidden;
-    max-height: 300px;
+    max-height: 280px;
     transition: all 0.2s;
 }
 
@@ -514,7 +518,7 @@ article img{
 .character-image{
     position: absolute;
     right: 0;
-    width: 40%;
+    width: 40rem;
     top : -10vh;
     opacity: 0;
     transition: all 0.3s;
@@ -571,19 +575,34 @@ article img{
     transition: all 0.5s;
 } 
 
-@media screen and (max-width : 770px) {
-    .character-section{
-        max-height: 250px;
+@media screen and (max-width : 800px) {
+    .character-image{
+        width: auto;
+        height: 150%;
     }
 }
 
-@media screen and (max-width : 550px){
+@media screen and (max-height : 1025px) and (max-width : 800px) {
     .character-section{
-        max-height: 150px;
+        max-height: 13rem;
+    }
+}
+
+@media screen and (max-height : 825px) and (max-width : 800px){
+    .character-section{
+        max-height: 8rem;
     }
     .character-section h2{
         font-size: 1.5rem;
     }
 }
 
+@media screen and (max-height : 600px) and (max-width : 800px){
+    .character-section{
+        max-height: 6.5rem;
+    }
+    .character-section h2{
+        font-size: 1.3rem;
+    }
+}
 

@@ -232,11 +232,8 @@ window.addEventListener('load',() => {
                 const characterTextDiv = document.querySelectorAll(".character-text-div");
                 const imageDiv = document.querySelectorAll('.character-image-div');
                 const imageList = document.querySelectorAll('.image-list');
-                if(background.style.backgroundImage === 'url("../assets/background/Mondstat.jpg")'){
-                    background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
-                }else{
-                    background.style.backgroundImage = "url('../assets/background/Mondstat.jpg')";
-                }
+                background.style.backgroundImage = "url('../assets/background/Liyue.jpg')";
+                
                 characterNameDiv[0].classList.remove('active-div');
                 characterTextDiv[0].classList.remove("active-div");
                 imageDiv[0].classList.remove("active-div");

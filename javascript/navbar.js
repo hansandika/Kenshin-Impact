@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   const sidebarDiv = document.querySelector('.sidebar-div');
   const navSlide = () => {
       burger.addEventListener('click', () => {
-          sidebarDiv.style.display = "block";
+          sidebarDiv.style.visibility = 'visible';
           if(sidebar.classList.contains('menu-active')){
               sidebar.classList.remove('menu-active');
           }
@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
           })
           if(burger.classList.contains('toggle')){
               burger.classList.remove('toggle');
-              sidebarDiv.style.display = "none";
+              sidebarDiv.style.visibility = 'hidden';
           }else{
               burger.classList.add('toggle');
           }
