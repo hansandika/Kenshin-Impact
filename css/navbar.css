@@ -229,7 +229,7 @@ aside{
 .burger{
     position : fixed;
     right: 5vw;
-    top : 2vh;
+    top : 3.5vh;
     display: none;
     height: 30px;
     padding: 8px;
