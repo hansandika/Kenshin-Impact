@@ -134,7 +134,8 @@ nav{
     cursor: pointer;
 }
 
-.login a{
+.login p{
+    pointer-events: none;
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: bolder;

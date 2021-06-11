@@ -335,15 +335,16 @@ article img{
     position: relative;
 }
 
-.download-background{
-    height: 70vh;
+.download::before{
+    content: '';
     position: absolute;
     width: 100%;
+    height: 70vh;
     background-image: url(../assets/background/Download.jpg);
     background-size: cover;
     background-position: right 20% center;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: -2;
     filter : brightness(70%);
 }
 
