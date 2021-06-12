@@ -22,6 +22,7 @@ const close = () => {
     const closeButton = document.querySelector('.fa-times');
     closeButton.addEventListener('click',() => {
         document.querySelector('.form-section').style.display = 'none';
+        document.querySelector('.overlay').style.visibility = 'hidden';
     })
 }
 
@@ -29,6 +30,7 @@ const open = () => {
     const openLogin = document.querySelector('.login');
     openLogin.addEventListener('click',() => {
         document.querySelector('.form-section').style.display = 'flex';
+        document.querySelector('.overlay').style.visibility = 'visible';    
     })
 }
 
