@@ -32,6 +32,25 @@ const open = () => {
         document.querySelector('.form-section').style.display = 'flex';
         document.querySelector('.overlay').style.visibility = 'visible';    
     })
+    const openButtonSidebar = document.querySelector('.login-sidebar');
+    const burger = document.querySelector('.burger');
+    const sidebar = document.querySelector(".sidebar");
+    const navLink = document.querySelectorAll('.sidebar-content');
+    const sidebarDiv = document.querySelector('.sidebar-div');
+    openButtonSidebar.addEventListener('click',()=>{
+        document.querySelector('.form-section').style.display = 'flex';
+        document.querySelector('.overlay').style.visibility = 'visible';    
+        sidebarDiv.style.visibility = "hidden";
+        sidebar.classList.remove('menu-active');
+        burger.classList.remove('toggle');
+        navLink.forEach((e,index) => {
+            if(e.style.animation){
+                e.style.animation = "";
+            }else{
+                e.style.animation = `navLinkFade 0.5s ease forwards ${index /7 + 0.25}s`
+            }
+        })
+    })
 }
 
 const clearField = (index) => {

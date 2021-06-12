@@ -270,8 +270,10 @@ main{
     .media-title h2{
         font-size: 3.5rem;
     }
-    .media-div h2{
+    .media-div a{
         margin : 0 3rem 8rem;
+    }
+    .media-div h2{
         font-size: 2.5rem;
     }
 }
@@ -280,15 +282,19 @@ main{
     .media-title h2{
         font-size: 1.5rem;
     }
-    .media-div h2{
+    .media-div a{
         margin: 0 1.5rem 5rem;
+    }
+    .media-div h2{
         font-size: 1.3rem;
     }
 }
 
 @media screen and (max-width : 500px){
-    .media-div h2{
+    .media-div a{
         margin : 0 0.8rem 5rem;
+    }
+    .media-div h2{{
         font-size: 1.2rem;
     }
 }
@@ -297,25 +303,31 @@ main{
     .media-title h2{
         font-size: 1rem;
     }
-    .media-div h2{
+    .media-div a{
         margin: 0 0.5rem 5rem;
+    }
+    .media-div h2{
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width : 320px){
-    .media-div h2{
+    .media-div a{
         padding: 0.2rem;
-        font-size: 0.8rem;
         margin: 0 0.5rem 5rem;
+    }
+    .media-div h2{
+        font-size: 0.8rem;  
     }
 }
 
 @media screen and (max-width : 250px) {
-    .media-div h2{
+    .media-div a{
         padding: 0.2rem;
-        font-size: 0.8rem;
         margin: 0 0.2rem 5rem;
+    }
+    .media-div h2{
+        font-size: 0.8rem;
     }
 }
 

@@ -362,4 +362,11 @@ aside{
         opacity: 1;
         transform: translateX(0px);
     }
+}   
+
+
+@media screen and (max-width : 400px) {
+    .list-sidebar a{
+        line-height: 4.1rem;
+    }
 }

@@ -58,8 +58,8 @@ window.addEventListener("load", () => {
   
   
   window.addEventListener('click', (e) =>{
-      if(e.target == sidebarDiv && sidebarDiv.style.display == "block"){
-          sidebarDiv.style.display = "none";
+      if(e.target == sidebarDiv){
+          sidebarDiv.style.visibility = "hidden";
           sidebar.classList.remove('menu-active');
           burger.classList.remove('toggle');
           navLink.forEach((e,index) => {

@@ -262,3 +262,25 @@ form input[type="checkbox"]{
 .register-form{
     padding: 2.5rem;
 }
+
+@media screen and (max-width : 550px) {
+    .form-container{
+        width: 25rem;
+        padding: 3rem 2rem;
+    }
+    .exit-button i{
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .form-container{
+        width: 20rem;
+    }
+    .input-area input{
+        padding: 0 45px;
+    }
+    form h1{
+        margin-bottom: 1em;
+    }
+}
