@@ -23,6 +23,7 @@ const close = () => {
     closeButton.addEventListener('click',() => {
         document.querySelector('.form-section').style.display = 'none';
         document.querySelector('.overlay').style.visibility = 'hidden';
+        clearField(0);
     })
 }
 
@@ -96,6 +97,21 @@ const clearField = (index) => {
     }
 }
 
+window.addEventListener('load',() => {
+    const userAccount = JSON.parse(localStorage.getItem('Account'));
+    if(userAccount !== null){
+        const loginButton = document.querySelector('.login');
+        loginButton.style.display = 'none';
+        const welcome = document.createElement('div');
+        welcome.classList.add("welcome");
+        const index = userAccount.username.indexOf('@');
+        welcome.style.display = 'block';
+        welcome.innerHTML = '<p>' + 'Welcome ' + userAccount.username.substring(0,index) + '</p>';
+        document.querySelector('.menu').appendChild(welcome);
+
+        
+    }
+})
 
 const loginValidation = () => {
     const formLogin = document.querySelector(".login-form");
@@ -103,50 +119,74 @@ const loginValidation = () => {
     const emailLoginInput = emailLoginField.querySelector("input");
     const passwordLoginField = formLogin.querySelector(".password");
     const passwordLoginInput = passwordLoginField.querySelector("input");
-
-    const checkEmail = () => {
-        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-        if (!emailLoginInput.value.match(pattern)) { 
-            emailLoginField.classList.add("error");
-            emailLoginField.classList.remove("valid");
-            const errorTxt = emailLoginField.querySelector(".error-txt");
-            (emailLoginInput.value != "") ? errorTxt.innerText = "Enter a valid email address" : errorTxt.innerText = "Email cannot be empty";
-        } else { 
-            emailLoginField.classList.remove("error");
-            emailLoginField.classList.add("valid");
-        }
-    }
-
-    const checkPass = () => {
-        if (passwordLoginInput.value == "") { 
-            passwordLoginField.classList.add("error");
-            passwordLoginField.classList.remove("valid");
-        } else { 
-            passwordLoginField.classList.remove("error");
-            passwordLoginField.classList.add("valid");
-        }
-    }
-
+    const errorTermsLogin = formLogin.querySelector('.error-terms-login');
+    
     formLogin.onsubmit = (e) => {
         e.preventDefault(); 
-        (emailLoginInput.value == "") ? emailLoginField.classList.add("shake", "error") : checkEmail();
-        (passwordLoginInput.value == "") ? passwordLoginField.classList.add("shake", "error") : checkPass();
+        const currentAccount = JSON.parse(localStorage.getItem('Account'));
+        if(emailLoginInput.value == "") {
+            emailLoginField.classList.add("shake", "error") 
+        }
+        if(passwordLoginInput.value == "") {
+            passwordLoginField.classList.add("shake", "error")
+        }
+        else if(currentAccount !== null){
+            if(emailLoginInput.value !== currentAccount.username || passwordLoginInput.value !== currentAccount.password){
+                errorTermsLogin.style.visibility = 'visible';
+                setTimeout(() => {
+                    errorTermsLogin.style.visibility = 'hidden';
+                },5000)
+            }
+            else if(emailLoginInput.value === currentAccount.username && passwordLoginInput.value === currentAccount.password){
+                document.querySelector('.form-section').style.display = 'none';
+                document.querySelector('.overlay').style.visibility = 'hidden';
+                clearField(0);
+                const loginButton = document.querySelector('.login');
+                loginButton.style.display = 'none';
+                const welcome = document.createElement('div');
+                welcome.classList.add("welcome");
+                const index = currentAccount.username.indexOf('@');
+                welcome.style.display = 'block';
+                welcome.innerHTML = '<p>' + 'Welcome ' + currentAccount.username.substring(0,index) + '</p>';
+                document.querySelector('.menu').appendChild(welcome);
+            }
+        }else{
+            errorTermsLogin.style.visibility = 'visible';
+            setTimeout(() => {
+                errorTermsLogin.style.visibility = 'hidden';
+            },5000)
+        }
+
+        emailLoginInput.addEventListener('keyup',() => {
+            if(emailLoginInput == ''){
+                emailLoginField.classList.add("error");
+                emailLoginField.classList.remove("valid");
+                const errorTxt = emailLoginField.querySelector(".error-txt");
+                errorTxt.innerText = "Email cannot be empty";
+            }else{
+                emailLoginField.classList.remove("error");
+                emailLoginField.classList.add("valid");
+            }
+        })
+
+        passwordLoginInput.addEventListener('keyup',() => {
+            if(passwordLoginInput == ''){
+                passwordLoginField.classList.add('error');
+                passwordLoginField.classList.remove('valid');
+                const errorTxt = passwordLoginField.querySelector('.error-txt');
+                errorTxt.innerText = 'Password cannot be empty';
+            }
+            else { 
+                passwordLoginField.classList.remove('error');
+                passwordLoginField.classList.add('valid');
+            }   
+        })
+
         setTimeout(() => { 
             emailLoginField.classList.remove("shake");
             passwordLoginField.classList.remove("shake");
         }, 500);
            
-        emailLoginInput.addEventListener('keyup',() => {
-            checkEmail();
-        })
-
-        passwordLoginInput.addEventListener('keyup',() => {
-            checkPass();
-        })
-        // //if eField and pField doesn't contains error class that mean user filled details properly
-        // if (!eField.classList.contains("error") && !pField.classList.contains("error")) {
-        //     window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
-        // }
     }
 }
 
@@ -162,14 +202,19 @@ const registerValidation = () => {
     const errorTerms = form.querySelector('.error-terms');
 
     const checkEmail = () => {
-        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
-        if (!emailInput.value.match(pattern)) {
+        if(emailInput.value == ''){
             emailField.classList.add("error");
             emailField.classList.remove("valid");
             const errorTxt = emailField.querySelector(".error-txt");
-            
-            (emailInput.value != "") ? errorTxt.innerText = "Enter a valid email address" : errorTxt.innerText = "Email cannot be empty";
-        } else { 
+            errorTxt.innerText = "Email cannot be empty";
+        }
+        else if(!emailInput.value.endsWith('@mail.com')){
+            emailField.classList.add("error");
+            emailField.classList.remove("valid");
+            const errorTxt = emailField.querySelector(".error-txt");
+            (emailInput.value.length < 8) ? errorTxt.innerText = "Email length must be more than 8 characters" : errorTxt.innerText = "must ends with @mail.com";
+        }
+        else { 
             emailField.classList.remove("error");
             emailField.classList.add("valid");
         }
@@ -232,7 +277,15 @@ const registerValidation = () => {
                     errorTerms.style.visibility = "hidden";
                 },3500)
             }else{
-
+                const account = {
+                    username : emailInput.value,
+                    password : passwordInput.value
+                };
+                localStorage.setItem("Account",JSON.stringify(account));
+                const formContainer = document.querySelectorAll(".form-container");
+                clearField(1);
+                formContainer[1].classList.remove('active-form');
+                formContainer[0].classList.add('active-form');
             }
         }
     }

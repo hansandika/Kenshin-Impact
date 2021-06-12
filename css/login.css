@@ -253,6 +253,19 @@ form input[type="checkbox"]{
     visibility: hidden;
 }
 
+.error-terms-login{
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgba(255,255,255,1);
+    padding: 10px;
+    font-size: 0.85rem;
+    background-color: rgba(0,0,0,0.65);
+    visibility: hidden;
+}
+
 .active-form{
     visibility: visible;
     transform: translateY(0%);

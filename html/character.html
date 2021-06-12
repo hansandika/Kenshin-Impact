@@ -9,14 +9,104 @@
     <link rel="stylesheet" href="../css/character.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <script src="../javascript/navbar.js" defer></script>
     <script src="../javascript/character.js" defer></script>
     <script src="../javascript/resize.js" defer></script>
+    <script src="../javascript/loginResgiter.js" defer></script>
 </head>
 <body>
+    <section class="form-section overlay">
+        <div class="form-container login-form active-form">
+            <div class="exit-button">
+                <i class="fas fa-times"></i>
+            </div>
+            <form>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Email Address">
+                        <i class="icon fas fa-envelope"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Email cannot be empty</div>
+                </div>
+                <div class="field password">
+                    <div class="input-area">
+                        <input type="password" placeholder="Password">
+                        <i class="icon fas fa-lock"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Password cannot be empty</div>
+                </div>
+                <div class="error-terms-login">
+                    <p>Account or password error</p>
+                </div>
+                <input type="submit" value="Log in">
+                <div class="register-now">
+                    <p>Forgot Password?</p>
+                    <p id="register-text">Register Now</p>
+                </div>
+                <div class="social-media-form">
+                    <p>Or log in using social media</p>
+                    <div class="social-media-form-img">
+                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
+                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="form-container register-form">
+            <form>
+                <h1>Register By Email</h1>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Email Address">
+                        <i class="icon fas fa-envelope"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Email cannot be empty</div>
+                </div>
+                <div class="field password">
+                    <div class="input-area">
+                        <input type="password" placeholder="Password">
+                        <i class="icon fas fa-lock"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Password cannot be empty</div>
+                </div>
+                <div class="field confirm-password">
+                    <div class="input-area">
+                        <input type="password" placeholder="Confirm Password">
+                        <i class="icon fas fa-user-lock"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Confirm Password cannot be empty</div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="agree" id="agree">
+                    <label for="agree">I have read and agree to the <a href="../html/termsOfService.html">Terms of
+                            Service</a> & <a href="../html/PrivacyPolicy.html">Privacy Policy</a></label>
+                </div>
+                <div class="error-terms">
+                    <p>Please tick the Terms of Service & Privacy Policy checkbox</p>
+                </div>
+                <input type="submit" value="Register">
+                <div class="social-media-form">
+                    <p>Or log in using social media</p>
+                    <div class="social-media-form-img">
+                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
+                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
+                    </div>
+                </div>
+                <div class="return-login">
+                    <p>Return to Login <i class="fas fa-angle-right"></i></p>
+                </div>
+            </form>
+        </div>
+    </section>
     <section class="character-landing-page">
         <div class="sidebar-div overlay">
             <aside class="sidebar">
@@ -28,7 +118,7 @@
                             Game</a></li>
                     <li class="sidebar-content"><a href="../html/gallery.html"><i class="fas fa-images"></i>Gallery</a></li>
                     <li class="sidebar-content"><a href="../html/download.html"><i class="fas fa-download"></i>Download</a></li>
-                    <li class="sidebar-content"><a href="#"><i class="fas fa-key"></i>Login</a></li>
+                    <li class="sidebar-content login-sidebar"><a><i class="fas fa-key"></i>Login</a></li>
                 </ul>
             </aside>
         </div>
