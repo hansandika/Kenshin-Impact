@@ -109,7 +109,20 @@ window.addEventListener('load',() => {
         welcome.innerHTML = '<p>' + 'Welcome ' + userAccount.username.substring(0,index) + '</p>';
         document.querySelector('.menu').appendChild(welcome);
 
-        
+        const loginSidebar = document.querySelector('.login-sidebar');
+        loginSidebar.style.display = 'none';
+        const li = document.createElement('li');
+        li.classList.add('sidebar-content');
+        li.style.opacity = 1;
+        li.style = 'animation: 0.5s ease 1.25s 1 normal forwards running navLinkFade';
+        const a = document.createElement('a');
+        const i = document.createElement('i');
+        i.classList.add('fas');
+        i.classList.add("fa-user-circle");
+        a.appendChild(i);
+        a.appendChild(document.createTextNode(userAccount.username.substring(0,index)));
+        li.appendChild(a);
+        document.querySelector('.list-sidebar').appendChild(li);
     }
 })
 
@@ -149,6 +162,22 @@ const loginValidation = () => {
                 welcome.style.display = 'block';
                 welcome.innerHTML = '<p>' + 'Welcome ' + currentAccount.username.substring(0,index) + '</p>';
                 document.querySelector('.menu').appendChild(welcome);
+
+
+                const loginSidebar = document.querySelector('.login-sidebar');
+                loginSidebar.style.display = 'none';
+                const li = document.createElement('li');
+                li.classList.add('sidebar-content');
+                li.style.opacity = 1;
+                li.style = 'animation: 0.5s ease 1.25s 1 normal forwards running navLinkFade';
+                const a = document.createElement('a');
+                const i = document.createElement('i');
+                i.classList.add('fas');
+                i.classList.add("fa-user-circle");
+                a.appendChild(i);
+                a.appendChild(document.createTextNode(currentAccount.username.substring(0,index)));
+                li.appendChild(a);
+                document.querySelector('.list-sidebar').appendChild(li);
             }
         }else{
             errorTermsLogin.style.visibility = 'visible';
