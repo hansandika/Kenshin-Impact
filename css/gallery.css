@@ -571,6 +571,15 @@ main{
     .wallpaper{
         width: 20rem;
     }
+    .video-section{
+        margin-bottom: 4rem;
+    }
+    .screenshot-section{
+        margin-bottom: 4rem;
+    }
+    .wallpaper-section{
+        margin-bottom: 5rem;
+    }
 }
 
 @media screen and (max-width : 400px){
@@ -579,6 +588,15 @@ main{
     }
     .wallpaper{
         width: 15rem;
+    }
+    .video-section{
+        margin-bottom: 2rem;
+    }
+    .screenshot-section{
+        margin-bottom: 2rem;
+    }
+    .wallpaper-section{
+        margin-bottom: 4rem;
     }
 }
 
