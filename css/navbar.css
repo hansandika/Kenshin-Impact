@@ -53,6 +53,7 @@ nav{
     padding : 1rem;
     width: 15rem;
     height: auto;
+    max-height: 15vh;
 }
 
 .menu{
@@ -289,6 +290,7 @@ aside{
 @media screen and (max-width : 1095px){
     .logo a img{
         width: 18rem;
+        max-height: 15vh;
     }
     .menu{
         display: none;

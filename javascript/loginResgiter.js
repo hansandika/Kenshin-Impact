@@ -249,10 +249,41 @@ const registerValidation = () => {
         }
     }
 
+    function isAlphaNumeric(str){
+        flag = false;
+        flag2 = false;
+        flag3 = false;
+        for(let i = 0;i < str.length;i++){
+            if(str.charAt(i) >= '0' && str.charAt(i) <= '9' ){
+                flag = true;
+            }else if(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z'){
+                flag2 = true;
+            }else if(str.charAt(i) >= 'a' && str.charAt(i) <= 'z'){
+                flag3 = true;
+            }else{
+                return false;
+            }
+        }
+        if(flag && flag2 && flag3) return true;
+        return false;
+    }
+
     const checkPass = () => {
         if (passwordInput.value == "") { 
             passwordField.classList.add("error");
             passwordField.classList.remove("valid");
+            const errorTxt = passwordField.querySelector('.error-txt');
+            errorTxt.innerText = "Password cannot be empty";
+        }else if(!(passwordInput.value.length >= 8 && passwordInput.value.length <= 30)){
+            passwordField.classList.add("error");
+            passwordField.classList.remove("valid");
+            const errorTxt = passwordField.querySelector('.error-txt');
+            errorTxt.innerText = "Password length must be between (8 - 30 characters)";
+        }else if(!isAlphaNumeric(passwordInput.value)){
+            passwordField.classList.add("error");
+            passwordField.classList.remove("valid");
+            const errorTxt = passwordField.querySelector('.error-txt');
+            errorTxt.innerText = "Password must be Alphanumeric (contains number(0-9), lower character(a-z), upper character(A-Z)";
         }else { 
             passwordField.classList.remove("error");
             passwordField.classList.add("valid");
