@@ -21,17 +21,17 @@ $(()=> {
         })
     });
 
-    $('.icon').click(() =>{
-        if($('.icon').hasClass('fa-moon')){
+    $('.theme-icon').click(() =>{
+        if($('.theme-icon').hasClass('fa-moon')){
             $('body').removeClass('light-theme');
-            $('.icon').removeClass('fa-moon');
-            $('.icon').addClass('fa-sun');
+            $('.theme-icon').removeClass('fa-moon');
+            $('.theme-icon').addClass('fa-sun');
             $('.left-slider img').attr('src','../assets/ICON/Arrow Left.png');
             $('.right-slider img').attr('src','../assets/ICON/Arrow Right.png');
-        }else{
+        }else if($('.theme-icon').hasClass('fa-sun')){
             $('body').addClass('light-theme');
-            $('.icon').addClass('fa-moon');
-            $('.icon').removeClass('fa-sun');
+            $('.theme-icon').addClass('fa-moon');
+            $('.theme-icon').removeClass('fa-sun');
             $('.left-slider img').attr('src','../assets/ICON/BlackArrowLeft.png');
             $('.right-slider img').attr('src','../assets/ICON/BlackArrowRight.png');
         }

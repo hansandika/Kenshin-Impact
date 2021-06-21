@@ -1,10 +1,12 @@
 About-game :
 -https://www.google.com/url?sa=i&url=https%3A%2F%2Fgenshin.mihoyo.com%2Fid%2Fnews%2Fdetail%2F8637&psig=AOvVaw0MYfm7pYtVQ4sGhKgRNEqV&ust=1620889012961000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCND289_Jw_ACFQAAAAAdAAAAABAJ
 -https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Fby_sub_category.php%3Fid%3D333944%26name%3DGenshin%2BImpact%2BWallpapers&psig=AOvVaw0MYfm7pYtVQ4sGhKgRNEqV&ust=1620889012961000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCND289_Jw_ACFQAAAAAdAAAAABAP
+-https://wall.alphacoders.com/big.php?i=1109233	
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092418400075313.png
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092418400431809.png
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092418412067196.png
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092418413164488.png
+
 Download:
 -https://www.gensh.in/gallery/wallpaper#lg=1&slide=31
 -https://webstatic-sea.mihoyo.com/upload/event/2021/04/27/e624f141d1aa1926b04e05756a94d0c0_4595387146162006406.png
@@ -12,6 +14,7 @@ Download:
 -https://webstatic-sea.mihoyo.com/upload/event/2020/11/02/c28bc4640ec4871d54f44ec90016388c_1053840216296627683.png
 -https://webstatic-sea.mihoyo.com/upload/event/2020/11/02/9b07f8ccb09b878c919d218c5ac6feff_8024998288801268420.png
 -https://genshin.mihoyo.com/_nuxt/img/54f13cb.png
+
 Gallery
 -https://www.youtube.com/watch?v=nbCxicX8Wdo
 -https://youtu.be/9cti_Dwd3Hc
@@ -27,6 +30,15 @@ Gallery
 -https://i.ytimg.com/vi/y43rmAQ-l_M/maxresdefault.jpg
 -https://i.ytimg.com/vi/Y8Q7k6o0uXk/maxresdefault.jpg
 -https://www.gensh.in/gallery/wallpaper
+-https://www.gensh.in/wallpaper/genshin/genshin_32_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_29_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_27_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_26_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_24_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_21_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_19_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_18_4K.jpg
+-https://www.gensh.in/wallpaper/genshin/genshin_11_4K.jpg
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092417575276358.jpg
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092417575534557.jpg
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092417575488724.jpg
@@ -34,14 +46,37 @@ Gallery
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092417575267258.jpg
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092417575221063.jpg
 -https://uploadstatic-sea.mihoyo.com/contentweb/20200924/2020092417575222081.jpg
+
 Characters
 -https://www.gensh.in/characters
+-https://www.gensh.in/fileadmin/Database/Characters/Amber/charPortrait_Amber_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/Barbara/charPortrait_Barbara_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/Jean/charPortrait_Jean_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/Lisa/charPortrait_Lisa_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/Venti/charPortrait_Venti_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/Chongyun/charPortrait_Chongyun_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/HuTao/charPortrait_HuTao.png
+-https://www.gensh.in/fileadmin/Database/Characters/Keqing/charPortrait_Keqing_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/Xiao/charPortrait_Xiao_XL.png
+-https://www.gensh.in/fileadmin/Database/Characters/Ningguang/charPortrait_Ningguang_XL.png
 -https://www.gensh.in/info-sheets/material-overview
+- https://www.gensh.in/fileadmin/Database/Characters/Amber/charAvatar_Amber.png
+- https://www.gensh.in/fileadmin/Database/Characters/Jean/charAvatar_Jean.png
+- https://www.gensh.in/fileadmin/Database/Characters/Lisa/charAvatar_Lisa.png
+- https://www.gensh.in/fileadmin/Database/Characters/Barbara/charAvatar_Barbara.png
+- https://www.gensh.in/fileadmin/Database/Characters/Venti/charAvatar_Venti.png
+- https://www.gensh.in/fileadmin/Database/Characters/Chongyun/charAvatar_Chongyun.png
+- https://www.gensh.in/fileadmin/Database/Characters/HuTao/charAvatar_Hutao.png
+- https://www.gensh.in/fileadmin/Database/Characters/Keqing/charAvatar_Keqing.png
+- https://www.gensh.in/fileadmin/Database/Characters/Ningguang/charAvatar_Ningguang.png
+- https://www.gensh.in/fileadmin/Database/Characters/Xiao/charAvatar_Xiao.png
+
 Home:
-https://www.gensh.in/gallery/wallpaper#lg=1&slide=30
-https://i2.wp.com/erago.id/wp-content/uploads/2021/03/hu-tao-banner-release-date-thumb.jpg?fit=1080%2C533
-https://uploadstatic-sea.mihoyo.com/contentweb/20201218/2020121817530732640.jpg
-https://www.dualshockers.com/static/uploads/2021/02/Genshin-Impact-Xiao-gacha-banner-Invitation-to-Mundane-Life-pc-ps4-ps5-switch-Xinyan-Beidou-Diona.jpg
-https://i.pinimg.com/originals/bb/5f/02/bb5f024f5e4e65be50d001835722ac2e.jpg
-https://www.pockettactics.com/wp-content/uploads/2021/02/genshin-impact-wallpaper-4.jpg
-https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b913c5af-5e52-487c-92b7-a7b10b642b58/dedxpr6-6ad94bfc-5ecb-4cb3-86ca-065a04552a62.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I5MTNjNWFmLTVlNTItNDg3Yy05MmI3LWE3YjEwYjY0MmI1OFwvZGVkeHByNi02YWQ5NGJmYy01ZWNiLTRjYjMtODZjYS0wNjVhMDQ1NTJhNjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pEdG9TO8kGIIfcAKJog5YLkNzCZ-_07pdVGnoKS3zrY
+-https://www.gensh.in/gallery/wallpaper#lg=1&slide=30
+-https://i2.wp.com/erago.id/wp-content/uploads/2021/03/hu-tao-banner-release-date-thumb.jpg?fit=1080%2C533
+-https://uploadstatic-sea.mihoyo.com/contentweb/20201218/2020121817530732640.jpg
+-https://www.dualshockers.com/static/uploads/2021/02/Genshin-Impact-Xiao-gacha-banner-Invitation-to-Mundane-Life-pc-ps4-ps5-switch-Xinyan-Beidou-Diona.jpg
+-https://genshin.mihoyo.com/_nuxt/img/29770c4.jpg
+-https://i.pinimg.com/originals/bb/5f/02/bb5f024f5e4e65be50d001835722ac2e.jpg
+-https://www.pockettactics.com/wp-content/uploads/2021/02/genshin-impact-wallpaper-4.jpg
+-https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b913c5af-5e52-487c-92b7-a7b10b642b58/dedxpr6-6ad94bfc-5ecb-4cb3-86ca-065a04552a62.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I5MTNjNWFmLTVlNTItNDg3Yy05MmI3LWE3YjEwYjY0MmI1OFwvZGVkeHByNi02YWQ5NGJmYy01ZWNiLTRjYjMtODZjYS0wNjVhMDQ1NTJhNjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pEdG9TO8kGIIfcAKJog5YLkNzCZ-_07pdVGnoKS3zrY
