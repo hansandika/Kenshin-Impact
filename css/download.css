@@ -162,6 +162,9 @@
   .system-requirement-media h2{
     padding: 1.3rem;
   }
+  .system-requirement{
+    margin-bottom: 5rem;
+  }
 }
 
 @media screen and (max-width : 360px) {

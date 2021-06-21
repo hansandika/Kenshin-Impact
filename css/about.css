@@ -139,7 +139,6 @@ article h2 {
 
 .game-features-title h2{    
     font-size: 3rem;
-    margin : 0 2vw;
 }
 
 .game-features-content{
@@ -396,6 +395,18 @@ article h2 {
         width: 15rem;
         font-size: 1rem;
         padding: 0.5rem 0.7rem;
+    }
+    .game-features-title{
+        padding: 4rem 0 5rem;
+    }
+    .game-features-content{
+        margin-bottom: 3rem;
+    }
+    .game-features-title img{
+        display: none;
+    }
+    .character-button{
+        margin-bottom: 4rem;
     }
 }
 
