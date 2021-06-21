@@ -299,7 +299,7 @@ window.addEventListener("load", () => {
                 usernameField.classList.add("error");
                 usernameField.classList.remove("valid");
                 const errorTxt = usernameField.querySelector('.error-txt');
-                errorTxt.innerText = "Username must be Alphanumeric (contains number(0-9), lower character(a-z), upper character(A-Z)";
+                errorTxt.innerText = "Username must be Alphanumeric (contains number(0-9), lower character(a-z), upper character(A-Z))";
             }else { 
                 usernameField.classList.remove("error");
                 usernameField.classList.add("valid");
@@ -321,7 +321,7 @@ window.addEventListener("load", () => {
                 passwordField.classList.add("error");
                 passwordField.classList.remove("valid");
                 const errorTxt = passwordField.querySelector('.error-txt');
-                errorTxt.innerText = "Password must be Alphanumeric (contains number(0-9), lower character(a-z), upper character(A-Z)";
+                errorTxt.innerText = "Password must be Alphanumeric (contains number(0-9), lower character(a-z),    )";
             }else { 
                 passwordField.classList.remove("error");
                 passwordField.classList.add("valid");
