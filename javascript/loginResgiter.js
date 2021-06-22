@@ -101,16 +101,15 @@ window.addEventListener("load", () => {
         }
     }
 
-    window.addEventListener('load',() => {
+    const autoLogin = () => {
         const userAccount = JSON.parse(localStorage.getItem('Account'));
         if(userAccount !== null){
             const loginButton = document.querySelector('.login');
             loginButton.style.display = 'none';
             const welcome = document.createElement('div');
             welcome.classList.add("welcome");
-            const index = userAccount.username.indexOf('@');
             welcome.style.display = 'block';
-            welcome.innerHTML = '<p>' + 'Welcome ' + userAccount.username.substring(0,index) + '</p>';
+            welcome.innerHTML = '<p>' + 'Welcome ' + userAccount.username + '</p>';
             document.querySelector('.menu').appendChild(welcome);
 
             const loginSidebar = document.querySelector('.login-sidebar');
@@ -124,11 +123,11 @@ window.addEventListener("load", () => {
             i.classList.add('fas');
             i.classList.add("fa-user-circle");
             a.appendChild(i);
-            a.appendChild(document.createTextNode(userAccount.username.substring(0,index)));
+            a.appendChild(document.createTextNode(userAccount.username));
             li.appendChild(a);
             document.querySelector('.list-sidebar').appendChild(li);
         }
-    })
+    }
 
     const loginValidation = () => {
         const formLogin = document.querySelector(".login-form");
@@ -152,7 +151,8 @@ window.addEventListener("load", () => {
                 errorTxt.innerText = "Password cannot be empty";
             }
             else if(currentAccount !== null){
-                if(emailLoginInput.value !== currentAccount.username || passwordLoginInput.value !== currentAccount.password){
+                if((emailLoginInput.value !== currentAccount.email && emailLoginInput.value !== currentAccount.username)
+                    || passwordLoginInput.value !== currentAccount.password){
                     errorTermsLogin.textContent = "Account or password error";
                     errorTermsLogin.style.visibility = 'visible';
                     setTimeout(() => {
@@ -160,8 +160,11 @@ window.addEventListener("load", () => {
                     },5000)
                     emailLoginField.classList.remove("valid");
                     passwordLoginField.classList.remove('valid');
+                    console.log("tesst");
                 }
-                else if(emailLoginInput.value === currentAccount.username && passwordLoginInput.value === currentAccount.password){
+                else if((emailLoginInput.value === currentAccount.email || emailLoginInput.value === currentAccount.username)
+                 && passwordLoginInput.value === currentAccount.password){
+                     console.log(currentAccount.username + ' ' + emailLoginInput.value);
                     document.querySelector('.form-section').style.display = 'none';
                     document.querySelector('.overlay').style.visibility = 'hidden';
                     clearField(0);
@@ -169,9 +172,8 @@ window.addEventListener("load", () => {
                     loginButton.style.display = 'none';
                     const welcome = document.createElement('div');
                     welcome.classList.add("welcome");
-                    const index = currentAccount.username.indexOf('@');
                     welcome.style.display = 'block';
-                    welcome.innerHTML = '<p>' + 'Welcome ' + currentAccount.username.substring(0,index) + '</p>';
+                    welcome.innerHTML = '<p>' + 'Welcome ' + currentAccount.username + '</p>';
                     document.querySelector('.menu').appendChild(welcome);
 
 
@@ -186,7 +188,7 @@ window.addEventListener("load", () => {
                     i.classList.add('fas');
                     i.classList.add("fa-user-circle");
                     a.appendChild(i);
-                    a.appendChild(document.createTextNode(currentAccount.username.substring(0,index)));
+                    a.appendChild(document.createTextNode(currentAccount.username));
                     li.appendChild(a);
                     document.querySelector('.list-sidebar').appendChild(li);
                 }
@@ -284,6 +286,15 @@ window.addEventListener("load", () => {
             return false;
         }
 
+        function containWhiteSpace(str){
+            for(let i = 0;i < str.length;i++){
+                if(str.charAt(i) === ' '){
+                    return true;
+                }
+            }
+            return false;
+        }
+
         const checkUsername = () => {
             if(usernameInput.value == ''){
                 usernameField.classList.add('error');
@@ -295,11 +306,11 @@ window.addEventListener("load", () => {
                 usernameField.classList.remove("valid");
                 const errorTxt = usernameField.querySelector('.error-txt');
                 errorTxt.innerText = "Username length must be between (5 - 10 characters)";
-            }else if(!isAlphaNumeric(usernameInput.value)){
+            }else if(containWhiteSpace(usernameInput.value)){
                 usernameField.classList.add("error");
                 usernameField.classList.remove("valid");
                 const errorTxt = usernameField.querySelector('.error-txt');
-                errorTxt.innerText = "Username must be Alphanumeric (contains number(0-9), lower character(a-z), upper character(A-Z))";
+                errorTxt.innerText = "Username cannot contains white space";
             }else { 
                 usernameField.classList.remove("error");
                 usernameField.classList.add("valid");
@@ -321,7 +332,7 @@ window.addEventListener("load", () => {
                 passwordField.classList.add("error");
                 passwordField.classList.remove("valid");
                 const errorTxt = passwordField.querySelector('.error-txt');
-                errorTxt.innerText = "Password must be Alphanumeric (contains number(0-9), lower character(a-z),    )";
+                errorTxt.innerText = "Password must be Alphanumeric (contains number(0-9), lower character(a-z),upper character(A-Z))";
             }else { 
                 passwordField.classList.remove("error");
                 passwordField.classList.add("valid");
@@ -375,7 +386,7 @@ window.addEventListener("load", () => {
                 checkConfirmPassword();
             })
 
-            if(!emailField.classList.contains('error') && !passwordField.classList.contains('error') && !confirmPasswordField.classList.contains('error')){
+            if(!emailField.classList.contains('error') && !usernameField.classList.contains('error') && !passwordField.classList.contains('error') && !confirmPasswordField.classList.contains('error')){
                 if(!termsAgreement.checked){
                     errorTerms.style.visibility = "visible";
                     setTimeout(()=>{
@@ -383,7 +394,8 @@ window.addEventListener("load", () => {
                     },3500)
                 }else{
                     const account = {
-                        username : emailInput.value,
+                        email : emailInput.value,
+                        username : usernameInput.value,
                         password : passwordInput.value
                     };
                     localStorage.setItem("Account",JSON.stringify(account));
@@ -397,7 +409,6 @@ window.addEventListener("load", () => {
     }
 
     const forgotPassword = () => {
-
         const forgot = document.querySelector('#forgot-password');
         const formLogin = document.querySelector(".login-form");
         const errorTermsLogin = formLogin.querySelector('.error-terms-login');
@@ -416,6 +427,7 @@ window.addEventListener("load", () => {
         loginValidation();
         registerValidation();
         forgotPassword();
+        autoLogin();
         open();
         close();
     }
