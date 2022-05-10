@@ -1,399 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character</title>
-    <link rel="shortcut icon" href="../assets/Logo/mihoyoman logo website.png"/>
-    <link rel="stylesheet" href="../css/character.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-    <script src="../javascript/navbar.js" defer></script>
-    <script src="../javascript/character.js" defer></script>
-    <script src="../javascript/resize.js" defer></script>
-    <script src="../javascript/loginResgiter.js" defer></script>
-</head>
-<body>
-    <section class="form-section overlay">
-        <div class="form-container login-form active-form">
-            <div class="exit-button">
-                <i class="fas fa-times"></i>
-            </div>
-            <form>
-                <div class="field email">
-                    <div class="input-area">
-                        <input type="text" placeholder="Email Address / Username">
-                        <i class="icon fas fa-envelope"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Email cannot be empty</div>
-                </div>
-                <div class="field password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Password">
-                        <i class="icon fas fa-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Password cannot be empty</div>
-                </div>
-                <div class="error-terms-login">
-                    <p>Account or password error</p>
-                </div>
-                <input type="submit" value="Log in">
-                <div class="register-now">
-                    <p id="forgot-password">Forgot Password?</p>
-                    <p id="register-text">Register Now</p>
-                </div>
-                <div class="social-media-form">
-                    <p>Or log in using social media</p>
-                    <div class="social-media-form-img">
-                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="form-container register-form">
-            <form>
-                <h1>Register By Email</h1>
-                <div class="field email">
-                    <div class="input-area">
-                        <input type="text" placeholder="Email Address">
-                        <i class="icon fas fa-envelope"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Email cannot be empty</div>
-                </div>
-                <div class="field username">
-                    <div class="input-area">
-                        <input type="text" placeholder="Username">
-                        <i class="icon fas fa-user"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Username cannot be empty</div>
-                </div>
-                <div class="field password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Password">
-                        <i class="icon fas fa-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Password cannot be empty</div>
-                </div>
-                <div class="field confirm-password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Confirm Password">
-                        <i class="icon fas fa-user-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Confirm Password cannot be empty</div>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="agree" id="agree">
-                    <label for="agree">I have read and agree to the <a href="../html/termsOfService.html">Terms of
-                            Service</a> & <a href="../html/PrivacyPolicy.html">Privacy Policy</a></label>
-                </div>
-                <div class="error-terms">
-                    <p>Please tick the Terms of Service & Privacy Policy checkbox</p>
-                </div>
-                <input type="submit" value="Register">
-                <div class="social-media-form">
-                    <p>Or log in using social media</p>
-                    <div class="social-media-form-img">
-                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
-                    </div>
-                </div>
-                <div class="return-login">
-                    <p>Return to Login <i class="fas fa-angle-right"></i></p>
-                </div>
-            </form>
-        </div>
-    </section>
-    <section class="character-landing-page">
-        <div class="sidebar-div overlay">
-            <aside class="sidebar">
-                <ul class="list-sidebar">
-                    <li class="sidebar-content"><a href="../html/index.html"><i class="fas fa-qrcode"></i>Home</a></li>
-                    <li class="sidebar-content sidebar-active"><a href="../html/character.html"><i class="fas fa-user-ninja"></i>Character</a>
-                    </li>
-                    <li class="sidebar-content"><a href="../html/about.html"><i class="fas fa-question-circle"></i>About
-                            Game</a></li>
-                    <li class="sidebar-content"><a href="../html/gallery.html"><i class="fas fa-images"></i>Gallery</a></li>
-                    <li class="sidebar-content"><a href="../html/download.html"><i class="fas fa-download"></i>Download</a></li>
-                    <li class="sidebar-content login-sidebar"><a><i class="fas fa-key"></i>Login</a></li>
-                </ul>
-            </aside>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        <nav>
-            <div class="logo">
-                <a href="../html/index.html" id="logo-navbar"><img src="../assets/Logo/logo putih.png"></a>
-            </div>
-            <div class="menu">
-                <ul class="menu-bar">
-                    <div class="slide"></div>
-                    <a href="../html/index.html">
-                        <li class="menu-content">
-                            <p>Home</p>
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="menu-content dropdown active-navbar">
-                            <p>Character</p>
-                            <ul class="dropdown-content">
-                                <li><p>Mondstadt</p></li>
-                                <li><p>Liyue Harbor</p></li>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href='../html/gallery.html'>
-                        <li class="menu-content">
-                            <p>Gallery</p>
-                        </li>
-                    </a>
-                    <a href='../html/about.html'>
-                        <li class="menu-content">
-                            <p>About Game</p>
-                        </li>
-                    </a>
-                    <a href='../html/download.html'>
-                        <li class="menu-content">
-                            <p>Download</p>
-                        </li>
-                    </a>
-                </ul>
-                <div class="login">
-                    <p>Login</p>
-                    <div class="login-logo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </section>
-   <section class="content">
-        <div class="character-background"></div>
-        <div class="paraleogram"></div>
-       <div class="map-text">
-           <div class="map-content map-active">
-                <img src="../assets/ICON/bulletin2.png">
-                <p>Mondstadt</p>
-            </div>
-            <div class="map-content">
-                 <img src = "../assets/ICON/bulletin2.png">
-                 <p>Liyue Harbor</p>
-            </div>
-       </div>
-       <div class="character-content">
-            <div class="character-name-div active-div">
-                <h2 class="character-name active-character-name">Jean</h2>
-                <h2 class="character-name">Amber</h2>
-                <h2 class="character-name">Lisa</h2>
-                <h2 class="character-name">Barbara</h2>
-                <h2 class="character-name">Venti</h2>
-            </div>
-            <div class="character-name-div">
-                <h2 class="character-name active-character-name">Chongyun</h2>
-                <h2 class="character-name">Hu Tao</h2>
-                <h2 class="character-name">Keqing</h2>
-                <h2 class="character-name">Ningguang</h2>
-                <h2 class="character-name">Xiao</h2>
-            </div>
-            <div class="character-text-div active-div">        
-                <div class="character-text active-character-text">
-                    <p>As the Acting Grand Master of the Knights, Jeans has always been devoted to her duties and mantaining peace in Mondstadt.</p>
-                    <p>She had taken precatusions long before the onset of Stormterror's assault, and she will guard Mondstadt with her life as always</p>
-                </div>
-                <div class="character-text">
-                    <p>A perky, straightforward girl, who is also the only Outrider of the Knights of Favonius.</p>
-                    <p>Her amazing mastery of the glider has made her a three-time winner of the Gliding Champion in Mondstadt</p>
-                    <p>As a rising star within the knights of Favonius, Amber is always ready for any challenging tasks</p>
-                </div>
-                <div class="character-text">
-                    <p>As the Librarian of the Knights of Favonius, Lisa is smart in that she always knows exactly what to do with whatever troubles her</p>
-                    <p>As much as she loves her sleep, she still manages to keep everything under control in a calm,composed manner</p>
-                </div>
-                <div class="character-text">
-                    <p>In the Knights of Favonius, Kaeya is the most trusted aide for the Acting Grand Master Jean. You can always count on him to solve any intractable problems.</p>
-                    <p>Everyone in Mondstadt loves Kaeya, but no one knows what secrets this witty, charming knight has...</p>
-                </div>
-                <div class="character-text">    
-                    <p>A bart that seems to have arrived on some unknown wind - sometimes sing songs as old as the hills, and the other times sing poems fresh and new</p>
-                    <p>Likes apples and lively places, but is not a fan of cheese or anything sticky.</p>
-                </div>
-            </div>
-            <div class="character-text-div">
-                <div class="character-text active-character-text">
-                    <p>An Exorcist who roams the land with Liyue as his base of operations, evil spirits fleeing wherever he goes. As the heir to a clan of exorcists, he has always possessed abilities superior to most. However, these abilities are not the result of training, but of an inborn trait -- a pure-yang spirit</p>
-                </div>
-                <div class="character-text">
-                    <p>Hu Tao is the 77th Director of Wangsheng Funeral Parlor, a person vital to managing Liyue's funerary affairs.</p>
-                    <p>She does her utmotst to flawlessly carry out a person's last rites and preserve the world's balance of yin and yang.</p>
-                    <p>Aside from this, she is also a talented poet whose many "masterpieces" have passed around Liyue's populace by word of mouth.</p>
-                </div>
-                <div class="character-text">
-                    <p>The Yuheng of the Liyue Qixing. Keqing has much to say about Rex Lapis' unilateral approach to policymaking in Liyue -- but in truth, gods admire skeptics such as her quite a lot.</p>
-                    <p>She firmly believes that humanity's future should be determined by human themselves, and that they can even do better than archons and adepti have done for them. In order to prove this, she works harded than anyone else</p>
-                </div>
-                <div class="character-text">
-                    <p>Owner of Jade Chamber in the skies above Liyue, there are stories abound about Ningguang, with her elegance and mysterious slime.</p>
-                    <p>As the Tianquan of the Liyue Qixing, not only does she embody law and order, she also represent fortune and wit.</p>
-                </div>
-                <div class="character-text">
-                    <p>One of the mighty and illuminated adepti guarding Liyue, also heralded as the "Vigilant Yakhsa."</p>
-                    <p>Despite his youthful appearance, tales of his exploits have been documented for millenia.</p>
-                    <p>He is especially fond of Wangshu Inn's Almond Tofu.</p>
-                    <p>This is because it tastes just like the sweet dreams he used to devour.</p>
-                </div>
-            </div>
-            <div class="character-image-div active-div">
-                <div class="character-image active-character-image jean">
-                    <img draggable="false" src = "../assets/Character/Mondstadt/Jean.png">
-                </div>
-                <div class="character-image amber">
-                    <img draggable="false" src="../assets/Character/Mondstadt/Amber.png">
-                </div>
-                <div class="character-image lisa">
-                    <img draggable="false" src="../assets/Character/Mondstadt/Lisa.png">
-                </div>
-                <div class="character-image barbara">
-                    <img draggable="false" src="../assets/Character/Mondstadt/Barbara.png">
-                </div>
-                <div class="character-image venti">
-                    <img draggable="false" src="../assets/Character/Mondstadt/Venti.png">
-                </div>
-            </div>
-            <div class="character-image-div">
-                <div class="character-image active-character-image chongyun">
-                    <img draggable="false" src="../assets/Character/Liyue Harbor/Chongyun.png">
-                </div>
-                <div class="character-image hu-tao">
-                    <img draggable="false" src="../assets/Character/Liyue Harbor/Hu Tao.png">
-                </div>
-                <div class="character-image keqing">
-                    <img draggable="false" src="../assets/Character/Liyue Harbor/Keqing.png">
-                </div>
-                <div class="character-image ningguang">
-                    <img draggable="false" src="../assets/Character/Liyue Harbor/Ningguang.png">
-                </div>
-                <div class="character-image xiao">
-                    <img draggable="false" src="../assets/Character/Liyue Harbor/Xiao.png">
-                </div>
-            </div>
-            <section class = "slider-div">
-                <div class="left-slider">
-                    <img src = "../assets/ICON/Arrow Left.png">
-                </div>
-                 <div class="image-list active-div">
-                     <div class="image-content active-character">
-                         <img draggable="false" src = "../assets/Character/Mondstadt/Jean Avatar.png">
-                         <h3>Jean</h3>
-                     </div>
-                     <div class="image-content">
-                         <img draggable="false" src="../assets/Character/Mondstadt/Amber Avatar.png">
-                         <h3>Amber</h3>
-                     </div>
-                     <div class="image-content">
-                         <img draggable="false" src="../assets/Character/Mondstadt/Lisa avatar.png">
-                         <h3>Lisa</h3>
-                     </div>
-                     <div class="image-content">
-                         <img draggable="false" src="../assets/Character/Mondstadt/Barbara avatar.png">
-                         <h3>Barbara</h3>
-                     </div>
-                     <div class="image-content">
-                         <img draggable="false" src="../assets/Character/Mondstadt/Venti avatar.png">
-                         <h3>Venti</h3>
-                     </div>
-                 </div>
-                <div class="image-list">
-                    <div class="image-content active-character">
-                        <img draggable="false" src="../assets/Character/Liyue Harbor/Chongyun avatar.png">
-                        <h3>Chongyun</h3>
-                    </div>
-                    <div class="image-content">
-                        <img draggable="false" src="../assets/Character/Liyue Harbor/Hu Tao avatar.png">
-                        <h3>Hu Tao</h3>
-                    </div>
-                    <div class="image-content">
-                        <img draggable="false" src="../assets/Character/Liyue Harbor/keqing avatar.png">
-                        <h3>Keqing</h3>
-                    </div>
-                    <div class="image-content">
-                        <img draggable="false" src="../assets/Character/Liyue Harbor/Ningguang avatar.png">
-                        <h3>Ningguang</h3>
-                    </div>
-                    <div class="image-content">
-                        <img draggable="false" src="../assets/Character/Liyue Harbor/Xiao avatar.png">
-                        <h3>Xiao</h3>
-                    </div>
-                </div>
-                <div class="right-slider">
-                    <img src="../assets/ICON/Arrow Right.png">
-                </div>
-            </section>
-            <section class = "map-responsive">
-                <div class="map-responsive-choose active-map-responsive">
-                    <h2>Mondstadt</h2>
-                    <i class = "arrow up"></i>
-                </div>
-                <div class="map-responsive-choose">
-                    <h2>LiyueHarbor</h2>
-                    <i class="arrow up"></i>
-                </div>
-            </section>
-            <section class="dropdown-responsive">
-                <p class = "dropdown-map active-dropdown">Mondstadt</p>
-                <p class = "dropdown-map">Liyue Harbor</p>
-            </section>
-        </div>
-   </section> 
-    <section class="social-media">
-        <div class="social-media-logo">
-            <a href="https://discord.com/invite/genshinimpact" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://www.facebook.com/GenshinImpact.id" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/genshinimpact/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/GenshinImpact" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/c/GenshinImpact" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-        <h2>Defy Your Own Limits</h2>
-    </section>
-    <footer>
-        <div class="logo-footer">
-            <div class="mihoyo-div">
-                <img draggable="false" src="../assets/Logo/LOGO MIHOYOMAN WITH CAPTION.png">
-            </div>
-            <div class="kenshin-impact-logo">
-                <img draggable="false" src="../assets/Logo/logo putih.png">
-            </div>
-        </div>
-        <div class="terms">
-            <a href="../html/PrivacyPolicy.html" target="_blank">
-                <p>Privacy Policy</p>
-            </a>
-            <a href="../html/termsOfService.html" target="_blank">
-                <p>Terms of Service</p>
-            </a>
-            <a href="../html/AboutUs.html" target="_blank">
-                <p>About Us</p>
-            </a>
-            <a href="mailto:kenshin_cs@mihoyo.com">
-                <p>Contact Us</p>
-            </a>
-        </div>
-        <div class="copyright">
-            <p>Copyright &copy; 2021 miHoYoMan All Rights Reserved</p>
-        </div>
-    </footer>
-</body> 
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Character</title>
+		<link
+			rel="shortcut icon"
+			href="../assets/Logo/mihoyoman logo website.png"
+		/>
+		<link rel="stylesheet" href="../css/character.css" />
+		<link rel="stylesheet" href="../css/navbar.css" />
+		<link rel="stylesheet" href="../css/footer.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/>
+		<script src="../javascript/navbar.js" defer></script>
+		<script src="../javascript/character.js" defer></script>
+		<script src="../javascript/resize.js" defer></script>
+		<script src="../javascript/loginResgiter.js" defer></script>
+	</head>
+	<body>
+		<section class="form-section overlay">
+			<div class="form-container login-form active-form">
+				<div class="exit-button">
+					<i class="fas fa-times"></i>
+				</div>
+				<form>
+					<div class="field email">
+						<div class="input-area">
+							<input type="text" placeholder="Email Address / Username" />
+							<i class="icon fas fa-envelope"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email cannot be empty</div>
+					</div>
+					<div class="field password">
+						<div class="input-area">
+							<input type="password" placeholder="Password" />
+							<i class="icon fas fa-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Password cannot be empty</div>
+					</div>
+					<div class="error-terms-login">
+						<p>Account or password error</p>
+					</div>
+					<input type="submit" value="Log in" />
+					<div class="register-now">
+						<p id="forgot-password">Forgot Password?</p>
+						<p id="register-text">Register Now</p>
+					</div>
+					<div class="social-media-form">
+						<p>Or log in using social media</p>
+						<div class="social-media-form-img">
+							<a
+								href="https://www.facebook.com/GenshinImpact.id"
+								target="_blank"
+								class="fab fa-facebook-f"
+							></a>
+							<a
+								href="https://twitter.com/GenshinImpact"
+								target="_blank"
+								class="fab fa-twitter"
+							></a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="form-container register-form">
+				<form>
+					<h1>Register By Email</h1>
+					<div class="field email">
+						<div class="input-area">
+							<input type="text" placeholder="Email Address" />
+							<i class="icon fas fa-envelope"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email cannot be empty</div>
+					</div>
+					<div class="field username">
+						<div class="input-area">
+							<input type="text" placeholder="Username" />
+							<i class="icon fas fa-user"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Username cannot be empty</div>
+					</div>
+					<div class="field password">
+						<div class="input-area">
+							<input type="password" placeholder="Password" />
+							<i class="icon fas fa-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Password cannot be empty</div>
+					</div>
+					<div class="field confirm-password">
+						<div class="input-area">
+							<input type="password" placeholder="Confirm Password" />
+							<i class="icon fas fa-user-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Confirm Password cannot be empty</div>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="agree" id="agree" />
+						<label for="agree"
+							>I have read and agree to the
+							<a href="../html/termsOfService.html">Terms of Service</a> &
+							<a href="../html/PrivacyPolicy.html">Privacy Policy</a></label
+						>
+					</div>
+					<div class="error-terms">
+						<p>Please tick the Terms of Service & Privacy Policy checkbox</p>
+					</div>
+					<input type="submit" value="Register" />
+					<div class="social-media-form">
+						<p>Or log in using social media</p>
+						<div class="social-media-form-img">
+							<a
+								href="https://www.facebook.com/GenshinImpact.id"
+								target="_blank"
+								class="fab fa-facebook-f"
+							></a>
+							<a
+								href="https://twitter.com/GenshinImpact"
+								target="_blank"
+								class="fab fa-twitter"
+							></a>
+						</div>
+					</div>
+					<div class="return-login">
+						<p>Return to Login <i class="fas fa-angle-right"></i></p>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="character-landing-page">
+			<div class="sidebar-div overlay">
+				<aside class="sidebar">
+					<ul class="list-sidebar">
+						<li class="sidebar-content">
+							<a href="../index.html"><i class="fas fa-qrcode"></i>Home</a>
+						</li>
+						<li class="sidebar-content sidebar-active">
+							<a href="../html/character.html"
+								><i class="fas fa-user-ninja"></i>Character</a
+							>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/about.html"
+								><i class="fas fa-question-circle"></i>About Game</a
+							>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/gallery.html"
+								><i class="fas fa-images"></i>Gallery</a
+							>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/download.html"
+								><i class="fas fa-download"></i>Download</a
+							>
+						</li>
+						<li class="sidebar-content login-sidebar">
+							<a><i class="fas fa-key"></i>Login</a>
+						</li>
+					</ul>
+				</aside>
+			</div>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<nav>
+				<div class="logo">
+					<a href="../index.html" id="logo-navbar"
+						><img src="../assets/Logo/logo putih.png"
+					/></a>
+				</div>
+				<div class="menu">
+					<ul class="menu-bar">
+						<div class="slide"></div>
+						<a href="../index.html">
+							<li class="menu-content">
+								<p>Home</p>
+							</li>
+						</a>
+						<a href="#">
+							<li class="menu-content dropdown active-navbar">
+								<p>Character</p>
+								<ul class="dropdown-content">
+									<li><p>Mondstadt</p></li>
+									<li><p>Liyue Harbor</p></li>
+								</ul>
+							</li>
+						</a>
+						<a href="../html/gallery.html">
+							<li class="menu-content">
+								<p>Gallery</p>
+							</li>
+						</a>
+						<a href="../html/about.html">
+							<li class="menu-content">
+								<p>About Game</p>
+							</li>
+						</a>
+						<a href="../html/download.html">
+							<li class="menu-content">
+								<p>Download</p>
+							</li>
+						</a>
+					</ul>
+					<div class="login">
+						<p>Login</p>
+						<div class="login-logo">
+							<i class="fas fa-user-circle"></i>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<section class="content">
+			<div class="character-background"></div>
+			<div class="paraleogram"></div>
+			<div class="map-text">
+				<div class="map-content map-active">
+					<img src="../assets/ICON/bulletin2.png" />
+					<p>Mondstadt</p>
+				</div>
+				<div class="map-content">
+					<img src="../assets/ICON/bulletin2.png" />
+					<p>Liyue Harbor</p>
+				</div>
+			</div>
+			<div class="character-content">
+				<div class="character-name-div active-div">
+					<h2 class="character-name active-character-name">Jean</h2>
+					<h2 class="character-name">Amber</h2>
+					<h2 class="character-name">Lisa</h2>
+					<h2 class="character-name">Barbara</h2>
+					<h2 class="character-name">Venti</h2>
+				</div>
+				<div class="character-name-div">
+					<h2 class="character-name active-character-name">Chongyun</h2>
+					<h2 class="character-name">Hu Tao</h2>
+					<h2 class="character-name">Keqing</h2>
+					<h2 class="character-name">Ningguang</h2>
+					<h2 class="character-name">Xiao</h2>
+				</div>
+				<div class="character-text-div active-div">
+					<div class="character-text active-character-text">
+						<p>
+							As the Acting Grand Master of the Knights, Jeans has always been
+							devoted to her duties and mantaining peace in Mondstadt.
+						</p>
+						<p>
+							She had taken precatusions long before the onset of Stormterror's
+							assault, and she will guard Mondstadt with her life as always
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							A perky, straightforward girl, who is also the only Outrider of
+							the Knights of Favonius.
+						</p>
+						<p>
+							Her amazing mastery of the glider has made her a three-time winner
+							of the Gliding Champion in Mondstadt
+						</p>
+						<p>
+							As a rising star within the knights of Favonius, Amber is always
+							ready for any challenging tasks
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							As the Librarian of the Knights of Favonius, Lisa is smart in that
+							she always knows exactly what to do with whatever troubles her
+						</p>
+						<p>
+							As much as she loves her sleep, she still manages to keep
+							everything under control in a calm,composed manner
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							In the Knights of Favonius, Kaeya is the most trusted aide for the
+							Acting Grand Master Jean. You can always count on him to solve any
+							intractable problems.
+						</p>
+						<p>
+							Everyone in Mondstadt loves Kaeya, but no one knows what secrets
+							this witty, charming knight has...
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							A bart that seems to have arrived on some unknown wind - sometimes
+							sing songs as old as the hills, and the other times sing poems
+							fresh and new
+						</p>
+						<p>
+							Likes apples and lively places, but is not a fan of cheese or
+							anything sticky.
+						</p>
+					</div>
+				</div>
+				<div class="character-text-div">
+					<div class="character-text active-character-text">
+						<p>
+							An Exorcist who roams the land with Liyue as his base of
+							operations, evil spirits fleeing wherever he goes. As the heir to
+							a clan of exorcists, he has always possessed abilities superior to
+							most. However, these abilities are not the result of training, but
+							of an inborn trait -- a pure-yang spirit
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							Hu Tao is the 77th Director of Wangsheng Funeral Parlor, a person
+							vital to managing Liyue's funerary affairs.
+						</p>
+						<p>
+							She does her utmotst to flawlessly carry out a person's last rites
+							and preserve the world's balance of yin and yang.
+						</p>
+						<p>
+							Aside from this, she is also a talented poet whose many
+							"masterpieces" have passed around Liyue's populace by word of
+							mouth.
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							The Yuheng of the Liyue Qixing. Keqing has much to say about Rex
+							Lapis' unilateral approach to policymaking in Liyue -- but in
+							truth, gods admire skeptics such as her quite a lot.
+						</p>
+						<p>
+							She firmly believes that humanity's future should be determined by
+							human themselves, and that they can even do better than archons
+							and adepti have done for them. In order to prove this, she works
+							harded than anyone else
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							Owner of Jade Chamber in the skies above Liyue, there are stories
+							abound about Ningguang, with her elegance and mysterious slime.
+						</p>
+						<p>
+							As the Tianquan of the Liyue Qixing, not only does she embody law
+							and order, she also represent fortune and wit.
+						</p>
+					</div>
+					<div class="character-text">
+						<p>
+							One of the mighty and illuminated adepti guarding Liyue, also
+							heralded as the "Vigilant Yakhsa."
+						</p>
+						<p>
+							Despite his youthful appearance, tales of his exploits have been
+							documented for millenia.
+						</p>
+						<p>He is especially fond of Wangshu Inn's Almond Tofu.</p>
+						<p>
+							This is because it tastes just like the sweet dreams he used to
+							devour.
+						</p>
+					</div>
+				</div>
+				<div class="character-image-div active-div">
+					<div class="character-image active-character-image jean">
+						<img
+							draggable="false"
+							src="../assets/Character/Mondstadt/Jean.png"
+						/>
+					</div>
+					<div class="character-image amber">
+						<img
+							draggable="false"
+							src="../assets/Character/Mondstadt/Amber.png"
+						/>
+					</div>
+					<div class="character-image lisa">
+						<img
+							draggable="false"
+							src="../assets/Character/Mondstadt/Lisa.png"
+						/>
+					</div>
+					<div class="character-image barbara">
+						<img
+							draggable="false"
+							src="../assets/Character/Mondstadt/Barbara.png"
+						/>
+					</div>
+					<div class="character-image venti">
+						<img
+							draggable="false"
+							src="../assets/Character/Mondstadt/Venti.png"
+						/>
+					</div>
+				</div>
+				<div class="character-image-div">
+					<div class="character-image active-character-image chongyun">
+						<img
+							draggable="false"
+							src="../assets/Character/Liyue Harbor/Chongyun.png"
+						/>
+					</div>
+					<div class="character-image hu-tao">
+						<img
+							draggable="false"
+							src="../assets/Character/Liyue Harbor/Hu Tao.png"
+						/>
+					</div>
+					<div class="character-image keqing">
+						<img
+							draggable="false"
+							src="../assets/Character/Liyue Harbor/Keqing.png"
+						/>
+					</div>
+					<div class="character-image ningguang">
+						<img
+							draggable="false"
+							src="../assets/Character/Liyue Harbor/Ningguang.png"
+						/>
+					</div>
+					<div class="character-image xiao">
+						<img
+							draggable="false"
+							src="../assets/Character/Liyue Harbor/Xiao.png"
+						/>
+					</div>
+				</div>
+				<section class="slider-div">
+					<div class="left-slider">
+						<img src="../assets/ICON/Arrow Left.png" />
+					</div>
+					<div class="image-list active-div">
+						<div class="image-content active-character">
+							<img
+								draggable="false"
+								src="../assets/Character/Mondstadt/Jean Avatar.png"
+							/>
+							<h3>Jean</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Mondstadt/Amber Avatar.png"
+							/>
+							<h3>Amber</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Mondstadt/Lisa avatar.png"
+							/>
+							<h3>Lisa</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Mondstadt/Barbara avatar.png"
+							/>
+							<h3>Barbara</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Mondstadt/Venti avatar.png"
+							/>
+							<h3>Venti</h3>
+						</div>
+					</div>
+					<div class="image-list">
+						<div class="image-content active-character">
+							<img
+								draggable="false"
+								src="../assets/Character/Liyue Harbor/Chongyun avatar.png"
+							/>
+							<h3>Chongyun</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Liyue Harbor/Hu Tao avatar.png"
+							/>
+							<h3>Hu Tao</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Liyue Harbor/keqing avatar.png"
+							/>
+							<h3>Keqing</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Liyue Harbor/Ningguang avatar.png"
+							/>
+							<h3>Ningguang</h3>
+						</div>
+						<div class="image-content">
+							<img
+								draggable="false"
+								src="../assets/Character/Liyue Harbor/Xiao avatar.png"
+							/>
+							<h3>Xiao</h3>
+						</div>
+					</div>
+					<div class="right-slider">
+						<img src="../assets/ICON/Arrow Right.png" />
+					</div>
+				</section>
+				<section class="map-responsive">
+					<div class="map-responsive-choose active-map-responsive">
+						<h2>Mondstadt</h2>
+						<i class="arrow up"></i>
+					</div>
+					<div class="map-responsive-choose">
+						<h2>LiyueHarbor</h2>
+						<i class="arrow up"></i>
+					</div>
+				</section>
+				<section class="dropdown-responsive">
+					<p class="dropdown-map active-dropdown">Mondstadt</p>
+					<p class="dropdown-map">Liyue Harbor</p>
+				</section>
+			</div>
+		</section>
+		<section class="social-media">
+			<div class="social-media-logo">
+				<a href="https://discord.com/invite/genshinimpact" target="_blank"
+					><i class="fab fa-discord"></i
+				></a>
+				<a href="https://www.facebook.com/GenshinImpact.id" target="_blank"
+					><i class="fab fa-facebook"></i
+				></a>
+				<a href="https://www.instagram.com/genshinimpact/" target="_blank"
+					><i class="fab fa-instagram"></i
+				></a>
+				<a href="https://twitter.com/GenshinImpact" target="_blank"
+					><i class="fab fa-twitter"></i
+				></a>
+				<a href="https://www.youtube.com/c/GenshinImpact" target="_blank"
+					><i class="fab fa-youtube"></i
+				></a>
+			</div>
+			<h2>Defy Your Own Limits</h2>
+		</section>
+		<footer>
+			<div class="logo-footer">
+				<div class="mihoyo-div">
+					<img
+						draggable="false"
+						src="../assets/Logo/LOGO MIHOYOMAN WITH CAPTION.png"
+					/>
+				</div>
+				<div class="kenshin-impact-logo">
+					<img draggable="false" src="../assets/Logo/logo putih.png" />
+				</div>
+			</div>
+			<div class="terms">
+				<a href="../html/PrivacyPolicy.html" target="_blank">
+					<p>Privacy Policy</p>
+				</a>
+				<a href="../html/termsOfService.html" target="_blank">
+					<p>Terms of Service</p>
+				</a>
+				<a href="../html/AboutUs.html" target="_blank">
+					<p>About Us</p>
+				</a>
+				<a href="mailto:kenshin_cs@mihoyo.com">
+					<p>Contact Us</p>
+				</a>
+			</div>
+			<div class="copyright">
+				<p>Copyright &copy; 2021 miHoYoMan All Rights Reserved</p>
+			</div>
+		</footer>
+	</body>
 </html>

@@ -1,293 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download</title>
-    <link rel="shortcut icon" href="../assets/Logo/mihoyoman logo website.png" />
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/download.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-    <script src="../javascript/navbar.js" defer></script>
-    <script src="../javascript/resize.js" defer></script>
-    <script src="../javascript/download.js" defer></script>
-    <script src="../javascript/loginResgiter.js" defer></script>
-</head>
-<body>
-    <section class="form-section overlay">
-        <div class="form-container login-form active-form">
-            <div class="exit-button">
-                <i class="fas fa-times"></i>
-            </div>
-            <form>
-                <div class="field email">
-                    <div class="input-area">
-                        <input type="text" placeholder="Email Address / Username">
-                        <i class="icon fas fa-envelope"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Email cannot be empty</div>
-                </div>
-                <div class="field password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Password">
-                        <i class="icon fas fa-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Password cannot be empty</div>
-                </div>
-                <div class="error-terms-login">
-                    <p>Account or password error</p>
-                </div>
-                <input type="submit" value="Log in">
-                <div class="register-now">
-                    <p id="forgot-password">Forgot Password?</p>
-                    <p id="register-text">Register Now</p>
-                </div>
-                <div class="social-media-form">
-                    <p>Or log in using social media</p>
-                    <div class="social-media-form-img">
-                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="form-container register-form">
-            <form>
-                <h1>Register By Email</h1>
-                <div class="field email">
-                    <div class="input-area">
-                        <input type="text" placeholder="Email Address">
-                        <i class="icon fas fa-envelope"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Email cannot be empty</div>
-                </div>
-                <div class="field username">
-                    <div class="input-area">
-                        <input type="text" placeholder="Username">
-                        <i class="icon fas fa-user"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Username cannot be empty</div>
-                </div>
-                <div class="field password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Password">
-                        <i class="icon fas fa-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Password cannot be empty</div>
-                </div>
-                <div class="field confirm-password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Confirm Password">
-                        <i class="icon fas fa-user-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Confirm Password cannot be empty</div>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="agree" id="agree">
-                    <label for="agree">I have read and agree to the <a href="../html/termsOfService.html">Terms of
-                            Service</a> & <a href="../html/PrivacyPolicy.html">Privacy Policy</a></label>
-                </div>
-                <div class="error-terms">
-                    <p>Please tick the Terms of Service & Privacy Policy checkbox</p>
-                </div>
-                <input type="submit" value="Register">
-                <div class="social-media-form">
-                    <p>Or log in using social media</p>
-                    <div class="social-media-form-img">
-                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
-                    </div>
-                </div>
-                <div class="return-login">
-                    <p>Return to Login <i class="fas fa-angle-right"></i></p>
-                </div>
-            </form>
-        </div>
-    </section>
-    <section class="download-landing-page">
-        <div class="sidebar-div overlay">
-            <aside class="sidebar">
-                <ul class="list-sidebar">
-                    <li class="sidebar-content"><a href="../html/index.html"><i class="fas fa-qrcode"></i>Home</a></li>
-                    <li class="sidebar-content"><a href="../html/character.html"><i class="fas fa-user-ninja"></i>Character</a>
-                    </li>
-                    <li class="sidebar-content"><a href="../html/about.html"><i class="fas fa-question-circle"></i>About
-                            Game</a></li>
-                    <li class="sidebar-content"><a href="../html/gallery.html"><i class="fas fa-images"></i>Gallery</a></li>
-                    <li class="sidebar-content sidebar-active"><a href="../html/download.html"><i class="fas fa-download"></i>Download</a></li>
-                    <li class="sidebar-content login-sidebar"><a><i class="fas fa-key"></i>Login</a></li>
-                </ul>
-            </aside>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        <nav>
-            <div class="logo">
-                <a href="../html/index.html" id="logo-navbar"><img src="../assets/Logo/logo putih.png"></a>
-            </div>
-            <div class="menu">
-                <ul class="menu-bar">
-                    <div class="slide"></div>
-                    <a href="../html/index.html">
-                        <li class="menu-content">
-                            <p>Home</p>
-                        </li>
-                    </a>
-                    <a href="../html/character.html">
-                        <li class="menu-content dropdown">
-                            <p>Character</p>
-                            <ul class="dropdown-content">
-                                <li><p>Mondstadt</p></li>
-                                <li><p>Liyue Harbor</p></li>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href='../html/gallery.html'>
-                        <li class="menu-content">
-                            <p>Gallery</p>
-                        </li>
-                    </a>
-                    <a href='../html/about.html'>
-                        <li class="menu-content">
-                            <p>About Game</p>
-                        </li>
-                    </a>
-                    <a href='#'>
-                        <li class="menu-content active-navbar">
-                            <p>Download</p>
-                        </li>
-                    </a>
-                </ul>
-                <div class="login">
-                    <p>Login</p>
-                    <div class="login-logo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>  
-        <div class="download-box">
-            <div class="download-logo">
-                <a href="https://www.playstation.com/en-id/games/genshin-impact/" target="_blank"><img src="../assets/ICON/ps4.png"></a>
-                <a href="https://ys-api-os.mihoyo.com/event/download_porter/link/ys_global/genshinimpactpc/default" target="_blank"><img src="../assets/ICON/windows.png"></a>
-            </div>
-            <div class="download-logo">
-                <a href="https://apps.apple.com/app/id1517783697" target="_blank"><img src="../assets/ICON/appstore.png"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact" target="_blank"><img src="../assets/ICON/google play.png"></a>
-            </div>
-        </div>
-    </section>
-    
-    <section class="system-requirement">
-        <div class="system-requirement-title">
-            <h2>System Requirements</h2>
-        </div>
-        <div class="system-requirement-media">
-            <h2 class = "media active-media">Windows</h2>
-            <h2 class = "media">Android</h2>
-            <h2 class = "media">iOS</h2>
-        </div>
-        <div class="system-requirement-specification">
-            <div class="specification active-specification">
-                <div class="recommended-configuration">
-                    <h2>>>>Recommended configuration:</h2>
-                    <p>Operating system: Windows 7 SP1 64-bit, Windows 8.1 64-bit, or Windows 10 64-bit</p>
-                    <p>Processor: Intel Core i7 equivalent or higher</p>
-                    <p>Memory: 16 GB RAM</p>
-                    <p>Graphics: NVIDIA GeForce GTX 1060 6 GB and higher</p>
-                    <p>DirectX version: 11</p>
-                    <p>Storage: Please reserve 30 GB of space</p>
-                </div>
-                <div class="minimum-configuration">
-                    <h2>>>>Minimum configuration:</h2>
-                    <p>Operating system: Windows 7 SP1 64-bit, Windows 8.1 64-bit or Windows 10 64-bit</p>
-                    <p>Processor: Intel Core i5 or equivalent</p>
-                    <p>Memory: 8 GB RAM</p>
-                    <p>Graphics card: NVIDIA® GeForce® GT 1030 and higher</p>
-                    <p>DirectX version: 11</p>
-                    <p>Storage: Please reserve 30 GB of space</p>
-                </div>
-            </div>
-            <div class="specification">
-                <div class="recommended-configuration">
-                    <h2>>>>Recommended configuration:</h2>
-                    <p>CPU: Qualcomm Snapdragon 845, Kirin 810 and above</p>
-                    <p>RAM: 4 GB and above</p>
-                    <p>Recommended system: Android 8.1 and above</p>
-                </div>
-                <div class="minimum-configuration">
-                    <h2>>>>Minimum configuration:</h2>
-                    <p>Compatibility requirements: Arm v8a 64-bit device</p>
-                    <p>Memory: 3 GB and above</p>
-                    <p>Supported system: Android 7.0 or above</p>
-                    <p>Storage: Please reserve 8 GB of space</p>
-                </div>
-            </div>
-            <div class="specification">
-                <div class="recommended-configuration">
-                    <p>Requires iOS 9.0 or later</p>
-                </div>
-                <div class="minimum-configuration">
-                    <p>Compatible with iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone XR, iPhone 11, iPhone 11 Pro, iPhone 11 Pro
-                    Max, iPhone SE (2nd generation), iPhone 12, iPhone 12 mini, iPhone 12 Pro, iPhone 12 Pro Max, iPad Air (3rd generation),
-                    iPad Air (4th generation), iPad mini (5th generation), iPad Pro (12.9-inch) (2nd generation), iPad Pro (10.5-inch) (2nd
-                    generation), iPad Pro (11-inch) (3rd generation), iPad Pro (12.9-inch) (3rd generation), iPad Pro (11-inch) (4th
-                    generation), iPad Pro (12.9-inch) (4th generation), and iPad (8th generation).</p>
-                </div>
-            </div>
-        </div>
-    </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Download</title>
+		<link
+			rel="shortcut icon"
+			href="../assets/Logo/mihoyoman logo website.png"
+		/>
+		<link rel="stylesheet" href="../css/navbar.css" />
+		<link rel="stylesheet" href="../css/footer.css" />
+		<link rel="stylesheet" href="../css/download.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/>
+		<script src="../javascript/navbar.js" defer></script>
+		<script src="../javascript/resize.js" defer></script>
+		<script src="../javascript/download.js" defer></script>
+		<script src="../javascript/loginResgiter.js" defer></script>
+	</head>
+	<body>
+		<section class="form-section overlay">
+			<div class="form-container login-form active-form">
+				<div class="exit-button">
+					<i class="fas fa-times"></i>
+				</div>
+				<form>
+					<div class="field email">
+						<div class="input-area">
+							<input type="text" placeholder="Email Address / Username" />
+							<i class="icon fas fa-envelope"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email cannot be empty</div>
+					</div>
+					<div class="field password">
+						<div class="input-area">
+							<input type="password" placeholder="Password" />
+							<i class="icon fas fa-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Password cannot be empty</div>
+					</div>
+					<div class="error-terms-login">
+						<p>Account or password error</p>
+					</div>
+					<input type="submit" value="Log in" />
+					<div class="register-now">
+						<p id="forgot-password">Forgot Password?</p>
+						<p id="register-text">Register Now</p>
+					</div>
+					<div class="social-media-form">
+						<p>Or log in using social media</p>
+						<div class="social-media-form-img">
+							<a
+								href="https://www.facebook.com/GenshinImpact.id"
+								target="_blank"
+								class="fab fa-facebook-f"
+							></a>
+							<a
+								href="https://twitter.com/GenshinImpact"
+								target="_blank"
+								class="fab fa-twitter"
+							></a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="form-container register-form">
+				<form>
+					<h1>Register By Email</h1>
+					<div class="field email">
+						<div class="input-area">
+							<input type="text" placeholder="Email Address" />
+							<i class="icon fas fa-envelope"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email cannot be empty</div>
+					</div>
+					<div class="field username">
+						<div class="input-area">
+							<input type="text" placeholder="Username" />
+							<i class="icon fas fa-user"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Username cannot be empty</div>
+					</div>
+					<div class="field password">
+						<div class="input-area">
+							<input type="password" placeholder="Password" />
+							<i class="icon fas fa-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Password cannot be empty</div>
+					</div>
+					<div class="field confirm-password">
+						<div class="input-area">
+							<input type="password" placeholder="Confirm Password" />
+							<i class="icon fas fa-user-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Confirm Password cannot be empty</div>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="agree" id="agree" />
+						<label for="agree"
+							>I have read and agree to the
+							<a href="../html/termsOfService.html">Terms of Service</a> &
+							<a href="../html/PrivacyPolicy.html">Privacy Policy</a></label
+						>
+					</div>
+					<div class="error-terms">
+						<p>Please tick the Terms of Service & Privacy Policy checkbox</p>
+					</div>
+					<input type="submit" value="Register" />
+					<div class="social-media-form">
+						<p>Or log in using social media</p>
+						<div class="social-media-form-img">
+							<a
+								href="https://www.facebook.com/GenshinImpact.id"
+								target="_blank"
+								class="fab fa-facebook-f"
+							></a>
+							<a
+								href="https://twitter.com/GenshinImpact"
+								target="_blank"
+								class="fab fa-twitter"
+							></a>
+						</div>
+					</div>
+					<div class="return-login">
+						<p>Return to Login <i class="fas fa-angle-right"></i></p>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="download-landing-page">
+			<div class="sidebar-div overlay">
+				<aside class="sidebar">
+					<ul class="list-sidebar">
+						<li class="sidebar-content">
+							<a href="../index.html"><i class="fas fa-qrcode"></i>Home</a>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/character.html"
+								><i class="fas fa-user-ninja"></i>Character</a
+							>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/about.html"
+								><i class="fas fa-question-circle"></i>About Game</a
+							>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/gallery.html"
+								><i class="fas fa-images"></i>Gallery</a
+							>
+						</li>
+						<li class="sidebar-content sidebar-active">
+							<a href="../html/download.html"
+								><i class="fas fa-download"></i>Download</a
+							>
+						</li>
+						<li class="sidebar-content login-sidebar">
+							<a><i class="fas fa-key"></i>Login</a>
+						</li>
+					</ul>
+				</aside>
+			</div>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<nav>
+				<div class="logo">
+					<a href="../index.html" id="logo-navbar"
+						><img src="../assets/Logo/logo putih.png"
+					/></a>
+				</div>
+				<div class="menu">
+					<ul class="menu-bar">
+						<div class="slide"></div>
+						<a href="../index.html">
+							<li class="menu-content">
+								<p>Home</p>
+							</li>
+						</a>
+						<a href="../html/character.html">
+							<li class="menu-content dropdown">
+								<p>Character</p>
+								<ul class="dropdown-content">
+									<li><p>Mondstadt</p></li>
+									<li><p>Liyue Harbor</p></li>
+								</ul>
+							</li>
+						</a>
+						<a href="../html/gallery.html">
+							<li class="menu-content">
+								<p>Gallery</p>
+							</li>
+						</a>
+						<a href="../html/about.html">
+							<li class="menu-content">
+								<p>About Game</p>
+							</li>
+						</a>
+						<a href="#">
+							<li class="menu-content active-navbar">
+								<p>Download</p>
+							</li>
+						</a>
+					</ul>
+					<div class="login">
+						<p>Login</p>
+						<div class="login-logo">
+							<i class="fas fa-user-circle"></i>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="download-box">
+				<div class="download-logo">
+					<a
+						href="https://www.playstation.com/en-id/games/genshin-impact/"
+						target="_blank"
+						><img src="../assets/ICON/ps4.png"
+					/></a>
+					<a
+						href="https://ys-api-os.mihoyo.com/event/download_porter/link/ys_global/genshinimpactpc/default"
+						target="_blank"
+						><img src="../assets/ICON/windows.png"
+					/></a>
+				</div>
+				<div class="download-logo">
+					<a href="https://apps.apple.com/app/id1517783697" target="_blank"
+						><img src="../assets/ICON/appstore.png"
+					/></a>
+					<a
+						href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact"
+						target="_blank"
+						><img src="../assets/ICON/google play.png"
+					/></a>
+				</div>
+			</div>
+		</section>
 
-    <section class="social-media">
-        <div class="social-media-logo">
-            <a href="https://discord.com/invite/genshinimpact" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://www.facebook.com/GenshinImpact.id" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/genshinimpact/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/GenshinImpact" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/c/GenshinImpact" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-        <h2>Defy Your Own Limits</h2>
-    </section>
-    <footer>
-        <div class="logo-footer">
-            <div class="mihoyo-div">
-                <img draggable="false" src="../assets/Logo/LOGO MIHOYOMAN WITH CAPTION.png">
-            </div>
-            <div class="kenshin-impact-logo">
-                <img draggable="false" src="../assets/Logo/logo putih.png">
-            </div>
-        </div>
-        <div class="terms">
-            <a href="../html/PrivacyPolicy.html" target="_blank">
-                <p>Privacy Policy</p>
-            </a>
-            <a href="../html/termsOfService.html" target="_blank">
-                <p>Terms of Service</p>
-            </a>
-            <a href="../html/AboutUs.html" target="_blank">
-                <p>About Us</p>
-            </a>
-            <a href="mailto:kenshin_cs@mihoyo.com">
-                <p>Contact Us</p>
-            </a>
-        </div>
-        <div class="copyright">
-            <p>Copyright &copy; 2021 miHoYoMan All Rights Reserved</p>
-        </div>
-    </footer>
-</body>
+		<section class="system-requirement">
+			<div class="system-requirement-title">
+				<h2>System Requirements</h2>
+			</div>
+			<div class="system-requirement-media">
+				<h2 class="media active-media">Windows</h2>
+				<h2 class="media">Android</h2>
+				<h2 class="media">iOS</h2>
+			</div>
+			<div class="system-requirement-specification">
+				<div class="specification active-specification">
+					<div class="recommended-configuration">
+						<h2>>>>Recommended configuration:</h2>
+						<p>
+							Operating system: Windows 7 SP1 64-bit, Windows 8.1 64-bit, or
+							Windows 10 64-bit
+						</p>
+						<p>Processor: Intel Core i7 equivalent or higher</p>
+						<p>Memory: 16 GB RAM</p>
+						<p>Graphics: NVIDIA GeForce GTX 1060 6 GB and higher</p>
+						<p>DirectX version: 11</p>
+						<p>Storage: Please reserve 30 GB of space</p>
+					</div>
+					<div class="minimum-configuration">
+						<h2>>>>Minimum configuration:</h2>
+						<p>
+							Operating system: Windows 7 SP1 64-bit, Windows 8.1 64-bit or
+							Windows 10 64-bit
+						</p>
+						<p>Processor: Intel Core i5 or equivalent</p>
+						<p>Memory: 8 GB RAM</p>
+						<p>Graphics card: NVIDIA® GeForce® GT 1030 and higher</p>
+						<p>DirectX version: 11</p>
+						<p>Storage: Please reserve 30 GB of space</p>
+					</div>
+				</div>
+				<div class="specification">
+					<div class="recommended-configuration">
+						<h2>>>>Recommended configuration:</h2>
+						<p>CPU: Qualcomm Snapdragon 845, Kirin 810 and above</p>
+						<p>RAM: 4 GB and above</p>
+						<p>Recommended system: Android 8.1 and above</p>
+					</div>
+					<div class="minimum-configuration">
+						<h2>>>>Minimum configuration:</h2>
+						<p>Compatibility requirements: Arm v8a 64-bit device</p>
+						<p>Memory: 3 GB and above</p>
+						<p>Supported system: Android 7.0 or above</p>
+						<p>Storage: Please reserve 8 GB of space</p>
+					</div>
+				</div>
+				<div class="specification">
+					<div class="recommended-configuration">
+						<p>Requires iOS 9.0 or later</p>
+					</div>
+					<div class="minimum-configuration">
+						<p>
+							Compatible with iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max,
+							iPhone XR, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, iPhone SE
+							(2nd generation), iPhone 12, iPhone 12 mini, iPhone 12 Pro, iPhone
+							12 Pro Max, iPad Air (3rd generation), iPad Air (4th generation),
+							iPad mini (5th generation), iPad Pro (12.9-inch) (2nd generation),
+							iPad Pro (10.5-inch) (2nd generation), iPad Pro (11-inch) (3rd
+							generation), iPad Pro (12.9-inch) (3rd generation), iPad Pro
+							(11-inch) (4th generation), iPad Pro (12.9-inch) (4th generation),
+							and iPad (8th generation).
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="social-media">
+			<div class="social-media-logo">
+				<a href="https://discord.com/invite/genshinimpact" target="_blank"
+					><i class="fab fa-discord"></i
+				></a>
+				<a href="https://www.facebook.com/GenshinImpact.id" target="_blank"
+					><i class="fab fa-facebook"></i
+				></a>
+				<a href="https://www.instagram.com/genshinimpact/" target="_blank"
+					><i class="fab fa-instagram"></i
+				></a>
+				<a href="https://twitter.com/GenshinImpact" target="_blank"
+					><i class="fab fa-twitter"></i
+				></a>
+				<a href="https://www.youtube.com/c/GenshinImpact" target="_blank"
+					><i class="fab fa-youtube"></i
+				></a>
+			</div>
+			<h2>Defy Your Own Limits</h2>
+		</section>
+		<footer>
+			<div class="logo-footer">
+				<div class="mihoyo-div">
+					<img
+						draggable="false"
+						src="../assets/Logo/LOGO MIHOYOMAN WITH CAPTION.png"
+					/>
+				</div>
+				<div class="kenshin-impact-logo">
+					<img draggable="false" src="../assets/Logo/logo putih.png" />
+				</div>
+			</div>
+			<div class="terms">
+				<a href="../html/PrivacyPolicy.html" target="_blank">
+					<p>Privacy Policy</p>
+				</a>
+				<a href="../html/termsOfService.html" target="_blank">
+					<p>Terms of Service</p>
+				</a>
+				<a href="../html/AboutUs.html" target="_blank">
+					<p>About Us</p>
+				</a>
+				<a href="mailto:kenshin_cs@mihoyo.com">
+					<p>Contact Us</p>
+				</a>
+			</div>
+			<div class="copyright">
+				<p>Copyright &copy; 2021 miHoYoMan All Rights Reserved</p>
+			</div>
+		</footer>
+	</body>
 </html>

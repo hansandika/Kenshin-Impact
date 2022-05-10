@@ -1,285 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Game</title>   
-    <link rel="shortcut icon" href="../assets/Logo/mihoyoman logo website.png" />
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-    <script src="../javascript/navbar.js" defer></script>
-    <script src="../javascript/scroll.js" defer></script>
-    <script src="../javascript/loginResgiter.js" defer></script>
-</head>
-<body>
-    <section class="form-section overlay">
-        <div class="form-container login-form active-form">
-            <div class="exit-button">
-                <i class="fas fa-times"></i>
-            </div>
-            <form>
-                <div class="field email">
-                    <div class="input-area">
-                        <input type="text" placeholder="Email Address / Username">
-                        <i class="icon fas fa-envelope"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Email cannot be empty</div>
-                </div>
-                <div class="field password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Password">
-                        <i class="icon fas fa-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Password cannot be empty</div>
-                </div>
-                <div class="error-terms-login">
-                    <p>Account or password error</p>
-                </div>
-                <input type="submit" value="Log in">
-                <div class="register-now">
-                    <p id="forgot-password">Forgot Password?</p>
-                    <p id="register-text">Register Now</p>
-                </div>
-                <div class="social-media-form">
-                    <p>Or log in using social media</p>
-                    <div class="social-media-form-img">
-                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="form-container register-form">
-            <form>
-                <h1>Register By Email</h1>
-                <div class="field email">
-                    <div class="input-area">
-                        <input type="text" placeholder="Email Address">
-                        <i class="icon fas fa-envelope"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Email cannot be empty</div>
-                </div>
-                <div class="field username">
-                    <div class="input-area">
-                        <input type="text" placeholder="Username">
-                        <i class="icon fas fa-user"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Username cannot be empty</div>
-                </div>
-                <div class="field password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Password">
-                        <i class="icon fas fa-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Password cannot be empty</div>
-                </div>
-                <div class="field confirm-password">
-                    <div class="input-area">
-                        <input type="password" placeholder="Confirm Password">
-                        <i class="icon fas fa-user-lock"></i>
-                        <i class="error error-icon fas fa-exclamation-circle"></i>
-                    </div>
-                    <div class="error error-txt">Confirm Password cannot be empty</div>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="agree" id="agree">
-                    <label for="agree">I have read and agree to the <a href="../html/termsOfService.html">Terms of
-                            Service</a> & <a href="../html/PrivacyPolicy.html">Privacy Policy</a></label>
-                </div>
-                <div class="error-terms">
-                    <p>Please tick the Terms of Service & Privacy Policy checkbox</p>
-                </div>
-                <input type="submit" value="Register">
-                <div class="social-media-form">
-                    <p>Or log in using social media</p>
-                    <div class="social-media-form-img">
-                        <a href="https://www.facebook.com/GenshinImpact.id" target="_blank" class="fab fa-facebook-f"></a>
-                        <a href="https://twitter.com/GenshinImpact" target="_blank" class="fab fa-twitter"></a>
-                    </div>
-                </div>
-                <div class="return-login">
-                    <p>Return to Login <i class="fas fa-angle-right"></i></p>
-                </div>
-            </form>
-        </div>
-    </section>
-    <section class="about-landing-page">
-        <div class="sidebar-div overlay">
-            <aside class="sidebar">
-                <ul class="list-sidebar">
-                    <li class="sidebar-content"><a href="../html/index.html"><i class="fas fa-qrcode"></i>Home</a></li>
-                    <li class="sidebar-content"><a href="../html/character.html"><i class="fas fa-user-ninja"></i>Character</a>
-                    </li>
-                    <li class="sidebar-content sidebar-active"><a href="../html/about.html"><i class="fas fa-question-circle"></i>About
-                            Game</a></li>
-                    <li class="sidebar-content"><a href="../html/gallery.html"><i class="fas fa-images"></i>Gallery</a></li>
-                    <li class="sidebar-content"><a href="../html/download.html"><i class="fas fa-download"></i>Download</a></li>
-                    <li class="sidebar-content login-sidebar"><a><i class="fas fa-key"></i>Login</a></li>
-                </ul>
-            </aside>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        <nav>
-            <div class="logo">
-                <a href="../html/index.html" id="logo-navbar"><img src="../assets/Logo/logo putih.png"></a>
-            </div>
-            <div class="menu">
-                <ul class="menu-bar">
-                    <div class="slide"></div>
-                    <a href="../html/index.html">
-                        <li class="menu-content">
-                            <p>Home</p>
-                        </li>
-                    </a>
-                    <a href="../html/character.html">
-                        <li class="menu-content dropdown">
-                            <p>Character</p>
-                            <ul class="dropdown-content">
-                                <li><p>Mondstadt</p></li>
-                                <li><p>Liyue Harbor</p></li>
-                            </ul>
-                        </li>
-                    </a>
-                    <a href='../html/gallery.html'>
-                        <li class="menu-content">
-                            <p>Gallery</p>
-                        </li>
-                    </a>
-                    <a href='#'>
-                        <li class="menu-content active-navbar">
-                            <p>About Game</p>
-                        </li>
-                    </a>
-                    <a href='../html/download.html'>
-                        <li class="menu-content">
-                            <p>Download</p>
-                        </li>
-                    </a>
-                </ul>
-                <div class="login">
-                    <p>Login</p>
-                    <div class="login-logo">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <section class="header-text">
-            <article>
-                <img src="../assets/Logo/logo putih.png" id="logo-main">
-                <h2>Available on Multiple Platform</h2>
-            </article>
-        </section>
-    </section>
-    <section class="content">
-        <div class="game-features-title">
-            <img src = "../assets/ICON/Left.png" class = "arrow">
-            <h2>Game Features</h2>
-            <img src = "../assets/ICON/Right.png" class = 'arrow'>  
-        </div>
-        <div class="game-features-content">
-            <div class="caption left-caption">
-                <h2>An Epic Adventure Awaits</h2>
-                <p>Explore in a single player world. Search for
-                    mysteries in the world of teyvat and reunite
-                    with your long-lost sibling. Travel as a traveler
-                    and explore this fantasy world.
-                </p>
-            </div>
-            <div class="features-image">
-                <img src="../assets/photo/An-Epic_adventure-awaits.png">
-            </div>
-        </div>
-        <div class="game-features-content">
-            <div class="caption right-caption">
-                <h2>The World Full of Mysteries</h2>
-                <p>Fly around the world, climb mountains
-                    and hills, and visit different cities. Unravel
-                    mysteries and unlock various rewards.
-                </p>
-            </div>
-            <div class="features-image">
-                <img src="../assets/photo/The-world-full-of-mysteries.png">
-            </div>
-        </div>
-        <div class="game-features-content">
-            <div class="caption left-caption">
-                <h2>Explore Alone or Together</h2>
-                <p>Charge head-on into battles solo, or invite
-                friends and together defeat various challenges
-                as well as monsters.
-                </p>
-            </div>
-            <div class="features-image">
-                <img src="../assets/photo/Explore-alone-or-together.png">
-            </div>
-        </div>
-        <div class="game-features-content">
-            <div class="caption right-caption">
-                <h2>Build Your Dream Team</h2>
-                <p>Choose who fights by your side. Build your party from over 20+ characters (with more to come) — each with unique
-                abilities, personalities, and combat styles.
-                </p>
-            </div>
-            <div class="features-image">
-                <img src="../assets/photo/Build-your-team.png">
-            </div>
-        </div>
-        <div class="character-button">
-            <a href = "../html/character.html"><button>View Character</button></a>
-        </div>
-    </section>
-    <section class="social-media">
-        <div class="social-media-logo">
-            <a href="https://discord.com/invite/genshinimpact" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://www.facebook.com/GenshinImpact.id" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/genshinimpact/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/GenshinImpact" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/c/GenshinImpact" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-        <h2>Defy Your Own Limits</h2>
-    </section>
-    <footer>
-        <div class="logo-footer">
-            <div class="mihoyo-div">
-                <img draggable="false" src="../assets/Logo/LOGO MIHOYOMAN WITH CAPTION.png">
-            </div>
-            <div class="kenshin-impact-logo">
-                <img draggable="false" src="../assets/Logo/logo putih.png">
-            </div>
-        </div>
-        <div class="terms">
-            <a href="../html/PrivacyPolicy.html" target="_blank">
-                <p>Privacy Policy</p>
-            </a>
-            <a href="../html/termsOfService.html" target="_blank">
-                <p>Terms of Service</p>
-            </a>
-            <a href="../html/AboutUs.html" target="_blank">
-                <p>About Us</p>
-            </a>
-            <a href="mailto:kenshin_cs@mihoyo.com">
-                <p>Contact Us</p>
-            </a>
-        </div>
-        <div class="copyright">
-            <p>Copyright &copy; 2021 miHoYoMan All Rights Reserved</p>
-        </div>
-    </footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About Game</title>
+		<link
+			rel="shortcut icon"
+			href="../assets/Logo/mihoyoman logo website.png"
+		/>
+		<link rel="stylesheet" href="../css/navbar.css" />
+		<link rel="stylesheet" href="../css/footer.css" />
+		<link rel="stylesheet" href="../css/about.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/>
+		<script src="../javascript/navbar.js" defer></script>
+		<script src="../javascript/scroll.js" defer></script>
+		<script src="../javascript/loginResgiter.js" defer></script>
+	</head>
+	<body>
+		<section class="form-section overlay">
+			<div class="form-container login-form active-form">
+				<div class="exit-button">
+					<i class="fas fa-times"></i>
+				</div>
+				<form>
+					<div class="field email">
+						<div class="input-area">
+							<input type="text" placeholder="Email Address / Username" />
+							<i class="icon fas fa-envelope"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email cannot be empty</div>
+					</div>
+					<div class="field password">
+						<div class="input-area">
+							<input type="password" placeholder="Password" />
+							<i class="icon fas fa-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Password cannot be empty</div>
+					</div>
+					<div class="error-terms-login">
+						<p>Account or password error</p>
+					</div>
+					<input type="submit" value="Log in" />
+					<div class="register-now">
+						<p id="forgot-password">Forgot Password?</p>
+						<p id="register-text">Register Now</p>
+					</div>
+					<div class="social-media-form">
+						<p>Or log in using social media</p>
+						<div class="social-media-form-img">
+							<a
+								href="https://www.facebook.com/GenshinImpact.id"
+								target="_blank"
+								class="fab fa-facebook-f"
+							></a>
+							<a
+								href="https://twitter.com/GenshinImpact"
+								target="_blank"
+								class="fab fa-twitter"
+							></a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="form-container register-form">
+				<form>
+					<h1>Register By Email</h1>
+					<div class="field email">
+						<div class="input-area">
+							<input type="text" placeholder="Email Address" />
+							<i class="icon fas fa-envelope"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email cannot be empty</div>
+					</div>
+					<div class="field username">
+						<div class="input-area">
+							<input type="text" placeholder="Username" />
+							<i class="icon fas fa-user"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Username cannot be empty</div>
+					</div>
+					<div class="field password">
+						<div class="input-area">
+							<input type="password" placeholder="Password" />
+							<i class="icon fas fa-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Password cannot be empty</div>
+					</div>
+					<div class="field confirm-password">
+						<div class="input-area">
+							<input type="password" placeholder="Confirm Password" />
+							<i class="icon fas fa-user-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Confirm Password cannot be empty</div>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="agree" id="agree" />
+						<label for="agree"
+							>I have read and agree to the
+							<a href="../html/termsOfService.html">Terms of Service</a> &
+							<a href="../html/PrivacyPolicy.html">Privacy Policy</a></label
+						>
+					</div>
+					<div class="error-terms">
+						<p>Please tick the Terms of Service & Privacy Policy checkbox</p>
+					</div>
+					<input type="submit" value="Register" />
+					<div class="social-media-form">
+						<p>Or log in using social media</p>
+						<div class="social-media-form-img">
+							<a
+								href="https://www.facebook.com/GenshinImpact.id"
+								target="_blank"
+								class="fab fa-facebook-f"
+							></a>
+							<a
+								href="https://twitter.com/GenshinImpact"
+								target="_blank"
+								class="fab fa-twitter"
+							></a>
+						</div>
+					</div>
+					<div class="return-login">
+						<p>Return to Login <i class="fas fa-angle-right"></i></p>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="about-landing-page">
+			<div class="sidebar-div overlay">
+				<aside class="sidebar">
+					<ul class="list-sidebar">
+						<li class="sidebar-content">
+							<a href="../index.html"><i class="fas fa-qrcode"></i>Home</a>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/character.html"
+								><i class="fas fa-user-ninja"></i>Character</a
+							>
+						</li>
+						<li class="sidebar-content sidebar-active">
+							<a href="../html/about.html"
+								><i class="fas fa-question-circle"></i>About Game</a
+							>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/gallery.html"
+								><i class="fas fa-images"></i>Gallery</a
+							>
+						</li>
+						<li class="sidebar-content">
+							<a href="../html/download.html"
+								><i class="fas fa-download"></i>Download</a
+							>
+						</li>
+						<li class="sidebar-content login-sidebar">
+							<a><i class="fas fa-key"></i>Login</a>
+						</li>
+					</ul>
+				</aside>
+			</div>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<nav>
+				<div class="logo">
+					<a href="../index.html" id="logo-navbar"
+						><img src="../assets/Logo/logo putih.png"
+					/></a>
+				</div>
+				<div class="menu">
+					<ul class="menu-bar">
+						<div class="slide"></div>
+						<a href="../index.html">
+							<li class="menu-content">
+								<p>Home</p>
+							</li>
+						</a>
+						<a href="../html/character.html">
+							<li class="menu-content dropdown">
+								<p>Character</p>
+								<ul class="dropdown-content">
+									<li><p>Mondstadt</p></li>
+									<li><p>Liyue Harbor</p></li>
+								</ul>
+							</li>
+						</a>
+						<a href="../html/gallery.html">
+							<li class="menu-content">
+								<p>Gallery</p>
+							</li>
+						</a>
+						<a href="#">
+							<li class="menu-content active-navbar">
+								<p>About Game</p>
+							</li>
+						</a>
+						<a href="../html/download.html">
+							<li class="menu-content">
+								<p>Download</p>
+							</li>
+						</a>
+					</ul>
+					<div class="login">
+						<p>Login</p>
+						<div class="login-logo">
+							<i class="fas fa-user-circle"></i>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<section class="header-text">
+				<article>
+					<img src="../assets/Logo/logo putih.png" id="logo-main" />
+					<h2>Available on Multiple Platform</h2>
+				</article>
+			</section>
+		</section>
+		<section class="content">
+			<div class="game-features-title">
+				<img src="../assets/ICON/Left.png" class="arrow" />
+				<h2>Game Features</h2>
+				<img src="../assets/ICON/Right.png" class="arrow" />
+			</div>
+			<div class="game-features-content">
+				<div class="caption left-caption">
+					<h2>An Epic Adventure Awaits</h2>
+					<p>
+						Explore in a single player world. Search for mysteries in the world
+						of teyvat and reunite with your long-lost sibling. Travel as a
+						traveler and explore this fantasy world.
+					</p>
+				</div>
+				<div class="features-image">
+					<img src="../assets/photo/An-Epic_adventure-awaits.png" />
+				</div>
+			</div>
+			<div class="game-features-content">
+				<div class="caption right-caption">
+					<h2>The World Full of Mysteries</h2>
+					<p>
+						Fly around the world, climb mountains and hills, and visit different
+						cities. Unravel mysteries and unlock various rewards.
+					</p>
+				</div>
+				<div class="features-image">
+					<img src="../assets/photo/The-world-full-of-mysteries.png" />
+				</div>
+			</div>
+			<div class="game-features-content">
+				<div class="caption left-caption">
+					<h2>Explore Alone or Together</h2>
+					<p>
+						Charge head-on into battles solo, or invite friends and together
+						defeat various challenges as well as monsters.
+					</p>
+				</div>
+				<div class="features-image">
+					<img src="../assets/photo/Explore-alone-or-together.png" />
+				</div>
+			</div>
+			<div class="game-features-content">
+				<div class="caption right-caption">
+					<h2>Build Your Dream Team</h2>
+					<p>
+						Choose who fights by your side. Build your party from over 20+
+						characters (with more to come) — each with unique abilities,
+						personalities, and combat styles.
+					</p>
+				</div>
+				<div class="features-image">
+					<img src="../assets/photo/Build-your-team.png" />
+				</div>
+			</div>
+			<div class="character-button">
+				<a href="../html/character.html"><button>View Character</button></a>
+			</div>
+		</section>
+		<section class="social-media">
+			<div class="social-media-logo">
+				<a href="https://discord.com/invite/genshinimpact" target="_blank"
+					><i class="fab fa-discord"></i
+				></a>
+				<a href="https://www.facebook.com/GenshinImpact.id" target="_blank"
+					><i class="fab fa-facebook"></i
+				></a>
+				<a href="https://www.instagram.com/genshinimpact/" target="_blank"
+					><i class="fab fa-instagram"></i
+				></a>
+				<a href="https://twitter.com/GenshinImpact" target="_blank"
+					><i class="fab fa-twitter"></i
+				></a>
+				<a href="https://www.youtube.com/c/GenshinImpact" target="_blank"
+					><i class="fab fa-youtube"></i
+				></a>
+			</div>
+			<h2>Defy Your Own Limits</h2>
+		</section>
+		<footer>
+			<div class="logo-footer">
+				<div class="mihoyo-div">
+					<img
+						draggable="false"
+						src="../assets/Logo/LOGO MIHOYOMAN WITH CAPTION.png"
+					/>
+				</div>
+				<div class="kenshin-impact-logo">
+					<img draggable="false" src="../assets/Logo/logo putih.png" />
+				</div>
+			</div>
+			<div class="terms">
+				<a href="../html/PrivacyPolicy.html" target="_blank">
+					<p>Privacy Policy</p>
+				</a>
+				<a href="../html/termsOfService.html" target="_blank">
+					<p>Terms of Service</p>
+				</a>
+				<a href="../html/AboutUs.html" target="_blank">
+					<p>About Us</p>
+				</a>
+				<a href="mailto:kenshin_cs@mihoyo.com">
+					<p>Contact Us</p>
+				</a>
+			</div>
+			<div class="copyright">
+				<p>Copyright &copy; 2021 miHoYoMan All Rights Reserved</p>
+			</div>
+		</footer>
+	</body>
 </html>
